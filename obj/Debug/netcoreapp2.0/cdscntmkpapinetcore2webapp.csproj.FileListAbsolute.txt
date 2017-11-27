@@ -1,0 +1,10 @@
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\bin\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.deps.json
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\bin\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.runtimeconfig.json
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\bin\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.runtimeconfig.dev.json
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\bin\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.dll
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\bin\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.pdb
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.csproj.CoreCompileInputs.cache
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.AssemblyInfoInputs.cache
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.AssemblyInfo.cs
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.dll
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.pdb

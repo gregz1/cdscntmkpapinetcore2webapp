@@ -1,0 +1,17 @@
+@using cdscntmkpapinetcore2webapp.Models
+@model cdscntmkpapinetcore2webapp.Models.SoapClient
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>Hello from our View Template!</p>
+Model._SellerMessage.Result.SellerLogin
+@Model._SellerMessage.Result.SellerLogin
+<ul>
+@foreach(SoapCall s in Model._methodList)
+{
+     <li>@s._methodName</li>
+}
+</ul>
