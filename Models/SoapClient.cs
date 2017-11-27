@@ -20,15 +20,15 @@ namespace cdscntmkpapinetcore2webapp.Models
         public string Genre { get; set; }
         public decimal Price { get; set; }
 
-        public Task<SellerMessage> _SellerMessage { get; set; }
+        public Task<CategoryTreeMessage> _CategoryTreeMessage { get; set; }
 
         public  SoapClient()
         {
             MarketplaceAPIServiceClient Client = new MarketplaceAPIServiceClient();            
-            Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc");
+            Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.cdiscount.com/MarketplaceAPIService.svc");
             var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
-            //string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
-			string proxyUrl = "http://m98js9u10vrq7m:4RBT1Hml9SL8uipUUXJ9R8iCDg@eu-west-1-babbage.quotaguard.com:9293";
+            string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
+			//string proxyUrl = "http://m98js9u10vrq7m:4RBT1Hml9SL8uipUUXJ9R8iCDg@eu-west-1-babbage.quotaguard.com:9293";
             System.Uri proxyUri = new System.Uri(proxyUrl);
 			string cleanProxyURL = proxyUri.Scheme + "://" + proxyUri.Host+":"+proxyUri.Port;
 			string user = proxyUri.UserInfo.Split(':')[0];
@@ -61,12 +61,12 @@ namespace cdscntmkpapinetcore2webapp.Models
                 },
                 Security = new SecurityContext
                 {
-                    TokenId = "b2dd5522cb4f4eed9a6e7677221ad700"
+                    TokenId = "22cf999895f34e08800bfbb9e39089e2"
                 },
                 Version = "1.0"
             };
 
-        _SellerMessage =  Client.GetSellerInformationAsync(hdr); 
+        _CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr); 
 
         }
 
