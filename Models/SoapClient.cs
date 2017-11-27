@@ -25,7 +25,26 @@ namespace cdscntmkpapinetcore2webapp.Models
         public  SoapClient()
         {
             MarketplaceAPIServiceClient Client = new MarketplaceAPIServiceClient();            
-            Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.cdiscount.com/MarketplaceAPIService.svc");
+            Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc");
+            var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
+            string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
+			//string proxyUrl = "http://m98js9u10vrq7m:4RBT1Hml9SL8uipUUXJ9R8iCDg@eu-west-1-babbage.quotaguard.com:9293";
+            System.Uri proxyUri = new System.Uri(proxyUrl);
+			string cleanProxyURL = proxyUri.Scheme + "://" + proxyUri.Host+":"+proxyUri.Port;
+			string user = proxyUri.UserInfo.Split(':')[0];
+			string password = proxyUri.UserInfo.Split(':')[1];
+            WebProxy myProxy = new WebProxy();
+            Uri newUri = new Uri(cleanProxyURL);
+            myProxy.Address = newUri;
+            
+            b.ProxyAddress =newUri;
+            myProxy.Credentials = new NetworkCredential(user, password);
+            WebRequest.DefaultWebProxy = myProxy;
+            b.UseDefaultWebProxy = true;
+            //b.Security.Transport.ProxyCredentialType = 
+
+
+
             HeaderMessage hdr  = new HeaderMessage()
             {
                 Context = new ContextMessage

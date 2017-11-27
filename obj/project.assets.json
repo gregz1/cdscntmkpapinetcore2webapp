@@ -13436,11 +13436,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\cdscntmkpapinetcore2webapp.csproj",
+      "projectUniqueName": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\cdscntmkpapinetcore2webapp.csproj",
       "projectName": "cdscntmkpapinetcore2webapp",
-      "projectPath": "C:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\cdscntmkpapinetcore2webapp.csproj",
+      "projectPath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\cdscntmkpapinetcore2webapp.csproj",
       "packagesPath": "C:\\Users\\gregory.tall\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\obj\\",
+      "outputPath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
