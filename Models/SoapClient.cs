@@ -25,7 +25,7 @@ namespace cdscntmkpapinetcore2webapp.Models
         public  SoapClient()
         {
             MarketplaceAPIServiceClient Client = new MarketplaceAPIServiceClient();            
-            Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.cdiscount.com/MarketplaceAPIService.svc");
+            Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc");
             var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
             string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
 			//string proxyUrl = "http://m98js9u10vrq7m:4RBT1Hml9SL8uipUUXJ9R8iCDg@eu-west-1-babbage.quotaguard.com:9293";
@@ -61,7 +61,7 @@ namespace cdscntmkpapinetcore2webapp.Models
                 },
                 Security = new SecurityContext
                 {
-                    TokenId = "22cf999895f34e08800bfbb9e39089e2"
+                    TokenId = "194d83e1c7014464854b3983d34db8f4"
                 },
                 Version = "1.0"
             };
