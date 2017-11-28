@@ -74,8 +74,8 @@ namespace cdscntmkpapinetcore2webapp.Models
                         Version = "1.0"
                     };
 
-                //_CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr);
-                _SellerMessage = Client.GetSellerInformationAsync(hdr);
+                _CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr);
+                //_SellerMessage = Client.GetSellerInformationAsync(hdr);
             }
             catch(SystemException ex)
             {
