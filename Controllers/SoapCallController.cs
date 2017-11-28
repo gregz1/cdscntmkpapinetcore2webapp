@@ -7,7 +7,6 @@ using System.Net;
 using System;
 using cdscntmkpapinetcore2webapp.Models;
 using Cdiscount.Framework.Core.Communication.Messages;
-
 namespace cdscntmkpapinetcore2webapp.Controllers
 {
     public class SoapCallController : Controller
