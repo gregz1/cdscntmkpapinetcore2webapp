@@ -13,6 +13,7 @@ namespace cdscntmkpapinetcore2webapp.Models
 {
     public class SoapClient
     {
+
         public List<SoapCall> _methodList = new List<SoapCall>();
         public int ID { get; set; }
         public string MethodName { get; set; }
@@ -24,65 +25,7 @@ namespace cdscntmkpapinetcore2webapp.Models
         public Task<SellerMessage> _SellerMessage { get; set; }
 
         public  SoapClient()
-        {
-            try{
-                    MarketplaceAPIServiceClient Client = new MarketplaceAPIServiceClient();            
-                    Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc");
-                  var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
-
-                    b.SendTimeout = TimeSpan.FromMinutes(10);
-                    b.ReceiveTimeout = TimeSpan.FromMinutes(10);
-                    b.OpenTimeout = TimeSpan.FromMinutes(10);
-                    b.CloseTimeout = TimeSpan.FromMinutes(10);
-
-                    string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
-                    System.Uri proxyUri = new System.Uri(proxyUrl);
-                    string cleanProxyURL = proxyUri.Scheme + "://" + proxyUri.Host+":"+proxyUri.Port;
-                    string user = proxyUri.UserInfo.Split(':')[0];
-                    string password = proxyUri.UserInfo.Split(':')[1];
-                    WebProxy myProxy = new WebProxy();
-                    Uri newUri = new Uri(cleanProxyURL);
-                    myProxy.Address = newUri;
-                    
-                    b.ProxyAddress =newUri;
-                    myProxy.Credentials = new NetworkCredential(user, password);
-                    WebRequest.DefaultWebProxy = myProxy;
-                    b.UseDefaultWebProxy = true;
-                    //b.Security.Transport.ProxyCredentialType = 
-
-        
-
-                    HeaderMessage hdr  = new HeaderMessage()
-                    {
-                        Context = new ContextMessage
-                        {
-                            CatalogID = 1,
-                            SiteID = 100
-                        },
-                        Localization = new LocalizationMessage
-                        {
-                            Country = Country.Fr,
-                            Currency = Currency.Eur,
-                            DecimalPosition = 2,
-                            Language = Language.Fr
-                        },
-                        Security = new SecurityContext
-                        {
-                            TokenId = "194d83e1c7014464854b3983d34db8f4"
-                            //TokenId = "4e002e269b044058a9cd2df305861525"
-                        },
-                        Version = "1.0"
-                    };
-
-                _CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr);
-                //_SellerMessage = Client.GetSellerInformationAsync(hdr);
-            }
-            catch(SystemException ex)
-            {
-                    _ErrorMessage = ex.Message;
-
-            }
-        }
+        {}
 
 
 

@@ -72,6 +72,12 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             return View(_mySoapClient);
         }
 
+        public IActionResult GetAllAllowedCategoryTree()
+        {
+            SoapCall mySoapCall = new SoapCall();
+            mySoapCall.BuildSoapCall();
+            return View(mySoapCall);
+        }
         // 
         // GET: /HelloWorld/Welcome/ 
 

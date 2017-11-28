@@ -1,0 +1,18 @@
+@using cdscntmkpapinetcore2webapp.Models
+@model cdscntmkpapinetcore2webapp.Models.SoapCall
+@{
+    ViewData["Title"] = "SoapCall";
+}
+
+<h2>SoapCall</h2>
+
+<p>Hello from our View Template!</p>
+@if(Model._ErrorMessage != null && Model._ErrorMessage !="")
+{
+    @Model._ErrorMessage
+}        
+else{
+    @Model._CategoryTreeMessage.Result.SellerLogin
+    @Model._CategoryTreeMessage.Result.SellerLogin
+    
+}
