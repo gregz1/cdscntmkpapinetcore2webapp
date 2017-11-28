@@ -26,7 +26,7 @@ namespace cdscntmkpapinetcore2webapp.Models
         {
             MarketplaceAPIServiceClient Client = new MarketplaceAPIServiceClient();            
             Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.cdiscount.com/MarketplaceAPIService.svc");
-            var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
+      /*      var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
 
             b.SendTimeout = TimeSpan.FromMinutes(10);
             b.ReceiveTimeout = TimeSpan.FromMinutes(10);
@@ -49,7 +49,7 @@ namespace cdscntmkpapinetcore2webapp.Models
             b.UseDefaultWebProxy = true;
             //b.Security.Transport.ProxyCredentialType = 
 
-
+*/
 
             HeaderMessage hdr  = new HeaderMessage()
             {
