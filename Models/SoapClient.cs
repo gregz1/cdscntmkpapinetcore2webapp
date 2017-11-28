@@ -32,7 +32,7 @@ namespace cdscntmkpapinetcore2webapp.Models
             b.ReceiveTimeout = TimeSpan.FromMinutes(10);
             b.OpenTimeout = TimeSpan.FromMinutes(10);
             b.CloseTimeout = TimeSpan.FromMinutes(10);
-            
+
             //string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
 			string proxyUrl = "http://m98js9u10vrq7m:4RBT1Hml9SL8uipUUXJ9R8iCDg@eu-west-1-babbage.quotaguard.com:9293";
             System.Uri proxyUri = new System.Uri(proxyUrl);
@@ -72,7 +72,7 @@ namespace cdscntmkpapinetcore2webapp.Models
                 Version = "1.0"
             };
 
-        _CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr); 
+   //     _CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr); 
 
         }
 
