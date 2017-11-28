@@ -30,7 +30,7 @@ namespace cdscntmkpapinetcore2webapp.Models
         {
             try{
                     MarketplaceAPIServiceClient Client = new MarketplaceAPIServiceClient();            
-                    Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc");
+                    Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.cdiscount.com/MarketplaceAPIService.svc");
                   var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
 
                     b.SendTimeout = TimeSpan.FromMinutes(10);
@@ -71,8 +71,8 @@ namespace cdscntmkpapinetcore2webapp.Models
                         },
                         Security = new SecurityContext
                         {
-                            TokenId = "194d83e1c7014464854b3983d34db8f4"
-                            //TokenId = "4e002e269b044058a9cd2df305861525"
+                            //TokenId = "194d83e1c7014464854b3983d34db8f4"
+                            TokenId = "4e002e269b044058a9cd2df305861525"
                         },
                         Version = "1.0"
                     };
