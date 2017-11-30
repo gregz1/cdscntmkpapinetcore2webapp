@@ -5,10 +5,12 @@ using System.Text.Encodings.Web;
 using System.Xml.Linq;
 using System.Xml;
 using System.Net;
+using System.Net.Http;
 using Cdiscount.Framework.Core.Communication.Messages;
 using System.Threading.Tasks;
 using www.cdiscount.com;
-
+using System.IO;
+using System.ServiceModel;
 
 namespace cdscntmkpapinetcore2webapp.Models
 {
@@ -45,16 +47,16 @@ namespace cdscntmkpapinetcore2webapp.Models
                     string password = proxyUri.UserInfo.Split(':')[1];
                     WebProxy myProxy = new WebProxy();
                     Uri newUri = new Uri(cleanProxyURL);
-                    myProxy.Address = newUri;
-                    
-                    b.ProxyAddress =newUri;
                     myProxy.Credentials = new NetworkCredential(user, password);
+                    myProxy.Address = newUri;                    
+                    b.ProxyAddress =newUri;
                     WebRequest.DefaultWebProxy = myProxy;
+                    b.Security.Mode = BasicHttpSecurityMode.Transport;
+                    b.Security.Transport.ClientCredentialType = HttpClientCredentialType.None; // !!!
+                    b.Security.Transport.ProxyCredentialType = HttpProxyCredentialType.Basic; // !!!
                     b.UseDefaultWebProxy = true;
-                    //b.Security.Transport.ProxyCredentialType = 
-
-        
-
+                    
+                
                     HeaderMessage hdr  = new HeaderMessage()
                     {
                         Context = new ContextMessage
@@ -71,13 +73,14 @@ namespace cdscntmkpapinetcore2webapp.Models
                         },
                         Security = new SecurityContext
                         {
-                            TokenId = "194d83e1c7014464854b3983d34db8f4"
+                            TokenId = "c1fbbc8cd14a4c8dbade07b202fb69dc"
                             //TokenId = "4e002e269b044058a9cd2df305861525"
                         },
                         Version = "1.0"
                     };
 
-                _CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr);
+                _CategoryTreeMessage =  Client.GetAllAllowedCategoryTreeAsync(hdr);                
+
                 //_SellerMessage = Client.GetSellerInformationAsync(hdr);
             }
             catch(SystemException ex)
