@@ -49,7 +49,7 @@ namespace cdscntmkpapinetcore2webapp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=SoapCall}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
