@@ -1,0 +1,29 @@
+﻿using Cdiscount.Framework.Core.Communication.Messages;
+using www.cdiscount.com;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace cdscntmkpapinetcore2webapp.Models.OrderManager
+{
+    public class GetOrderListRequest : Request
+    {
+        public OrderFilter _OrderFilter { get; set; }
+
+        public GetOrderListRequest()
+        {
+            _OrderFilter = new OrderFilter();
+            _Parameters.Add("OrderReferenceList", "Scopusid;ScopusId;ScopusId");
+            _Parameters.Add("BeginCreationDate", "yyyy-mm-ddThh:mm:ss");
+            _Parameters.Add("BeginModificationDate", "yyyy-mm-ddThh:mm:ss");
+            _Parameters.Add("EndCreationDate", "yyyy-mm-ddThh:mm:ss");
+            _Parameters.Add("EndModificationDate", "yyyy-mm-ddThh:mm:ss");
+            _Parameters.Add("CorporationCode", "1(Cdiscount) / 16(CdiscountPro)");
+            _Parameters.Add("PartnerOrderRef", "PartnerOrderRef");
+            _ParametersBool.Add("FetchOrderLines", true);
+            _ParametersBool.Add("FetchTrackingInformation", false);
+            _ParametersBool.Add("IncludeExternalFbcSiteId", false);
+
+        }
+
+    }
+}

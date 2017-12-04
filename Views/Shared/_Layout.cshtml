@@ -40,8 +40,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product Manager<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("GetAllAllowedCategoryTree", "GetAllAllowedCategoryTree", "SoapCall")</li>
-                           <!-- <li>@Html.ActionLink("SubmitProductPackage", "SubmitProductPackageRequest", "ProductManager")</li>
+                            <li>@Html.ActionLink("GetAllAllowedCategoryTree", "GetAllAllowedCategoryTreeRequest", "ProductManager")</li>
+                           <li>@Html.ActionLink("SubmitProductPackage", "SubmitProductPackageRequest", "ProductManager")</li>
                             <li>@Html.ActionLink("GetAllowedCategoryTree", "GetAllowedCategoryTreeRequest", "ProductManager")</li>
                             <li>@Html.ActionLink("GetAllModelList", "GetAllModelListRequest", "ProductManager")</li>
                             <li>@Html.ActionLink("GetModelList", "GetModelListRequest", "ProductManager")</li>
@@ -49,8 +49,56 @@
                             <li>@Html.ActionLink("GetBrandList", "GetBrandListRequest", "ProductManager")</li>
                             <li>@Html.ActionLink("GetProductPackageSubmissionResult", "GetProductPackageSubmissionResultRequest", "ProductManager")</li>
                             <li>@Html.ActionLink("GetProductPackageMatchingFileData", "GetProductPackageMatchingFileDataRequest", "ProductManager")</li>
-                            <li>@Html.ActionLink("GetProductListByIdentifier", "GetProductListByIdentifierRequest", "ProductManager")</li>
--->
+                            <li>@Html.ActionLink("GetProductListByIdentifier", "GetProductListByIdentifierRequest", "ProductManager")
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Offer manager<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("SubmitOfferPackage", "SubmitOfferPackageRequest", "OfferManager")</li>
+                            <li>@Html.ActionLink("GetOfferPackageSubmissionResult", "GetOfferPackageSubmissionResultRequest", "OfferManager")</li>
+                            <li>@Html.ActionLink("GetOfferList", "GetOfferListRequest", "OfferManager")</li>
+                            <li>@Html.ActionLink("GetOfferListPaginated", "GetOfferListPaginatedRequest", "OfferManager")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order manager<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("GetOrderList", "GetOrderListRequest", "OrderManager")</li>
+                            <li>@Html.ActionLink("ValidateOrderList", "ValidateOrderListRequest", "OrderManager")</li>
+                            <li>@Html.ActionLink("CreateRefundVoucher", "CreateRefundVoucherRequest", "OrderManager")</li>
+                            <li>@Html.ActionLink("ManageParcel", "ManageParcelRequest", "OrderManager")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CRM manager<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("GetOrderClaimList", "GetOrderClaimListRequest", "CRMManager")</li>
+                            <li>@Html.ActionLink("GetOfferQuestionList", "GetOfferQuestionListRequest", "CRMManager")</li>
+                            <li>@Html.ActionLink("CloseDiscussionList", "CloseDiscussionListRequest", "CRMManager")</li>
+                            <li>@Html.ActionLink("GetDiscussionMailList", "GetDiscussionMailListRequest", "CRMManager")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account manager<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("GetSellerInformation", "GetSellerInformationRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("GetSellerIndicators", "GetSellerIndicatorsRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("GetGlobalConfiguration", "GetGlobalConfigurationRequest", "AccountManager")</li>
+                            <!--<li>@Html.ActionLink("GetParcelShopList", "GetParcelShopListRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("SubmitRelaysFile", "SubmitRelaysFileRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("GetRelaysFileSubmissionResult", "GetRelaysFileSubmissionResultRequest", "AccountManager")</li>-->
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FBC manager<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("CreateExternalOrder", "GetSellerInformationRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("GetExternalOrderStatus", "GetSellerIndicatorsRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("GetProductStockList", "GetGlobalConfigurationRequest", "AccountManager")</li>
+                            <!--<li>@Html.ActionLink("GetParcelShopList", "GetParcelShopListRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("SubmitRelaysFile", "SubmitRelaysFileRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("GetRelaysFileSubmissionResult", "GetRelaysFileSubmissionResultRequest", "AccountManager")</li>-->
                         </ul>
                     </li>
                 </ul>
