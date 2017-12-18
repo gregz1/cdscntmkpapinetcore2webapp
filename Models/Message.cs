@@ -84,6 +84,7 @@ namespace cdscntmkpapinetcore2webapp.Models
                     b.OpenTimeout = TimeSpan.FromMinutes(10);
                     b.CloseTimeout = TimeSpan.FromMinutes(10);
                     string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
+                     Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT","Development");
                     System.Uri proxyUri = new System.Uri(proxyUrl);
                     string cleanProxyURL = proxyUri.Scheme + "://" + proxyUri.Host+":"+proxyUri.Port;
                     string user = proxyUri.UserInfo.Split(':')[0];
