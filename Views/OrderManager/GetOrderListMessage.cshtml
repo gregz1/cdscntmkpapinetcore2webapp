@@ -232,11 +232,7 @@
             </div>
         </div>
     }
-
-<h4>@Html.ActionLink("Export your order list", "CreateReport", "OrderManager")</h4>
-<h4><a href="@Model._env.">Visit W3Schools</a></h4>
-
-
+<h4><a href="~/OrderManager/Download/?SellerLogin=@Model._OrderListMessage.Result.SellerLogin">Export your order list</a></h4>
 
 <script>
 

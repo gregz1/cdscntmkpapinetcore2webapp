@@ -65,7 +65,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         }
         public ActionResult GetOfferQuestionListRequest()
         {
-            Request MyRequest = new GetOrderClaimListRequest();
+            Request MyRequest = new GetOfferQuestionListRequest();
             GetSessionData(ref MyRequest);
             return View(MyRequest);
         }

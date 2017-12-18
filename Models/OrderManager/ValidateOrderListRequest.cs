@@ -11,7 +11,6 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
         public ValidateOrderListRequest()
         {
             _ValidateOrderListMessage = new ValidateOrderListMessage();
-            
         }
 
        public ValidateOrderListRequest(GetOrderListMessage MyGetOrderListMessage)

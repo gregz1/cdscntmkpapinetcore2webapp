@@ -9,6 +9,7 @@ using cdscntmkpapinetcore2webapp.Models;
 using Cdiscount.Framework.Core.Communication.Messages;
 namespace cdscntmkpapinetcore2webapp.Controllers
 {
+    /*
     public class SoapCallController : Controller
     {
         // 
@@ -62,7 +63,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                         break;
                     case XmlNodeType.EndElement:
                         Console.Write("</{0}>", WsdlReader.Name);
-                        break;*/
+                        break;
                     }
                 } 
             }
@@ -91,5 +92,5 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         {
             return View();
         }
-    }
+    } */
 }

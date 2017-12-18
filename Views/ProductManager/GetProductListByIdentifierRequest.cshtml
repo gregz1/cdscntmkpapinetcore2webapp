@@ -34,7 +34,7 @@
                             @Html.TextBoxFor(model => model._Token, new { @id = "token", @class = "form-control", @placeholder = "Token" })
                         </div>
                         <div class="form-group">
-                            <label for="token"><span class="glyphicon glyphicon-qrcode"></span> Environment</label>
+                            <label for="Environment"><span class="glyphicon glyphicon-qrcode"></span> Environment</label>
                             <br />
                             <p class="nav navbar-nav navbar-left">
                                 @Html.DropDownListFor(m => m._EnvironmentSelected, new MultiSelectList(Enum.GetValues(typeof(EnvironmentEnum))), "Select Environment")<br />                                

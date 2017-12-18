@@ -22,9 +22,6 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
                 _ModelFilter.CategoryCodeList = MyRequest._Parameters["Values"].Split(';');
                 var _ModelListMessage = _MarketplaceAPIService.GetModelListAsync(MyRequest._HeaderMessage, _ModelFilter);
 
-                _RequestXML = _RequestInterceptor.LastRequestXML;
-                _MessageXML = _RequestInterceptor.LastResponseXML;
-
                 if (_ModelListMessage != null)
                 {
                     if (_ModelListMessage.Result != null)
@@ -34,6 +31,8 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
                             _ErrorList = _ModelListMessage.Result.ErrorList;
                     }
                 }
+                _RequestXML = _RequestInterceptor.LastRequestXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML;
             }
 
             catch (System.Exception ex)

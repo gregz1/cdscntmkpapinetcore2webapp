@@ -13,11 +13,16 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
 
             public ValidateOrderListResponse(ValidateOrderListRequest MyRequest)
             {
-                _Environment = MyRequest._EnvironmentSelected;
-                GetService();
-            _ValidationResultMessage = _MarketplaceAPIService.ValidateOrderListAsync(MyRequest._HeaderMessage, MyRequest._ValidateOrderListMessage);
-                XmlSerializer xmlSerializer = new XmlSerializer(_ValidationResultMessage.Result.GetType());
-
+                try
+                {
+                    _Environment = MyRequest._EnvironmentSelected;
+                    GetService();
+                    _ValidationResultMessage = _MarketplaceAPIService.ValidateOrderListAsync(MyRequest._HeaderMessage, MyRequest._ValidateOrderListMessage);
+                    // XmlSerializer xmlSerializer = new XmlSerializer(_ValidationResultMessage.Result.GetType());
+                }
+                catch(System.Exception ex)                {
+                        
+                }
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;
             }

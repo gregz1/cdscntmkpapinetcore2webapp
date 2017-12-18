@@ -3,6 +3,7 @@ using cdscntmkpapinetcore2webapp.Models;
 using cdscntmkpapinetcore2webapp.Models.AccountManager;
 using Microsoft.AspNetCore.Http;
 using System;
+using System.Threading.Tasks;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -52,16 +53,17 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         }
         public ActionResult GetSellerInformationRequest()
         {
-            Request MyRequest = new Request();
+            Request MyRequest = new GetSellerInformationRequest();
             GetSessionData(ref MyRequest);
             return View(MyRequest);
         }
         [HttpPost]
-        public ActionResult GetSellerInformationRequest(Request MyRequest)
+        public async Task<ActionResult> GetSellerInformationMessage(GetSellerInformationRequest MyRequest)
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            return View(new GetSellerInformationMessage(MyRequest));
+            GetSellerInformationMessage MyMessage =new GetSellerInformationMessage(MyRequest);
+            return View(await MyMessage.GetMessage());
         }
         public ActionResult GetSellerIndicatorsRequest()
         {
