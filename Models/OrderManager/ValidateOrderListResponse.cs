@@ -8,9 +8,6 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
     public class ValidateOrderListResponse : Message
         {
             public Task<ValidationResultMessage> _ValidationResultMessage { get; set; }
-
-           
-
             public ValidateOrderListResponse(ValidateOrderListRequest MyRequest)
             {
                 try
