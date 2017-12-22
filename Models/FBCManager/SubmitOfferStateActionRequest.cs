@@ -10,7 +10,8 @@ namespace cdscntmkpapinetcore2webapp.Models.FBCManager
         public OfferStateActionRequest _OfferStateActionRequest;
         public SubmitOfferStateActionRequest()
         {
-            _OfferStateActionRequest = new OfferStateActionRequest();                 
+            _OfferStateActionRequest = new OfferStateActionRequest();               
+             
         }
 
     }

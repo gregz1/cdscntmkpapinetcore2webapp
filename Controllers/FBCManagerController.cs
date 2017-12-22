@@ -86,7 +86,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             CreateExternalOrderMessage MyCreateExternalOrderMessage = new CreateExternalOrderMessage();
             return View(await MyCreateExternalOrderMessage.GetMessage(MyRequest));
         }
-        public ActionResult GetFulfilmentActivationReportListRequest()
+         public ActionResult GetFulfilmentActivationReportListRequest()
         {
             Request MyRequest = new GetFulfilmentActivationReportListRequest();
             GetSessionData(ref MyRequest);
@@ -99,6 +99,34 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             SetSessionData(MyRequest);
             GetFulfilmentActivationReportListMessage MyGetFulfilmentActivationReportListMessage = new GetFulfilmentActivationReportListMessage();
             return View(await MyGetFulfilmentActivationReportListMessage.GetMessage(MyRequest));
+        }
+        public ActionResult GetExternalOrderStatusRequest()
+        {
+            Request MyRequest = new GetExternalOrderStatusRequest();
+            GetSessionData(ref MyRequest);
+            return View(MyRequest);
+        }
+        [HttpPost]
+        public async Task<ActionResult> GetExternalOrderStatusMessage(GetExternalOrderStatusRequest MyRequest)
+        {
+            MyRequest.GetHeaderMessage();
+            SetSessionData(MyRequest);
+            GetExternalOrderStatusMessage MyGetExternalOrderStatusMessage = new GetExternalOrderStatusMessage();
+            return View(await MyGetExternalOrderStatusMessage.GetMessage(MyRequest));
+        }
+        public ActionResult GetProductStockListRequest()
+        {
+            Request MyRequest = new GetProductStockListRequest();
+            GetSessionData(ref MyRequest);
+            return View(MyRequest);
+        }
+        [HttpPost]
+        public async Task<ActionResult> GetProductStockListMessage(GetProductStockListRequest MyRequest)
+        {
+            MyRequest.GetHeaderMessage();
+            SetSessionData(MyRequest);
+            GetProductStockListMessage MyGetProductStockListMessage = new GetProductStockListMessage();
+            return View(await MyGetProductStockListMessage.GetMessage(MyRequest));
         }
          public ActionResult GetFulfilmentDeliveryDocumentRequest()
         {
