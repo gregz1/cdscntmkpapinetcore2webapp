@@ -1,21 +1,18 @@
-﻿<fieldset>
+<fieldset>
     @using cdscntmkpapinetcore2webapp.Models
     @using www.cdiscount.com
-    @model cdscntmkpapinetcore2webapp.Models.OrderManager.ValidateOrderListRequest
-
-
-
+    @model cdscntmkpapinetcore2webapp.Models.FBCManager.CreateExternalOrderRequest
 
     @{
-        ViewData["Title"] = "Index";
+        ViewData["Title"] = "CreateExternalOrder";
     }
 
 
-    @using (Html.BeginForm("ValidateOrderListResponse", "OrderManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("CreateExternalOrderMessage", "FBCManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <br />
         <br />
-        <h2>ValidateOrderList</h2>
+        <h2>CreateExternalOrder</h2>
         <div class="col-xs-3">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -57,11 +54,14 @@
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
-
-                        <br /><label for="Select Filter Criterion">Select a mass update file</label><br />
-                        <div class="file-loading">
-                            <input id="input-b7" name="input-b7[]" multiple type="file" class="file" data-allowed-file-extensions='["csv", "txt"]'>
-                        </div>  
+                        <div class="form-group">
+                            <label for="CustomerOrderNumber"><span class="glyphicon glyphicon-qrcode"></span>CustomerOrderNumber</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.CustomerOrderNumber, new { @id = "CustomerOrderNumber", @class = "form-control", @placeholder = "CustomerOrderNumber" })
+                            <label for="OrderDate"><span class="glyphicon glyphicon-calendar"></span>OrderDate</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.OrderDate, new { @id = "OrderDate", @class = "form-control", @placeholder = "OrderDate" })
+                            <label for="ShippingMode"><span class="glyphicon glyphicon-plane"></span>ShippingMode</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.ShippingMode, new { @id = "ShippingMode", @class = "form-control", @placeholder = "ShippingMode" })
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,143 +72,66 @@
                     <h3 class="panel-title">Parameters</h3>
                 </div>
                 <div class="panel panel-default">
-                            <div class="container">
-    
-  <div id="table" class="table-editable">
-    
-    <table class="table-condensed">
-      <tr>
-        <th>OrderNumber</th>
-        <th>OrderState</th>
-        <th>SellerProductId</th>
-        <th>ProductCondition</th>
-        <th>AcceptationState</th>
-        <th>CarrierName</th>
-        <th>TrackingId</th>
-        <th>TrackingUrl</th>
-        <th></th>
-        <th><span class="table-add glyphicon glyphicon-plus"></span></th>
-      </tr>
-      <tr>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="OrderNumber" name="OrderNumber[]" value="OrderNumber" placeholder="OrderNumber">
-        </td>
-        <td contenteditable="true">
-            <select class="form-control" id="OrderState" value="AcceptedBySeller" name="OrderState[]">
-                <option value="AcceptedBySeller">AcceptedBySeller</option>
-                <option value="RefusedBySeller">RefusedBySeller</option>
-                <option value="Shipped">Shipped</option>
-                <option value="ShipmentRefusedBySeller">ShipmentRefusedBySeller</option>
-            </select>
-        </td>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="SellerProductId" name="SellerProductId[]" value="SellerProductId" placeholder="SellerProductId">
-        </td>
-        <td contenteditable="true">
-            <select class="form-control" id="ProductCondition" value="New" name="ProductCondition[]">
-                <option value="6">New</option>
-                <option value="1">LikeNew</option>
-                <option value="2">VeryGoodState</option>
-                <option value="3">GoodState</option>
-                <option value="4">AverageState</option>
-                <option value="5">Refurbished</option>
-            </select>
-        </td>
-        <td contenteditable="true">
-            <select class="form-control" id="AcceptationState" value="AcceptedBySeller" name="AcceptationState[]">
-                <option value="AcceptedBySeller">AcceptedBySeller</option>
-                <option value="RefusedBySeller">RefusedBySeller</option>
-                <option value="ShippedBySeller">ShippedBySeller</option>
-                <option value="ShipmentRefusedBySeller">ShipmentRefusedBySeller</option>
-                <option value="CancellationRequestPending">CancellationRequestPending</option>
-            </select>
-        </td>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="CarrierName" name="CarrierName[]" value="CarrierName" placeholder="CarrierName">
-        </td>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="TrackingId" name="TrackingId[]" value="TrackingId" placeholder="TrackingId">
-        </td>
-        <td contenteditable="true">
-            <input type="url" class="form-control" id="TrackingUrl" name="TrackingUrl[]" value="http://trackingurl.com" placeholder="TrackingUrl">
-        </td>        
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-      <!-- This is our clonable table line -->
-      <tr class="hide">
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="OrderNumberClo" name="OrderNumber[]" value="OrderNumber" placeholder="OrderNumber">
-        </td>
-        <td contenteditable="true">
-            <select class="form-control" id="OrderStateClo" value="AcceptedBySeller" name="OrderState[]">
-                <option value="1">AcceptedBySeller</option>
-                <option value="2">RefusedBySeller</option>
-                <option value="3">Shipped</option>
-                <option value="5">ShipmentRefusedBySeller</option>
-            </select>
-        </td>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="SellerProductIdClo" name="SellerProductId[]" value="SellerProductId" placeholder="SellerProductId">
-        </td>
-        <td contenteditable="true">
-            <select class="form-control" id="ProductConditionClo" value="New" name="ProductCondition[]">
-                <option value="6">New</option>
-                <option value="1">LikeNew</option>
-                <option value="2">VeryGoodState</option>
-                <option value="3">GoodState</option>
-                <option value="4">AverageState</option>
-                <option value="5">Refurbished</option>
-            </select>
-        </td>
-        <td contenteditable="true">
-            <select class="form-control" id="AcceptationStateClo" value="AcceptedBySeller" name="AcceptationState[]">
-                <option value="1">AcceptedBySeller</option>
-                <option value="2">RefusedBySeller</option>
-                <option value="3">ShippedBySeller</option>
-                <option value="5">ShipmentRefusedBySeller</option>
-                <option value="5">CancellationRequestPending</option>
-            </select>
-        </td>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="CarrierNameClo" name="CarrierName[]" value="CarrierName" placeholder="CarrierName">
-        </td>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="TrackingIdClo" name="TrackingId[]" value="TrackingId" placeholder="TrackingId">
-        </td>
-        <td contenteditable="true">
-            <input type="text" class="form-control" id="TrackingUrlClo" name="TrackingUrl[]" value="http://trackingurl.com" placeholder="TrackingUrl">
-        </td>        
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-    </table>
-  </div>
-</div>
+                    <div class="container">    
+                        <div id="table" class="table-editable">
+                            
+                            <table class="table-condensed">
+                            <tr>
+                                <th>ProductEan</th>
+                                <th>ProductReference</th>
+                                <th>Quantity</th>        
+                                <th></th>
+                                <th><span class="table-add glyphicon glyphicon-plus"></span></th>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true">
+                                    <input type="text" class="form-control" id="ProductEan" name="ProductEan[]" value="ProductEan" placeholder="ProductEan">
+                                </td>        
+                                <td contenteditable="true">
+                                    <input type="text" class="form-control" id="ProductReference" name="ProductReference[]" value="ProductReference" placeholder="ProductReference">
+                                </td>
+                                <td contenteditable="true">
+                                    <input type="number" class="form-control" id="Quantity" name="Quantity[]" value="Quantity" placeholder="Quantity">
+                                </td>
+                                <td>
+                                <span class="table-remove glyphicon glyphicon-remove"></span>
+                                </td>
+                                <td>
+                                <span class="table-up glyphicon glyphicon-arrow-up"></span>
+                                <span class="table-down glyphicon glyphicon-arrow-down"></span>
+                                </td>
+                            </tr>
+                            <!-- This is our clonable table line -->
+                            <tr class="hide">
+                                <td contenteditable="true">
+                                    <input type="text" class="form-control" id="ProductEan" name="ProductEan[]" value="ProductEan" placeholder="ProductEan">
+                                </td>        
+                                <td contenteditable="true">
+                                    <input type="text" class="form-control" id="ProductReference" name="ProductReference[]" value="ProductReference" placeholder="ProductReference">
+                                </td>
+                                <td contenteditable="true">
+                                    <input type="number" class="form-control" id="Quantity" name="Quantity[]" value="Quantity" placeholder="Quantity">
+                                </td>
+                                <td>
+                                <span class="table-remove glyphicon glyphicon-remove"></span>
+                                </td>
+                                <td>
+                                <span class="table-up glyphicon glyphicon-arrow-up"></span>
+                                <span class="table-down glyphicon glyphicon-arrow-down"></span>
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
 
-</div>
-    </div>
+                </div>
             </div>
-            
-          
-           
-
-
-            <div class="form-group">
-                <input type="submit" value="Send" class="btn btn-info" />
-                <input type="reset" value="Reset" class="btn btn-default" />
-            </div>
-            }
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Send" class="btn btn-info" />
+            <input type="reset" value="Reset" class="btn btn-default" />
+        </div>
+    }
 </fieldset>
 
 

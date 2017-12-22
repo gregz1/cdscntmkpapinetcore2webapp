@@ -31,6 +31,7 @@ namespace cdscntmkpapinetcore2webapp.Models
         protected EnvironmentEnum _Environment;
         string _EndPointAddress;
         protected ServiceBaseAPIMessage ApiMessage;
+        public HeaderMessage _HeaderMessage;
         
 
         public Message()
@@ -54,7 +55,6 @@ namespace cdscntmkpapinetcore2webapp.Models
 
             _MarketplaceAPIService = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, _EndPointAddress);
             _MarketplaceAPIService.Endpoint.EndpointBehaviors.Add(_RequestInterceptor);
-
 
         }
 

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration">
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" name="OfferPackage" type="clr:OfferPackage" />
+<x:complexType name="OfferPackage">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0″ maxOccurs="1″ name="OfferPackage.OfferPublicationList" type="clr:OfferPackage.OfferPublicationList" />
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="1″ maxOccurs="1″ name="OfferPackage.Offers" type="clr:OfferPackage.Offers" />
+</x:sequence>
+<x:attribute use="required" name="Name" type="x:string" />
+<x:attribute use="required" name="PurgeAndReplace" type="x:boolean" />
+<x:attribute xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" use="optional" name="PackageType" type="clr:OfferPackageType" />
+</x:complexType>
+<x:complexType name="OfferPackage.OfferPublicationList">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0″ maxOccurs="1″ name="OfferPublicationList" type="clr:OfferPublicationList" />
+</x:sequence>
+<x:attribute type="x:int" name="Capacity" use="optional"/>
+</x:complexType>
+<x:complexType name="OfferPackage.Offers">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="1″ maxOccurs="1″ name="OfferCollection" nillable="true" type="clr:OfferCollection"/>
+</x:sequence>
+</x:complexType>
+<x:complexType name="OfferCollection">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="1" maxOccurs="unbounded" name="Offer" nillable="true" type="clr:Offer" />
+</x:sequence>
+<x:attribute type="x:int" name="Capacity" use="optional"/>
+</x:complexType>
+<x:complexType name="Offer">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0″ maxOccurs="1″ name="Offer.PriceAndDiscountList" type="clr:Offer.PriceAndDiscountList"/>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0″ maxOccurs="1″ name="Offer.ShippingInformationList" type="clr:Offer.ShippingInformationList"/>
+</x:sequence>
+<x:attribute name="ProductPackagingUnit" xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" type="clr:ProductPackagingUnit" />
+<x:attribute name="ProductPackagingValue" type="x:decimal" />
+<x:attribute name="IsCDAV" type="x:boolean" />
+<x:attribute name="PreparationTime" use="required" type="x:byte" />
+<x:attribute name="PriceMustBeAligned" xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" type="clr:PriceAlignmentAction" />
+<x:attribute name="MinimumPriceForPriceAlignment" type="x:decimal" />
+<x:attribute name="SellerProductId" use="required" type="x:string" />
+<x:attribute name="ProductEan" type="x:string" />
+<x:attribute name="Stock" use="required" type="x:int" />
+<x:attribute name="Price" use="required" type="x:decimal" />
+<x:attribute name="Vat" use="required" type="x:decimal" />
+<x:attribute name="EcoPart" use="required" type="x:decimal" />
+<x:attribute name="ProductCondition" use="required" type="x:unsignedByte" />
+<x:attribute name="Comment" use="required" type="x:string" />
+<x:attribute name="StrikedPrice" type="x:decimal" />
+<x:attribute name="DeaTax" use="required" type="x:decimal" />
+<x:attribute name="BluffDeliveryMax" type="x:int" />
+</x:complexType>
+<x:complexType name="Offer.ShippingInformationList">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0″ maxOccurs="1″ name="ShippingInformationList" type="clr:ArrayOfShippingInformation"/>
+</x:sequence>
+</x:complexType>
+<x:complexType name="Offer.PriceAndDiscountList">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0″ maxOccurs="1″ name="DiscountComponentList" nillable="true" type="clr:DiscountComponentList" />
+</x:sequence>
+</x:complexType>
+<x:complexType name="DiscountComponentList">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0" maxOccurs="unbounded" name="DiscountComponent" nillable="true" type="clr:DiscountComponent" />
+</x:sequence>
+<x:attribute type="x:int" name="Capacity" use="optional"/>
+</x:complexType>
+<x:complexType name="DiscountComponent">
+<x:attribute use="required" name="DiscountValue" type="x:decimal" />
+<x:attribute use="required" name="DiscountUnit" type="x:int" />
+<x:attribute use="required" name="StartDate" type="x:dateTime" />
+<x:attribute use="required" name="EndDate" type="x:dateTime" />
+<x:attribute use="required" name="Type" type="x:int" />
+<x:attribute use="required" name="SalesReferencePrice" type="x:decimal" />
+</x:complexType>
+<x:simpleType name="PriceAlignmentAction">
+<x:restriction base="x:string">
+<x:enumeration value="Align" />
+<x:enumeration value="DontAlign" />
+</x:restriction>
+</x:simpleType>
+<x:complexType name="ArrayOfShippingInformation">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0" maxOccurs="unbounded" name="ShippingInformation" nillable="true" type="clr:ShippingInformation" />
+</x:sequence>
+<x:attribute type="x:int" name="Capacity" use="optional"/>
+</x:complexType>
+<x:complexType name="ShippingInformation">
+<x:attribute use="required" name="ShippingCharges" type="x:decimal" />
+<x:attribute use="required" name="AdditionalShippingCharges" type="x:decimal" />
+<x:attribute xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" use="required" name="DeliveryMode" type="clr:ExternalDeliveryMode" />
+</x:complexType>
+<x:simpleType name="ExternalDeliveryMode">
+<x:restriction base="x:string">
+<x:enumeration value="Standard"/>
+<x:enumeration value="Tracked"/>
+<x:enumeration value="Registered"/>
+<x:enumeration value="Relay"/>
+<x:enumeration value="MondialRelay"/>
+<x:enumeration value="RelaisColis"/>
+<x:enumeration value="SoColissimo"/>
+<x:enumeration value="BigParcelEco"/>
+<x:enumeration value="BigParcelStandard"/>
+<x:enumeration value="BigParcelComfort"/>
+<x:enumeration value="Express"/>
+<x:enumeration value="Fast"/>
+</x:restriction>
+</x:simpleType>
+<x:simpleType name="ProductPackagingUnit">
+<x:restriction base="x:string">
+<x:enumeration value="Empty" />
+<x:enumeration value="Unknown" />
+<x:enumeration value="Liter" />
+<x:enumeration value="Kilogram" />
+<x:enumeration value="SquareMeter" />
+<x:enumeration value="CubicMeter" />
+</x:restriction>
+</x:simpleType>
+<x:simpleType name="OfferPackageType">
+<x:restriction base="x:string">
+<x:enumeration value="Full" />
+<x:enumeration value="StockAndPrice" />
+</x:restriction>
+</x:simpleType>
+<x:complexType name="OfferPublicationList">
+<x:sequence>
+<x:element xmlns:clr="clr-namespace:Cdiscount.Service.OfferIntegration.Pivot;assembly=Cdiscount.Service.OfferIntegration" minOccurs="0" maxOccurs="unbounded" name="PublicationPool" nillable="true" type="clr:PublicationPool" />
+</x:sequence>
+</x:complexType>
+<x:complexType name="PublicationPool">
+<x:attribute use="required" name="Id" type="x:int"/>
+</x:complexType>
+</x:schema>

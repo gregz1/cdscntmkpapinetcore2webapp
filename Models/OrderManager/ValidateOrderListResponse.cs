@@ -7,21 +7,24 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
 {
     public class ValidateOrderListResponse : Message
         {
-            public Task<ValidationResultMessage> _ValidationResultMessage { get; set; }
-            public ValidateOrderListResponse(ValidateOrderListRequest MyRequest)
+            public ValidationResultMessage _ValidationResultMessage { get; set; }
+            
+            public ValidateOrderListResponse()
+            {              
+            }
+
+             public async Task<ValidateOrderListResponse> GetMessage(ValidateOrderListRequest MyRequest)
             {
-                try
-                {
-                    _Environment = MyRequest._EnvironmentSelected;
-                    GetService();
-                    _ValidationResultMessage = _MarketplaceAPIService.ValidateOrderListAsync(MyRequest._HeaderMessage, MyRequest._ValidateOrderListMessage);
-                    // XmlSerializer xmlSerializer = new XmlSerializer(_ValidationResultMessage.Result.GetType());
-                }
-                catch(System.Exception ex)                {
-                        
-                }
+                _Environment = MyRequest._EnvironmentSelected;
+                _HeaderMessage=MyRequest._HeaderMessage;
+                GetService();     
+
+                _ValidationResultMessage = await _MarketplaceAPIService.ValidateOrderListAsync(MyRequest._HeaderMessage, MyRequest._ValidateOrderListMessage);
+
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;
+
+                return this;
             }
         }
     }

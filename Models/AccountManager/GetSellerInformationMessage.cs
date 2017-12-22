@@ -11,8 +11,7 @@ namespace cdscntmkpapinetcore2webapp.Models.AccountManager
     public class GetSellerInformationMessage :Message
     {
             public SellerMessage _SellerMessage { get; set; }
-            public HeaderMessage _HeaderMessage;
-
+            
             public GetSellerInformationMessage(Request MyRequest)
             {
 

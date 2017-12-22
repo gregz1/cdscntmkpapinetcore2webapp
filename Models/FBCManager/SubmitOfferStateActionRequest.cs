@@ -5,7 +5,13 @@ using System.Xml.Serialization;
 
 namespace cdscntmkpapinetcore2webapp.Models.FBCManager
 {
-    public class SubmitOfferStateActionRequest
+    public class SubmitOfferStateActionRequest:Request
     {
+        public OfferStateActionRequest _OfferStateActionRequest;
+        public SubmitOfferStateActionRequest()
+        {
+            _OfferStateActionRequest = new OfferStateActionRequest();                 
+        }
+
     }
 }

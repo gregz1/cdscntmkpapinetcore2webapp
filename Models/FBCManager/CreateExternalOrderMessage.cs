@@ -2,53 +2,40 @@
 using www.cdiscount.com;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using Cdiscount.Service.Marketplace.API.External.Contract.Data;
 
-namespace cdscntmkpapinetcore2webapp.Models.OrderManager
+namespace cdscntmkpapinetcore2webapp.Models.FBCManager
 {
     public class CreateExternalOrderMessage : Message
     {
-        public Task<OrderListMessage> _OrderListMessage { get; set; }
+        public OrderIntegrationMessage _OrderIntegrationMessage { get; set; }
 
-        public CreateExternalOrderMessage(CreateExternalOrderRequest MyRequest)
+        public CreateExternalOrderMessage() 
+        {}
+        
+        public async Task<CreateExternalOrderMessage> GetMessage(CreateExternalOrderRequest MyRequest)
         {
             try
             {
-
                 _Environment = MyRequest._EnvironmentSelected;
+                _HeaderMessage =MyRequest._HeaderMessage;
+
                 GetService();
-                if (MyRequest._OrderFilter.OrderReferenceList.Length == 1 && MyRequest._OrderFilter.OrderReferenceList[0] == null)
-                    MyRequest._OrderFilter.OrderReferenceList = null;
-                _OrderListMessage = _MarketplaceAPIService.
-                    GetOrderListAsync(MyRequest._HeaderMessage, MyRequest._OrderFilter);
-                if (_OrderListMessage.Result != null)
-                    _xmlSerializer = new XmlSerializer(_OrderListMessage.Result.GetType());
-
+                _OrderIntegrationMessage= await _MarketplaceAPIService.CreateExternalOrderAsync(MyRequest._HeaderMessage, MyRequest._MyOrderIntegrationRequest);
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;
-            }
-            catch (System.AggregateException aggex)
-            {
-                if (_OrderListMessage.Exception.InnerException != null)
-                    _InnerErrorMessage = _OrderListMessage.Exception.InnerException.Message;
-                _OperationSuccess = false;
-                _ErrorMessage = aggex.Message;
-                _ErrorType = aggex.HelpLink;
-                _RequestXML = _RequestInterceptor.LastRequestXML;
-                _MessageXML = _RequestInterceptor.LastResponseXML;
-
-            }
+            }           
             catch (System.Exception ex)
             {
-
-                if (_OrderListMessage.Exception.InnerException != null)
-                    _InnerErrorMessage = _OrderListMessage.Exception.InnerException.Message;
+                if (_OrderIntegrationMessage.ErrorMessage != null)
+                    _InnerErrorMessage = _OrderIntegrationMessage.ErrorMessage;
                 _OperationSuccess = false;
                 _ErrorMessage = ex.Message;
                 _ErrorType = ex.HelpLink;
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;
             }
-
+            return this;
         }
 
      

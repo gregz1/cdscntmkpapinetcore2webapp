@@ -5,7 +5,13 @@ using System.Xml.Serialization;
 
 namespace cdscntmkpapinetcore2webapp.Models.FBCManager
 {
-    public class SubmitFulfilmentSupplyOrderRequest
+    public class SubmitFulfilmentSupplyOrderRequest:Request
     {
+        public FulfilmentSupplyOrderRequest _FulfilmentSupplyOrderRequest;
+
+        public SubmitFulfilmentSupplyOrderRequest()
+        {
+            _FulfilmentSupplyOrderRequest = new FulfilmentSupplyOrderRequest();
+        }
     }
 }

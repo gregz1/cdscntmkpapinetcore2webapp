@@ -94,11 +94,20 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FBC manager<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("CreateExternalOrder", "GetSellerInformationRequest", "AccountManager")</li>
-                            <li>@Html.ActionLink("GetExternalOrderStatus", "GetSellerIndicatorsRequest", "AccountManager")</li>
-                            <li>@Html.ActionLink("GetProductStockList", "GetGlobalConfigurationRequest", "AccountManager")</li>
-                            <!--<li>@Html.ActionLink("GetParcelShopList", "GetParcelShopListRequest", "AccountManager")</li>
-                            <li>@Html.ActionLink("SubmitRelaysFile", "SubmitRelaysFileRequest", "AccountManager")</li>
+                            <li>@Html.ActionLink("CreateExternalOrder", "CreateExternalOrderRequest", "FBCManager")</li>
+                            <li>@Html.ActionLink("GetExternalOrderStatus", "GetSellerIndicatorsRequest", "FBCManager")</li>
+                            <li>@Html.ActionLink("GetProductStockList", "GetGlobalConfigurationRequest", "FBCManager")</li>
+                            <li>@Html.ActionLink("GetFulfilmentActivationReportList", "GetFulfilmentActivationReportListRequest", "FBCManager")</li>
+                            <li>@Html.ActionLink("GetFulfilmentDeliveryDocument", "GetFulfilmentDeliveryDocumentRequest", "FBCManager")</li>
+                            <li>@Html.ActionLink("GetFulfilmentOrderListToSupply", "GetFulfilmentOrderListToSupplyRequest", "FBCManager")</li>                            
+                            <li>@Html.ActionLink("GetFulfilmentSupplyOrder", "GetFulfilmentSupplyOrderRequest", "FBCManager")</li>                            
+                            <li>@Html.ActionLink("GetFulfilmentSupplyOrderReportList", "GetFulfilmentSupplyOrderReportListRequest", "FBCManager")</li>                                                        
+                            <li>@Html.ActionLink("SubmitFulfilmentActivation", "SubmitFulfilmentActivationRequest", "FBCManager")</li>                                                                                    
+                            <li>@Html.ActionLink("SubmitFulfilmentOnDemandSupplyOrder", "SubmitFulfilmentOnDemandSupplyOrderRequest", "FBCManager")</li>                                                                                    
+                            <li>@Html.ActionLink("SubmitFulfilmentSupplyOrder", "SubmitFulfilmentSupplyOrderRequest", "FBCManager")</li>                                                                                    
+                            <li>@Html.ActionLink("SubmitOfferStateAction", "SubmitOfferStateActionRequest", "FBCManager")</li>                                                                                    
+                            
+                            <!--<li>@Html.ActionLink("SubmitRelaysFile", "SubmitRelaysFileRequest", "AccountManager")</li>
                             <li>@Html.ActionLink("GetRelaysFileSubmissionResult", "GetRelaysFileSubmissionResultRequest", "AccountManager")</li>-->
                         </ul>
                     </li>

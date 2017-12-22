@@ -2,12 +2,15 @@
 using www.cdiscount.com;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using System.Web;
 
 namespace cdscntmkpapinetcore2webapp.Models.OrderManager
 {
     public class ValidateOrderListRequest :Request
     {
         public ValidateOrderListMessage _ValidateOrderListMessage { get; set; }
+        public string  _MassUpdateFilePath { get; set; }
+        //public HttpPostedFileBase File { get; set; }
         public ValidateOrderListRequest()
         {
             _ValidateOrderListMessage = new ValidateOrderListMessage();
