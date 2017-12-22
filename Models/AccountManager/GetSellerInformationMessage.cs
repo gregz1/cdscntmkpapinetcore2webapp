@@ -12,18 +12,14 @@ namespace cdscntmkpapinetcore2webapp.Models.AccountManager
     {
             public SellerMessage _SellerMessage { get; set; }
             
-            public GetSellerInformationMessage(Request MyRequest)
+            public GetSellerInformationMessage()
+            {}
+            public async Task<GetSellerInformationMessage> GetMessage(GetSellerInformationRequest MyRequest)
             {
-
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage = MyRequest._HeaderMessage;
-                GetService();
-              
-
-            }
-            public async Task<GetSellerInformationMessage> GetMessage()
-            {
-                 _SellerMessage = await _MarketplaceAPIService.GetSellerInformationAsync(_HeaderMessage);
+                GetService(MyRequest);
+                _SellerMessage = await _MarketplaceAPIService.GetSellerInformationAsync(_HeaderMessage);
                 //  XmlSerializer xmlSerializer = new XmlSerializer(_AllCategoryTreeMessage.Result.GetType());
 
                 _RequestXML = _RequestInterceptor.LastRequestXML;

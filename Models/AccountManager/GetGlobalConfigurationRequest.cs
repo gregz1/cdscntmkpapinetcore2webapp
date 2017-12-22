@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace cdscntmkpapinetcore2webapp.Models.AccountManager
 {
-    public class GetGlobalConfigurationRequest
+    public class GetGlobalConfigurationRequest:Request
     {
     }
 }

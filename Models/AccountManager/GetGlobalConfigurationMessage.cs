@@ -8,22 +8,25 @@ namespace cdscntmkpapinetcore2webapp.Models.AccountManager
 {
     public class GetGlobalConfigurationMessage: Message
     {
-            public Task<GlobalConfigurationMessage> _GlobalConfigurationMessage { get; set; }
+        public GlobalConfigurationMessage _GlobalConfigurationMessage { get; set; }
+        public GetGlobalConfigurationMessage()           
+        {
+        
+            _RequestXML = _RequestInterceptor.LastRequestXML;
+            _MessageXML = _RequestInterceptor.LastResponseXML;
+        }
+        public async Task<GetGlobalConfigurationMessage> GetMessage(GetGlobalConfigurationRequest MyRequest)
+        {
+            _Environment = MyRequest._EnvironmentSelected;
+            _HeaderMessage = MyRequest._HeaderMessage;
+            GetService(MyRequest);
+                
+            _GlobalConfigurationMessage =await _MarketplaceAPIService.GetGlobalConfigurationAsync(MyRequest._HeaderMessage);
+            _RequestXML = _RequestInterceptor.LastRequestXML;
+            _MessageXML = _RequestInterceptor.LastResponseXML;
 
-
-            public GetGlobalConfigurationMessage(Request MyRequest)
-            {
-
-                _Environment = MyRequest._EnvironmentSelected;
-                GetService();
-                _GlobalConfigurationMessage = _MarketplaceAPIService.GetGlobalConfigurationAsync(MyRequest._HeaderMessage);
-                //  XmlSerializer xmlSerializer = new XmlSerializer(_AllCategoryTreeMessage.Result.GetType());
-
-                _RequestXML = _RequestInterceptor.LastRequestXML;
-                _MessageXML = _RequestInterceptor.LastResponseXML;
-
-            }
-
+            return this;
+        }
         
     }
 }

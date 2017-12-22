@@ -62,21 +62,36 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            GetSellerInformationMessage MyMessage =new GetSellerInformationMessage(MyRequest);
-            return View(await MyMessage.GetMessage());
+            GetSellerInformationMessage MyMessage =new GetSellerInformationMessage();
+            return View(await MyMessage.GetMessage(MyRequest));
         }
         public ActionResult GetSellerIndicatorsRequest()
         {
-            Request MyRequest = new Request();
+            Request MyRequest = new GetSellerIndicatorsRequest();
             GetSessionData(ref MyRequest);
             return View(MyRequest);
         }
         [HttpPost]
-        public ActionResult GetSellerIndicatorsMessage(Request MyRequest)
+        public async Task<ActionResult> GetSellerIndicatorsMessage(GetSellerIndicatorsRequest MyRequest)
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            return View(new GetSellerIndicatorsMessage(MyRequest));
+            GetSellerIndicatorsMessage MyMessage =new GetSellerIndicatorsMessage();
+            return View(await MyMessage.GetMessage(MyRequest));
+        }       
+        public ActionResult GetGlobalConfigurationRequest()
+        {
+            Request MyRequest = new GetGlobalConfigurationRequest();
+            GetSessionData(ref MyRequest);
+            return View(MyRequest);
+        }
+        [HttpPost]
+        public async Task<ActionResult> GetGlobalConfigurationMessage(GetGlobalConfigurationRequest MyRequest)
+        {
+            MyRequest.GetHeaderMessage();
+            SetSessionData(MyRequest);
+            GetGlobalConfigurationMessage MyMessage =new  GetGlobalConfigurationMessage();
+            return View(await MyMessage.GetMessage(MyRequest));            
         }       
 
     }

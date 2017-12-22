@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace cdscntmkpapinetcore2webapp.Models.AccountManager
 {
-    public class GetParcelShopListRequest
+    public class GetParcelShopListRequest:Request
     {
     }
 }
