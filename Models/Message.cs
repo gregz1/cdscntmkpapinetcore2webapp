@@ -46,8 +46,8 @@ namespace cdscntmkpapinetcore2webapp.Models
         {
             if (_Environment == EnvironmentEnum.Production)
                 _EndPointAddress = "https://wsvc.cdiscount.com/MarketplaceAPIService.svc";
-            else if (_Environment == EnvironmentEnum.Local)
-                _EndPointAddress = "http://localhost:8030/MarketplaceAPIService.svc";
+            /*else if (_Environment == EnvironmentEnum.Local)
+                _EndPointAddress = "http://localhost:8030/MarketplaceAPIService.svc";*/
             else if (_Environment == EnvironmentEnum.Preproduction)
                 _EndPointAddress = "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
             else if (_Environment == EnvironmentEnum.Recette)
