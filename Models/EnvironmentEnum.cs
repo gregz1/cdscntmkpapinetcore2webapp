@@ -4,7 +4,7 @@ namespace cdscntmkpapinetcore2webapp.Models
     {
         Production,
         Preproduction,
-        Local,
+//        Local,
         Recette,
         /*Dev,
         Sandbox,

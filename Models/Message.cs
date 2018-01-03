@@ -67,15 +67,13 @@ namespace cdscntmkpapinetcore2webapp.Models
                     _MarketplaceAPIService = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, _EndPointAddress);
                     _MarketplaceAPIService.Endpoint.EndpointBehaviors.Add(_RequestInterceptor);  
                 }
-            else if (_Environment == EnvironmentEnum.Local)
-                {
+            else{
+                if (_Environment == EnvironmentEnum.Recette)
                     _EndPointAddress = "http://localhost:8030/MarketplaceAPIService.svc";
-                    _MarketplaceAPIService = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, _EndPointAddress);
-                    _MarketplaceAPIService.Endpoint.EndpointBehaviors.Add(_RequestInterceptor);  
-                }
-            else
-                {
+                    
+                else if (_Environment == EnvironmentEnum.Preproduction)
                     _EndPointAddress = "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
+                    
                     _MarketplaceAPIService = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, _EndPointAddress);
                     var b = _MarketplaceAPIService.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
 
@@ -84,7 +82,6 @@ namespace cdscntmkpapinetcore2webapp.Models
                     b.OpenTimeout = TimeSpan.FromMinutes(10);
                     b.CloseTimeout = TimeSpan.FromMinutes(10);
                     string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
-                     Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT","Development");
                     System.Uri proxyUri = new System.Uri(proxyUrl);
                     string cleanProxyURL = proxyUri.Scheme + "://" + proxyUri.Host+":"+proxyUri.Port;
                     string user = proxyUri.UserInfo.Split(':')[0];
@@ -101,6 +98,7 @@ namespace cdscntmkpapinetcore2webapp.Models
                     b.UseDefaultWebProxy = true;
             
                     _MarketplaceAPIService.Endpoint.EndpointBehaviors.Add(_RequestInterceptor);      
+                    
                 }      
 
         }
