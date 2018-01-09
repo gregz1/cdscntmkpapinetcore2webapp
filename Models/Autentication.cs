@@ -100,7 +100,8 @@ namespace cdscntmkpapinetcore2webapp.Models
                 },
                 Security = new SecurityContext
                 {
-                    TokenId = _Token
+                    TokenId = _Token,
+                    UserName= "CdscntMkpWebapp"
                 },
                 Version = "1.0"
             };
