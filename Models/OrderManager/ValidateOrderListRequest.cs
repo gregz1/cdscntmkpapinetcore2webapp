@@ -20,7 +20,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
         {
             _ValidateOrderListMessage = new ValidateOrderListMessage();
             int i = 0;
-            foreach(Order MyOrder in MyGetOrderListMessage._OrderListMessage.Result.OrderList)
+            foreach(Order MyOrder in MyGetOrderListMessage._OrderListMessage.OrderList)
             {
                 ValidateOrder MyValidateOrder = new ValidateOrder();
                 MyValidateOrder.CarrierName = "CarrierName";

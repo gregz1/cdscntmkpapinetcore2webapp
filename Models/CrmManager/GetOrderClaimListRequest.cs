@@ -6,7 +6,7 @@ namespace cdscntmkpapinetcore2webapp.Models.CrmManager
 
     public class GetOrderClaimListRequest:Request
     {
-        public OrderClaimFilter _OrderClaimFilter;
+        public OrderClaimFilter _OrderClaimFilter { get; set; }
         public GetOrderClaimListRequest()
         {
             _OrderClaimFilter = new OrderClaimFilter();

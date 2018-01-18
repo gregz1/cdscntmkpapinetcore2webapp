@@ -260,12 +260,12 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         [HttpPost]
         public async Task<ActionResult> SubmitFulfilmentSupplyOrderMessage(SubmitFulfilmentSupplyOrderRequest MyRequest)
         {
-            string[] ExternalSupplyOrderIdList = Request.Form["ExternalSupplyOrderIdList[]"].ToArray();
-            string[] ProductEanList = Request.Form["ProductEanList[]"].ToArray();
-            string[] QuantityList = Request.Form["QuantityList[]"].ToArray();
-            string[] SellerProductReferenceList = Request.Form["SellerProductReferenceList[]"].ToArray();
-            string[] WarehouseList = Request.Form["WarehouseList[]"].ToArray();
-            string[] WarehouseReceptionMinDateList = Request.Form["WarehouseReceptionMinDateList[]"].ToArray();
+            string[] ExternalSupplyOrderIdList = Request.Form["ExternalSupplyOrderId[]"].ToArray();
+            string[] ProductEanList = Request.Form["ProductEan[]"].ToArray();
+            string[] QuantityList = Request.Form["Quantity[]"].ToArray();
+            string[] SellerProductReferenceList = Request.Form["SellerProductReference[]"].ToArray();
+            string[] WarehouseList = Request.Form["Warehouse[]"].ToArray();
+            string[] WarehouseReceptionMinDateList = Request.Form["WarehouseReceptionMinDate[]"].ToArray();
 
             MyRequest._FulfilmentSupplyOrderRequest.ProductList = new FulfilmentProductDescription[ProductEanList.Length];
             for(int i = 0 ;i< ProductEanList.Length;i++)

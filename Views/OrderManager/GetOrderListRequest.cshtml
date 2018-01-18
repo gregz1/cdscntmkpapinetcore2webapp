@@ -2,11 +2,9 @@
 @using www.cdiscount.com
 @model cdscntmkpapinetcore2webapp.Models.OrderManager.GetOrderListRequest
 
-
 @{
     ViewData["Title"] = "Index";
 }
-
 
 @using (Html.BeginForm("GetOrderListMessage", "OrderManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -63,13 +61,13 @@
                     <br /><label for="Select Filter Criterion">Select OrderState</label><br />
                     @Html.DropDownListFor(m => m._OrderFilter.States, new MultiSelectList(Enum.GetValues(typeof(OrderStateEnum))), "Select Filter Criterion")<br />
                     <br /><label for="Set BeginCreationDate"><span class="glyphicon glyphicon-calendar"></span>Set BeginCreationDate</label>
-                    @Html.TextBoxFor(m => m._OrderFilter.BeginCreationDate, new { @id = "beginCreationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                    <br />@Html.EditorFor(m => m._OrderFilter.BeginCreationDate, new { @id = "beginCreationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                     <br /><label for="Set BeginModificationDate"><span class="glyphicon glyphicon-calendar"></span>Set BeginModificationDate</label>
-                    @Html.TextBoxFor(m => m._OrderFilter.BeginModificationDate, new { @id = "beginModificationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
-                    <br /><label for="Set EndCreationDate"><span class="glyphicon glyphicon-calendar"></span>Set EndCreationDate</label>
-                    @Html.TextBoxFor(m => m._OrderFilter.EndCreationDate, new { @id = "endCreationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                    <br />@Html.EditorFor(m => m._OrderFilter.BeginModificationDate, new { @id = "beginModificationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                   <br /><label for="Set EndCreationDate"><span class="glyphicon glyphicon-calendar"></span>Set EndCreationDate</label>
+                    <br />@Html.EditorFor(m => m._OrderFilter.EndCreationDate, new { @id = "endCreationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                     <br /><label for="Set EndModificationDate"><span class="glyphicon glyphicon-calendar"></span>Set EndModificationDate</label>
-                    @Html.TextBoxFor(m => m._OrderFilter.EndModificationDate, new { @id = "endModificationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                    <br />@Html.EditorFor(m => m._OrderFilter.EndModificationDate, new { @id = "endModificationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                     <br /><label for="Select Corporation Code"><span class="glyphicon glyphicon-copyright-mark"></span>Select Corporation Code</label>
                     @Html.TextBoxFor(m => m._OrderFilter.CorporationCode, new { @id = "CorporationCode", @class = "form-control", @placeholder = "parameter" })<br />
                     <br /><label for="Fetch Order Lines"><span class="glyphicon glyphicon-zoom-in"></span>Fetch Order Lines</label>

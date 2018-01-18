@@ -7,25 +7,46 @@ namespace cdscntmkpapinetcore2webapp.Models.CrmManager
 {
     public class GetOrderClaimListMessage:Message
     {
-        Task<OrderClaimListMessage> _OrderClaimListMessage;
-        OrderClaimListMessage _OrderClaimListMessage2;
+        OrderClaimListMessage _OrderClaimListMessage;
         public GetOrderClaimListMessage(GetOrderClaimListRequest MyRequest)
         {
-            _Environment = MyRequest._EnvironmentSelected;
-            GetService();
             //      MyRequest._OrderClaimFilter.OrderNumberList[0] = "17021521164NH3V";
-            //_OrderClaimListMessage = _MarketplaceAPIService.GetOrderClaimListAsync(MyRequest._HeaderMessage, MyRequest._OrderClaimFilter) ;
-            _OrderClaimListMessage = GetOrderClaimListMessageAsync(MyRequest);
-            XmlSerializer xmlSerializer = new XmlSerializer(_OrderClaimListMessage.GetType());
-
-            _RequestXML = _RequestInterceptor.LastRequestXML;
-            _MessageXML = _RequestInterceptor.LastResponseXML;
+            //_OrderClaimListMessage = _MarketplaceAPIService.GetOrderClaimListAsync(MyRequest._HeaderMessage, MyRequest._OrderClaimFilter) ;            
         }
-        public async Task<OrderClaimListMessage> GetOrderClaimListMessageAsync(GetOrderClaimListRequest MyRequest)
+        public async Task<GetOrderClaimListMessage> GetMessage(GetOrderClaimListRequest MyRequest)
         {
-            _OrderClaimListMessage2 = await _MarketplaceAPIService.GetOrderClaimListAsync(MyRequest._HeaderMessage, MyRequest._OrderClaimFilter);
-            System.Threading.Thread.Sleep(3000);
-            return _OrderClaimListMessage2;
+            try{
+                _Environment = MyRequest._EnvironmentSelected;
+                GetService(MyRequest);          
+                if (MyRequest._OrderClaimFilter.OrderNumberList.Length == 1 && MyRequest._OrderClaimFilter.OrderNumberList[0] == null)
+                        MyRequest._OrderClaimFilter.OrderNumberList = null;  
+                _OrderClaimListMessage = await _MarketplaceAPIService.GetOrderClaimListAsync(MyRequest._HeaderMessage, MyRequest._OrderClaimFilter);
+                XmlSerializer xmlSerializer = new XmlSerializer(_OrderClaimListMessage.GetType());
+
+                _RequestXML = _RequestInterceptor.LastRequestXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML;
+            }
+            catch (System.AggregateException aggex)
+            {
+                if (_OrderClaimListMessage.ErrorMessage != null)
+                    _InnerErrorMessage = _OrderClaimListMessage.ErrorMessage;
+                _OperationSuccess = false;
+                _ErrorMessage = aggex.Message;
+                _ErrorType = aggex.HelpLink;
+                _RequestXML = _RequestInterceptor.LastRequestXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML;
+            }
+            catch (System.Exception ex)
+            {
+       /*       if (_OrderListMessage.Exception.InnerException != null)
+                   _InnerErrorMessage = _OrderListMessage.Exception.InnerException.Message;*/
+                _OperationSuccess = false;
+                _ErrorMessage = ex.Message;
+                _ErrorType = ex.HelpLink;
+                _RequestXML = _RequestInterceptor.LastRequestXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML;
+            }
+            return this;
         }
     }
 }

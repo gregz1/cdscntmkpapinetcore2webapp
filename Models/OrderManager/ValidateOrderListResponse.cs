@@ -17,7 +17,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
             {
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage=MyRequest._HeaderMessage;
-                GetService();     
+                GetService(MyRequest);     
 
                 _ValidationResultMessage = await _MarketplaceAPIService.ValidateOrderListAsync(MyRequest._HeaderMessage, MyRequest._ValidateOrderListMessage);
 

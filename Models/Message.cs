@@ -66,6 +66,12 @@ namespace cdscntmkpapinetcore2webapp.Models
                     _EndPointAddress = "https://wsvc.cdiscount.com/MarketplaceAPIService.svc";
                     _MarketplaceAPIService = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, _EndPointAddress);
                     _MarketplaceAPIService.Endpoint.EndpointBehaviors.Add(_RequestInterceptor);  
+                    var b = _MarketplaceAPIService.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
+
+                    b.SendTimeout = TimeSpan.FromMinutes(10);
+                    b.ReceiveTimeout = TimeSpan.FromMinutes(10);
+                    b.OpenTimeout = TimeSpan.FromMinutes(10);
+                    b.CloseTimeout = TimeSpan.FromMinutes(10);
                 }
             else{
                 if (_Environment == EnvironmentEnum.Recette)

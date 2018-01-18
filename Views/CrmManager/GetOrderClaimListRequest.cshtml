@@ -2,18 +2,13 @@
 @using www.cdiscount.com
 @model cdscntmkpapinetcore2webapp.Models.CrmManager.GetOrderClaimListRequest
 
-
 @{
     ViewData["Title"] = "Index";
 }
 
-
 @using (Html.BeginForm("GetOrderClaimListMessage", "CrmManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 
-    <br />
-    <br />
-    <br />
     <br />
     <br />
     <h2>GetOrderClaimList</h2>
@@ -58,17 +53,16 @@
                 <h3 class="panel-title">Parameters</h3>
             </div>
             <div class="panel-body">
-
                 <br /><label for="Select Filter Criterion">Select discussion Status </label><br />
                 @Html.DropDownListFor(m => m._OrderClaimFilter.StatusList, new MultiSelectList(Enum.GetValues(typeof(DiscussionStateFilter))), "Select Filter Criterion")<br />
                 <br /><label for="Set BeginCreationDate"><span class="glyphicon glyphicon-calendar"></span>Set BeginCreationDate</label>
-                @Html.TextBoxFor(m => m._OrderClaimFilter.BeginCreationDate, new { @class = "form-control datepicker", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                @Html.EditorFor(m => m._OrderClaimFilter.BeginCreationDate,new { @id = "beginCreationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                 <br /><label for="Set BeginModificationDate"><span class="glyphicon glyphicon-calendar"></span>Set BeginModificationDate</label>
-                @Html.TextBoxFor(m => m._OrderClaimFilter.BeginModificationDate, new { @class = "form-control datepicker", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                @Html.EditorFor(m => m._OrderClaimFilter.BeginModificationDate,new { @id = "beginModificationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                 <br /><label for="Set EndCreationDate"><span class="glyphicon glyphicon-calendar"></span>Set EndCreationDate</label>
-                @Html.TextBoxFor(m => m._OrderClaimFilter.EndCreationDate, new { @class = "form-control datepicker", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                @Html.EditorFor(m => m._OrderClaimFilter.EndCreationDate, new { @id = "endCreationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                 <br /><label for="Set EndModificationDate"><span class="glyphicon glyphicon-calendar"></span>Set EndModificationDate</label>
-                @Html.TextBoxFor(m => m._OrderClaimFilter.EndModificationDate, new { @class = "form-control datepicker", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
+                @Html.EditorFor(m => m._OrderClaimFilter.EndModificationDate, new { @id = "endModificationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                 <br /><label for="Select Filter Criterion">Select an order</label><br />
                 @Html.TextBoxFor(m => m._OrderClaimFilter.OrderNumberList, new { @id = "OrderNumberList", @class = "form-control form_datetime", placeholder = "Scopusid;ScopusId;ScopusId;..." })<br />
 

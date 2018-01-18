@@ -234,11 +234,12 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             return View(MyRequest);
         }
         [HttpPost]
-        public ActionResult GetOrderListMessage(GetOrderListRequest MyRequest)
+        public async Task<ActionResult> GetOrderListMessage(GetOrderListRequest MyRequest)
         {          
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            return View(new GetOrderListMessage(MyRequest,_hostingEnvironment));
+            GetOrderListMessage MyGetOrderListMessage = new GetOrderListMessage(_hostingEnvironment);
+            return View(await MyGetOrderListMessage.GetMessage(MyRequest,_hostingEnvironment));
         }
         public ActionResult ManageParcelRequest()
         {
@@ -256,7 +257,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            return View(new GetOrderListMessage(MyRequest,_hostingEnvironment));
+            return View(new GetOrderListMessage(_hostingEnvironment));
         }
 
          public ActionResult Download(string SellerLogin)

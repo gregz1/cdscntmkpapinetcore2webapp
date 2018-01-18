@@ -3,6 +3,7 @@ using cdscntmkpapinetcore2webapp.Models;
 using cdscntmkpapinetcore2webapp.Models.CrmManager;
 using Microsoft.AspNetCore.Http;
 using System;
+using System.Threading.Tasks;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -52,16 +53,17 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         
         public ActionResult GetOrderClaimListRequest()
         {
-            Request MyRequest = new GetOrderClaimListRequest();
-            GetSessionData(ref MyRequest);
+            GetOrderClaimListRequest MyRequest = new GetOrderClaimListRequest();
+            //GetSessionData(ref MyRequest);
             return View(MyRequest);
         }
         [HttpPost]
-        public ActionResult GetOrderClaimListMessage(GetOrderClaimListRequest MyRequest)
+        public async Task<ActionResult> GetOrderClaimListMessage(GetOrderClaimListRequest MyRequest)
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            return View(new GetOrderClaimListMessage(MyRequest));
+            GetOrderClaimListMessage MyMessage = new GetOrderClaimListMessage(MyRequest);
+            return View(await MyMessage.GetMessage(MyRequest));
         }
         public ActionResult GetOfferQuestionListRequest()
         {

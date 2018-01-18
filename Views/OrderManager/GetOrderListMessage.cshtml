@@ -63,9 +63,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @if (Model._OrderListMessage.Result != null)
+                            @if (Model._OrderListMessage != null)
                             {
-                                @foreach (Order MyOrder in Model._OrderListMessage.Result.OrderList)
+                                @foreach (Order MyOrder in Model._OrderListMessage.OrderList)
                                 {
                                     <tr>
                                         <td>@MyOrder.OrderNumber</td>
@@ -142,9 +142,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if (Model._OrderListMessage.Result != null)
+                                    @if (Model._OrderListMessage != null)
                                     {
-                                        @foreach (Order MyOrder in Model._OrderListMessage.Result.OrderList)
+                                        @foreach (Order MyOrder in Model._OrderListMessage.OrderList)
                                         {
                                             <tr>
                                                 <td>@MyOrder.OrderNumber</td>
@@ -199,9 +199,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if (Model._OrderListMessage.Result != null)
+                                    @if (Model._OrderListMessage != null)
                                     {
-                                        @foreach (Order MyOrder in Model._OrderListMessage.Result.OrderList)
+                                        @foreach (Order MyOrder in Model._OrderListMessage.OrderList)
                                         {
                                             <tr>
                                                 <td>@MyOrder.OrderNumber</td>
@@ -232,7 +232,7 @@
             </div>
         </div>
     }
-<h4><a href="~/OrderManager/Download/?SellerLogin=@Model._OrderListMessage.Result.SellerLogin">Export your order list</a></h4>
+<h4><a href="~/OrderManager/Download/?SellerLogin=@Model._OrderListMessage.SellerLogin">Export your order list</a></h4>
 
 <script>
 

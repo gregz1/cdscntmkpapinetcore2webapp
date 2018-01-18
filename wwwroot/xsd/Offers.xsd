@@ -45,7 +45,7 @@
 		<x:attribute name="Vat" use="required" type="x:decimal" />
 		<x:attribute name="EcoPart" use="required" type="x:decimal" />
 		<x:attribute name="ProductCondition" use="required" type="x:unsignedByte" />
-		<x:attribute name="Comment" use="required" type="x:string" />
+		<x:attribute name="Comment" use="required" type="x:string" />	
 		<x:attribute name="StrikedPrice" type="x:decimal" />
 		<x:attribute name="DeaTax" use="required" type="x:decimal" />
 		<x:attribute name="BluffDeliveryMax" type="x:int" />

@@ -10,7 +10,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
 
         public PackageFilter _PackageFilter { get; set; }
         OfferPackageRequest _OfferPackageRequest;
-        Task<ProductIntegrationReportMessage> _ProductIntegrationReportMessage;
+        Task<OfferIntegrationReportMessage> _OfferIntegrationReportMessage;
 
         public GetOfferPackageSubmissionResultMessage(Request MyRequest)
         {
@@ -20,8 +20,8 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
             long j;
             if (long.TryParse(MyRequest._Parameters["Values"], out j))
                 _PackageFilter.PackageID = j;
-             _ProductIntegrationReportMessage = _MarketplaceAPIService.GetProductPackageSubmissionResultAsync(MyRequest._HeaderMessage, _PackageFilter);
-            XmlSerializer xmlSerializer = new XmlSerializer(_ProductIntegrationReportMessage.Result.GetType());
+             _OfferIntegrationReportMessage = _MarketplaceAPIService.GetOfferPackageSubmissionResultAsync(MyRequest._HeaderMessage, _PackageFilter);
+            XmlSerializer xmlSerializer = new XmlSerializer(_OfferIntegrationReportMessage.Result.GetType());
 
             _RequestXML = _RequestInterceptor.LastRequestXML;
             _MessageXML = _RequestInterceptor.LastResponseXML;
