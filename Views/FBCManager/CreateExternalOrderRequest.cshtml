@@ -47,29 +47,83 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-5">
+        <div class="col-xs-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Parameters</h3>
+                    <h3 class="panel-title">Order</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <br />
+                        <div class="form-group">
+                            <label for="CustomerOrderNumber"><span class="glyphicon glyphicon-qrcode"></span>CustomerOrderNumber</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.CustomerOrderNumber, new { @id = "CustomerOrderNumber", @class = "form-control", @placeholder = "CustomerOrderNumber" })
+                        </div>
+                        <div class="form-group">
+                            <label for="OrderDate"><span class="glyphicon glyphicon-calendar"></span>OrderDate</label>
+                            <br />
+                            @Html.EditorFor(model => model._MyOrderIntegrationRequest.Order.OrderDate, new { @id = "OrderDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })
+                        </div>
+                        <div class="form-group">
+                            <label for="ShippingMode"><span class="glyphicon glyphicon-plane"></span>ShippingMode</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.ShippingMode, new { @id = "ShippingMode", @class = "form-control", @placeholder = "ShippingMode" })
+                        </div>
+                        <div class="form-group">
+                            <label for="Corporation"><span class="glyphicon glyphicon-plane"></span>Corporation</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Corporation, new { @id = "Corporation", @class = "form-control", @placeholder = "Corporation" })
+                        </div>
+                         <div class="form-group">
+                            <label for="Comments"><span class="glyphicon glyphicon-plane"></span>Comments</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Comments, new { @id = "Comments", @class = "form-control", @placeholder = "Comments" })
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span>Customer</h3>
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
                         <div class="form-group">
-                            <label for="CustomerOrderNumber"><span class="glyphicon glyphicon-qrcode"></span>CustomerOrderNumber</label>
-                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.CustomerOrderNumber, new { @id = "CustomerOrderNumber", @class = "form-control", @placeholder = "CustomerOrderNumber" })
-                            <label for="OrderDate"><span class="glyphicon glyphicon-calendar"></span>OrderDate</label>
-                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.OrderDate, new { @id = "OrderDate", @class = "form-control", @placeholder = "OrderDate" })
-                            <label for="ShippingMode"><span class="glyphicon glyphicon-plane"></span>ShippingMode</label>
-                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.ShippingMode, new { @id = "ShippingMode", @class = "form-control", @placeholder = "ShippingMode" })
+                           <label for="Civility"><span class="glyphicon glyphicon-user"></span>Civility</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.Civility, new { @id = "Civility", @class = "form-control", @placeholder = "Civility" })
+                           <label for="CustomerFirstName"><span class="glyphicon glyphicon-user"></span>CustomerFirstName</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.CustomerFirstName, new { @id = "CustomerFirstName", @class = "form-control", @placeholder = "CustomerFirstName" })
+                            <label for="CustomerLastName"><span class="glyphicon glyphicon-user"></span>CustomerLastName</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.CustomerLastName, new { @id = "CustomerLastName", @class = "form-control", @placeholder = "CustomerLastName" })
+                            <label for="CustomerEmailAddress"><span class="glyphicon glyphicon-envelope"></span>CustomerEmailAddress</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.CustomerEmailAddress, new { @id = "CustomerEmailAddress", @class = "form-control", @placeholder = "CustomerEmailAddress" })
+                            <label for="CellPhoneNumber"><span class="glyphicon glyphicon-phone"></span>CellPhoneNumber</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.CellPhoneNumber, new { @id = "CellPhoneNumber", @class = "form-control", @placeholder = "CellPhoneNumber" })
+                            <label for="LandlinePhoneNumber"><span class="glyphicon glyphicon-earphone"></span>LandlinePhoneNumber</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.LandlinePhoneNumber, new { @id = "LandlinePhoneNumber", @class = "form-control", @placeholder = "LandlinePhoneNumber" })
+                            <label for="Locality"><span class="glyphicon glyphicon-home"></span>Locality</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.Locality, new { @id = "Locality", @class = "form-control", @placeholder = "Locality" })
+                            <label for="ShippingAddress"><span class="glyphicon glyphicon-home"></span>ShippingAddress</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.ShippingAddress, new { @id = "ShippingAddress", @class = "form-control", @placeholder = "ShippingAddress" })
+                            <label for="ShippingAddressTitle"><span class="glyphicon glyphicon-home"></span>ShippingAddressTitle</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.ShippingAddressTitle, new { @id = "ShippingAddressTitle", @class = "form-control", @placeholder = "ShippingAddressTitle" })
+                            <label for="CustomerOrderNumber"><span class="glyphicon glyphicon-home"></span>AdditionalShippingAddress</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.AdditionalShippingAddress, new { @id = "AdditionalShippingAddress", @class = "form-control", @placeholder = "AdditionalShippingAddress" })
+                            <label for="ShippingPostalCode"><span class="glyphicon glyphicon-globe"></span>ShippingPostalCode</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.ShippingPostalCode, new { @id = "ShippingPostalCode", @class = "form-control", @placeholder = "ShippingPostalCode" })
+                            <label for="ShippingCity"><span class="glyphicon glyphicon-globe"></span>ShippingCity</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.ShippingCity, new { @id = "ShippingCity", @class = "form-control", @placeholder = "ShippingCity" })
+                            <label for="ShippingCountry"><span class="glyphicon glyphicon-globe"></span>ShippingCountry</label>
+                            @Html.TextBoxFor(model => model._MyOrderIntegrationRequest.Order.Customer.ShippingCountry, new { @id = "ShippingCountry", @class = "form-control", @placeholder = "ShippingCountry" })
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>   
         <div class="col-xs-12">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Parameters</h3>
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-list-alt"></span> OrderLineList</h3>
                 </div>
                 <div class="panel panel-default">
                     <div class="container">    

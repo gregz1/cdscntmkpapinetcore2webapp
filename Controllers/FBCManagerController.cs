@@ -73,6 +73,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             MyRequest._MyOrderIntegrationRequest.Order.OrderLineList = new ExternalOrderLine[ProductEanList.Length];
             for(int i = 0 ;i< ProductEanList.Length;i++)
             {
+                if(ProductEanList[i] != "ProductEan")
                 MyRequest._MyOrderIntegrationRequest.Order.OrderLineList[i] = new ExternalOrderLine()
                 {
                     ProductEan = ProductEanList[i],
