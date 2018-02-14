@@ -22,7 +22,7 @@ namespace cdscntmkpapinetcore2webapp.Models.FBCManager
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage =MyRequest._HeaderMessage;
 
-                GetService();
+                GetService(MyRequest);
                 _ProductStockListMessage= await _MarketplaceAPIService.GetProductStockListAsync(MyRequest._HeaderMessage, MyRequest._FulfilmentProductRequest);
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;
