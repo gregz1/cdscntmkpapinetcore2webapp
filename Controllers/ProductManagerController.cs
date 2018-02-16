@@ -8,6 +8,13 @@ using System.IO;
 using System.Collections.Generic;
 using System.Xml;
 using System.Threading.Tasks;
+using www.cdiscount.com;
+using System.Linq;
+using System.Text;
+using System.Net;
+using Microsoft.AspNetCore.Hosting;
+
+
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,8 +26,12 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         const string SessionLogin = "_Login";
         const string SessionToken = "_Token";
         const string SessionEnvironment = "_Environment";
+        private readonly IHostingEnvironment _hostingEnvironment;
+        public ProductManagerController(IHostingEnvironment hostingEnvironment)
+        {
+            _hostingEnvironment = hostingEnvironment;
+        }
 
-       
         //Autentication _Autentication;
         public IActionResult Index()
         {
@@ -115,17 +126,48 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         {
             Request MyRequest = new GetProductListByIdentifierRequest();
             GetSessionData(ref MyRequest);
+           
             return View(MyRequest);
 
         }
 
         [HttpPost]
-        public ActionResult GetProductListByIdentifierMessage(GetProductListByIdentifierRequest MyRequest)
+        public async Task<ActionResult>  GetProductListByIdentifierMessage(GetProductListByIdentifierRequest MyRequest)
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
             //string Request.Form["UpdateMode"];
-            return View(new GetProductListByIdentifierMessage(MyRequest));
+
+             if(Request.Form.Files[0].Length > 0)
+            {
+                var filePath = Path.GetTempFileName();
+                List<string> LineList = new List<string>();
+                int i = 0;
+                foreach (var formFile in Request.Form.Files)
+                {
+                    if (formFile.Length > 0 && formFile.FileName.EndsWith(".csv"))
+                    {
+                        //MyRequest._Parameters.Add("IdentifierType","EAN");
+                        string EANList = "";
+                           string strLine = "";
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await formFile.CopyToAsync(stream);
+                        }
+                        using(StreamReader sr = new  StreamReader(filePath,Encoding.UTF8))//(filePath,Encoding.UTF8)
+                        {                               
+                            while((strLine = sr.ReadLine()) != null && i<1000)
+                            {
+                                EANList += strLine;
+                                i++;
+                            }
+                            MyRequest._Parameters["EAN"] = EANList;                            
+
+                        }
+                    }
+                }
+            }
+            return View(new GetProductListByIdentifierMessage(MyRequest,_hostingEnvironment));
         }
 
         public ActionResult GetProductPackageSubmissionResultRequest()
@@ -272,6 +314,23 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                     break;
             }
 
+        }
+        public async Task<ActionResult> Download(string SellerLogin)
+        {
+            if (SellerLogin == null)
+                return Content("filename not present");
+
+            var path = Path.Combine(
+                           Directory.GetCurrentDirectory(),
+                           "wwwroot", SellerLogin,"ProductList.csv");
+
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(path, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+            return File(memory, "application/octet-stream", Path.GetFileName(path));
         }
 
     }
