@@ -15,7 +15,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         public GetOfferListPaginatedMessage(GetOfferListPaginatedRequest MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();          
+            GetService(MyRequest);          
             _OfferListPaginatedMessage = _MarketplaceAPIService.GetOfferListPaginatedAsync(MyRequest._HeaderMessage, MyRequest._OfferFilterPaginated);
             XmlSerializer xmlSerializer = new XmlSerializer(_OfferListPaginatedMessage.Result.GetType());
 

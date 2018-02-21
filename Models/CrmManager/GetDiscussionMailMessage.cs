@@ -11,7 +11,7 @@ namespace cdscntmkpapinetcore2webapp.Models.CrmManager
         public GetDiscussionMailMessage(GetDiscussionsMailRequest MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _DiscussionMailListMessage = _MarketplaceAPIService.GetDiscussionMailListAsync(MyRequest._HeaderMessage,MyRequest._GetDiscussionMailListRequest);
             XmlSerializer xmlSerializer = new XmlSerializer(_DiscussionMailListMessage.GetType());
 

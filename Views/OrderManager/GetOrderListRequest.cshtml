@@ -69,7 +69,7 @@
                     <br /><label for="Set EndModificationDate"><span class="glyphicon glyphicon-calendar"></span>Set EndModificationDate</label>
                     <br />@Html.EditorFor(m => m._OrderFilter.EndModificationDate, new { @id = "endModificationDate", @class = "form-control form_datetime", placeholder = "yyyy-mm-ddThh:mm:ss" })<br />
                     <br /><label for="Select Corporation Code"><span class="glyphicon glyphicon-copyright-mark"></span>Select Corporation Code</label>
-                    @Html.TextBoxFor(m => m._OrderFilter.CorporationCode, new { @id = "CorporationCode", @class = "form-control", @placeholder = "parameter" })<br />
+                    @Html.TextBoxFor(m => m._OrderFilter.CorporationCode, new { @id = "CorporationCode", @class = "form-control", @placeholder = "CDSB2C/CDSB2B" })<br />
                     <br /><label for="Fetch Order Lines"><span class="glyphicon glyphicon-zoom-in"></span>Fetch Order Lines</label>
                     @Html.CheckBoxFor(m => m._OrderFilter.FetchOrderLines, new { @id = "FetchOrderLines", @class = "form-control", @placeholder = "FetchOrderLines" })<br />
                     <br /><label for="Fetch Tracking Information"><span class="glyphicon glyphicon-zoom-in"></span>Fetch Tracking Information</label>

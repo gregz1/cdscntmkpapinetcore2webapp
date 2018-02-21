@@ -15,7 +15,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         public GetOfferPackageSubmissionResultMessage(Request MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _PackageFilter = new PackageFilter();
             long j;
             if (long.TryParse(MyRequest._Parameters["Values"], out j))

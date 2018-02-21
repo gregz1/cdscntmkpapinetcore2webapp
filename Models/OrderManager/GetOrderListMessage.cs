@@ -128,7 +128,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
             var webRoot = _env.WebRootPath;
             if (_OrderListMessage.OrderList != null)
             {
-                string folderPath = System.IO.Path.Combine(webRoot, _OrderListMessage.SellerLogin);
+                string folderPath = System.IO.Path.Combine(webRoot,"OrderExtract", _OrderListMessage.SellerLogin);
                 if (!Directory.Exists(folderPath))
                     Directory.CreateDirectory(folderPath);
                 _OrderListReportPath = System.IO.Path.Combine(folderPath,"OrderList.csv"); 

@@ -12,7 +12,7 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
             try
             {
                 _Environment = MyRequest._EnvironmentSelected;
-                GetService();
+                GetService(MyRequest);
                 var _ModelListMessage = _MarketplaceAPIService.GetAllModelListAsync(MyRequest._HeaderMessage);
                
                 _RequestXML = _RequestInterceptor.LastRequestXML;

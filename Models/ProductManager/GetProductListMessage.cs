@@ -15,7 +15,7 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
         public GetProductListMessage(Request MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _ProductFilter = new ProductFilter();
             _ProductFilter.CategoryCode = MyRequest._Parameters["Values"];
             _ProductListMessage = _MarketplaceAPIService.GetProductListAsync(MyRequest._HeaderMessage, _ProductFilter);

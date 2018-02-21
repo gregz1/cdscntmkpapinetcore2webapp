@@ -29,9 +29,9 @@ namespace cdscntmkpapinetcore2webapp.Models
         {
             _Autentication._Login = _Login;
             _Autentication._Password = _Password;
-            _Autentication._Environment = _EnvironmentSelected;
+            _Autentication._Environment = _EnvironmentSelected;            
             _Autentication._Token = _Token;
-            _HeaderMessage =  _Autentication.GetDefaultHeaderMessage();
+            _HeaderMessage =  _Autentication.GetDefaultHeaderMessage();            
         }
     }
 }

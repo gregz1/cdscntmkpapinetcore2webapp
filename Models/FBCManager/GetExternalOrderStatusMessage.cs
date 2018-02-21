@@ -21,7 +21,7 @@ namespace cdscntmkpapinetcore2webapp.Models.FBCManager
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage =MyRequest._HeaderMessage;
 
-                GetService();
+                GetService(MyRequest);
                 _OrderStatusMessage= await _MarketplaceAPIService.GetExternalOrderStatusAsync(MyRequest._HeaderMessage, MyRequest._MyOrderStatusRequest);
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;

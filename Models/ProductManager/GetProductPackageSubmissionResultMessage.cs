@@ -15,12 +15,13 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
         {
 
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _PackageFilter = new PackageFilter();
             long j;
             if (long.TryParse(MyRequest._Parameters["Values"], out j))
                 _PackageFilter.PackageID = j;
             var _ProductIntegrationReportMessage = _MarketplaceAPIService.GetProductPackageSubmissionResultAsync(MyRequest._HeaderMessage, _PackageFilter);
+            
             XmlSerializer xmlSerializer = new XmlSerializer(_ProductIntegrationReportMessage.Result.GetType());
 
             _RequestXML = _RequestInterceptor.LastRequestXML;

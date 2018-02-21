@@ -30,6 +30,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         public ProductManagerController(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
+            CleanFiles();
         }
 
         //Autentication _Autentication;
@@ -125,10 +126,9 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         public ActionResult GetProductListByIdentifierRequest()
         {
             Request MyRequest = new GetProductListByIdentifierRequest();
-            GetSessionData(ref MyRequest);
-           
+            CleanFiles();
+            GetSessionData(ref MyRequest);           
             return View(MyRequest);
-
         }
 
         [HttpPost]
@@ -158,7 +158,8 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                         {                               
                             while((strLine = sr.ReadLine()) != null && i<1000)
                             {
-                                EANList += strLine;
+                                if(!strLine.Contains(';'))
+                                    EANList += ';'+strLine;
                                 i++;
                             }
                             MyRequest._Parameters["EAN"] = EANList;                            
@@ -313,16 +314,16 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                     Console.WriteLine("Warning {0}", e.Message);
                     break;
             }
-
         }
         public async Task<ActionResult> Download(string SellerLogin)
-        {
+        {            
+            
             if (SellerLogin == null)
                 return Content("filename not present");
 
             var path = Path.Combine(
                            Directory.GetCurrentDirectory(),
-                           "wwwroot", SellerLogin,"ProductList.csv");
+                           "wwwroot","ProductExtract", SellerLogin,"ProductList.csv");
 
             var memory = new MemoryStream();
             using (var stream = new FileStream(path, FileMode.Open))
@@ -332,6 +333,20 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             memory.Position = 0;
             return File(memory, "application/octet-stream", Path.GetFileName(path));
         }
+        public async void CleanFiles()
+        {        
+            var path = Path.Combine(
+                           Directory.GetCurrentDirectory(),
+                           "wwwroot"
+                           ,"ProductExtract");
+          int count = Directory.GetDirectories(path).Count();
+        if (count > 0)
+            foreach(string filePath in Directory.GetDirectories(path))
+            {
+                if(Directory.GetCreationTime(filePath)< DateTime.Now.AddMinutes(-5)) 
+                    Directory.Delete(filePath,true);
+            }
 
+        }
     }
 }

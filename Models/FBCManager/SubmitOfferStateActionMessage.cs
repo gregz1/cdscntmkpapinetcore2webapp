@@ -17,7 +17,7 @@ namespace cdscntmkpapinetcore2webapp.Models.FBCManager
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage =MyRequest._HeaderMessage;
 
-                GetService();                 
+                GetService(MyRequest);                 
                 _OfferStateReportMessage = await _MarketplaceAPIService.SubmitOfferStateActionAsync(MyRequest._HeaderMessage,MyRequest._OfferStateActionRequest);
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;

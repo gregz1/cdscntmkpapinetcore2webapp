@@ -14,7 +14,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         public GetOfferListMessage(GetOfferListRequest MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _OfferListMessage = _MarketplaceAPIService.GetOfferListAsync(MyRequest._HeaderMessage, MyRequest._OfferFilter);
             XmlSerializer xmlSerializer = new XmlSerializer(_OfferListMessage.Result.GetType());
 

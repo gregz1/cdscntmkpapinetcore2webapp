@@ -10,7 +10,7 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
         public GetBrandListMessage(Request MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             var _BrandListMessage = _MarketplaceAPIService.GetBrandListAsync(MyRequest._HeaderMessage);
             XmlSerializer xmlSerializer = new XmlSerializer(_BrandListMessage.Result.GetType());
 

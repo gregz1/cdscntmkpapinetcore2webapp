@@ -14,7 +14,7 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
         {
 
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _AllCategoryTreeMessage = _MarketplaceAPIService.GetAllAllowedCategoryTreeAsync(MyRequest._HeaderMessage);
             //  XmlSerializer xmlSerializer = new XmlSerializer(_AllCategoryTreeMessage.Result.GetType());
             

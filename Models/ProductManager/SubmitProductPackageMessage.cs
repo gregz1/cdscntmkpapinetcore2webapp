@@ -14,7 +14,7 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
         public SubmitProductPackageMessage(Request MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _ProductPackageRequest = new ProductPackageRequest();
             _ProductPackageRequest.ZipFileFullPath = MyRequest._Parameters["Values"];
             _ProductIntegrationReportMessage = _MarketplaceAPIService.SubmitProductPackageAsync(MyRequest._HeaderMessage, _ProductPackageRequest);

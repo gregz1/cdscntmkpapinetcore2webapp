@@ -17,7 +17,7 @@ namespace cdscntmkpapinetcore2webapp.Models.FBCManager
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage =MyRequest._HeaderMessage;
 
-                GetService();                 
+                GetService(MyRequest);                 
                 _SupplyOrderReportMessage = await _MarketplaceAPIService.SubmitFulfilmentOnDemandSupplyOrderAsync(MyRequest._HeaderMessage,MyRequest._FulfilmentOnDemandSupplyOrderRequest);
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;

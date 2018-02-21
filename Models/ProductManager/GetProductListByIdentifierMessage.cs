@@ -46,7 +46,7 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
             _ProductListByIdentifierMessage = _MarketplaceAPIService.GetProductListByIdentifierAsync(MyRequest._HeaderMessage, _IdentifierRequest);
             if(_ProductListByIdentifierMessage!=null)
                 {
-                    _ProductListByIdentifierMessage.Result.TokenId = MyRequest._Token.Substring(0,10);
+                    _ProductListByIdentifierMessage.Result.TokenId = MyRequest._HeaderMessage.Security.TokenId.Substring(0,10);
                     CreateProductListReport();
                 }
 
@@ -56,13 +56,12 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
 
         public void CreateProductListReport()
         {
-
             string myProductList = "Ean;FatherProductId;Name;CategoryCode;BrandName;Size;Color;ImageUrl;HasError;ErrorMessage;\r\n";
             var webRoot = _env.WebRootPath;            
             
             if (_ProductListByIdentifierMessage.Result.ProductListByIdentifier != null)
             {
-                string folderPath = System.IO.Path.Combine(webRoot,_ProductListByIdentifierMessage.Result.TokenId);
+                string folderPath = System.IO.Path.Combine(webRoot,"ProductExtract",_ProductListByIdentifierMessage.Result.TokenId);
                 if (!Directory.Exists(folderPath))
                     Directory.CreateDirectory(folderPath);
                 _ProductListReportPath = System.IO.Path.Combine(folderPath,"ProductList.csv"); 

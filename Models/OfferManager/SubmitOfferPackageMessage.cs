@@ -14,7 +14,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         public SubmitOfferPackageMessage(Request MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _OfferPackageRequest = new OfferPackageRequest();
             _OfferPackageRequest.ZipFileFullPath = MyRequest._Parameters["Values"];
             _OfferIntegrationReportMessage = _MarketplaceAPIService.SubmitOfferPackageAsync(MyRequest._HeaderMessage, _OfferPackageRequest);

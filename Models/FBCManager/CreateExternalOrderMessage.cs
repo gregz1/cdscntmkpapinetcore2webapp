@@ -20,7 +20,7 @@ namespace cdscntmkpapinetcore2webapp.Models.FBCManager
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage =MyRequest._HeaderMessage;
 
-                GetService();
+                GetService(MyRequest);
                 _OrderIntegrationMessage= await _MarketplaceAPIService.CreateExternalOrderAsync(MyRequest._HeaderMessage, MyRequest._MyOrderIntegrationRequest);
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;

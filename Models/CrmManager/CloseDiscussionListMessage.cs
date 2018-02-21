@@ -11,7 +11,7 @@ namespace cdscntmkpapinetcore2webapp.Models.CrmManager
         public CloseDiscussionListMessage(CloseDiscussionListRequest MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _CloseDiscussionResultMessage = _MarketplaceAPIService.CloseDiscussionListAsync(MyRequest._HeaderMessage, MyRequest._CloseDiscussionRequest);
             XmlSerializer xmlSerializer = new XmlSerializer(_CloseDiscussionResultMessage.GetType());
 

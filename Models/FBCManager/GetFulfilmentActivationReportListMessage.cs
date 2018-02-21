@@ -18,7 +18,7 @@ namespace cdscntmkpapinetcore2webapp.Models.FBCManager
                 _Environment = MyRequest._EnvironmentSelected;
                 _HeaderMessage =MyRequest._HeaderMessage;
 
-                GetService();                 
+                GetService(MyRequest);                 
                 _FulfilmentActivationReportMessage = await _MarketplaceAPIService.GetFulfilmentActivationReportListAsync(MyRequest._HeaderMessage, MyRequest._FulfilmentActivationReportRequest);
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;

@@ -11,7 +11,7 @@ namespace cdscntmkpapinetcore2webapp.Models.CrmManager
        public GetOfferQuestionListMessage(GetOfferQuestionListRequest MyRequest)
         { 
             _Environment = MyRequest._EnvironmentSelected;
-            GetService();
+            GetService(MyRequest);
             _OfferQuestionListMessage = _MarketplaceAPIService.GetOfferQuestionListAsync(MyRequest._HeaderMessage,MyRequest._OfferQuestionFilter);
             XmlSerializer xmlSerializer = new XmlSerializer(_OfferQuestionListMessage.GetType());
 
