@@ -168,7 +168,8 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                     }
                 }
             }
-            return View(new GetProductListByIdentifierMessage(MyRequest,_hostingEnvironment));
+             GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage = new GetProductListByIdentifierMessage(_hostingEnvironment);
+            return View(await MyGetProductListByIdentifierMessage.GetMessage(MyRequest,_hostingEnvironment));
         }
 
         public ActionResult GetProductPackageSubmissionResultRequest()

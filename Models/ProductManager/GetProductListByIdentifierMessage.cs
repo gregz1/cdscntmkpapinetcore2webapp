@@ -9,49 +9,64 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
 {
     public class GetProductListByIdentifierMessage : Message
     {
-        public Task<ProductListByIdentifierMessage> _ProductListByIdentifierMessage { get; set; }
+        public ProductListByIdentifierMessage _ProductListByIdentifierMessage { get; set; }
         public IHostingEnvironment _env;
         public ProductFilter _ProductFilter { get; set; }
         public string _ProductListReportPath { get; set; }
         ProductPackageRequest _ProductPackageRequest;
         public IdentifierRequest _IdentifierRequest { get; set; }
-
-        public GetProductListByIdentifierMessage(Request MyRequest)
+        public  GetProductListByIdentifierMessage(IHostingEnvironment env)
         {
-            
-            _Environment = MyRequest._EnvironmentSelected;
-            GetService(MyRequest);
-            _IdentifierRequest = new IdentifierRequest();
-            _IdentifierRequest.IdentifierType = IdentifierTypeEnum.EAN;
-            _IdentifierRequest.ValueList = MyRequest._Parameters["EAN"].Split(';');
-            _ProductListByIdentifierMessage = _MarketplaceAPIService.GetProductListByIdentifierAsync(MyRequest._HeaderMessage, _IdentifierRequest);
-            //XmlSerializer xmlSerializer = new XmlSerializer(_ProductListByIdentifierMessage.Result.GetType());
-                            
-            _RequestXML = _RequestInterceptor.LastRequestXML;
-            _MessageXML = _RequestInterceptor.LastResponseXML;
-
-        }
-          public GetProductListByIdentifierMessage(Request MyRequest, IHostingEnvironment env)
-        {
-            _env = env;
-            if (string.IsNullOrWhiteSpace(_env.WebRootPath))
+            if (string.IsNullOrWhiteSpace(env.WebRootPath))
             {
-                _env.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+                env.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
             }
-            _Environment = MyRequest._EnvironmentSelected;
-            GetService(MyRequest);      
-            _IdentifierRequest = new IdentifierRequest();
-            _IdentifierRequest.IdentifierType = IdentifierTypeEnum.EAN;
-            _IdentifierRequest.ValueList = MyRequest._Parameters["EAN"].Split(';');
-            _ProductListByIdentifierMessage = _MarketplaceAPIService.GetProductListByIdentifierAsync(MyRequest._HeaderMessage, _IdentifierRequest);
-            if(_ProductListByIdentifierMessage!=null)
+            _env = env;           
+        }        
+        public async Task<GetProductListByIdentifierMessage> GetMessage(GetProductListByIdentifierRequest MyRequest, IHostingEnvironment env)
+        {   
+            try
+            {       
+                _env = env;
+                if (string.IsNullOrWhiteSpace(_env.WebRootPath))
                 {
-                    _ProductListByIdentifierMessage.Result.TokenId = MyRequest._HeaderMessage.Security.TokenId.Substring(0,10);
-                    CreateProductListReport();
+                    _env.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
                 }
-
-            _RequestXML = _RequestInterceptor.LastRequestXML;
-            _MessageXML = _RequestInterceptor.LastResponseXML;
+                _Environment = MyRequest._EnvironmentSelected;
+                GetService(MyRequest);      
+                _IdentifierRequest = new IdentifierRequest();
+                _IdentifierRequest.IdentifierType = IdentifierTypeEnum.EAN;
+                _IdentifierRequest.ValueList = MyRequest._Parameters["EAN"].Split(';');
+                _ProductListByIdentifierMessage = await _MarketplaceAPIService.GetProductListByIdentifierAsync(MyRequest._HeaderMessage, _IdentifierRequest);
+                if(_ProductListByIdentifierMessage!=null)
+                    {
+                        _ProductListByIdentifierMessage.TokenId = MyRequest._HeaderMessage.Security.TokenId.Substring(0,10);
+                        CreateProductListReport();
+                    }
+                _RequestXML = _RequestInterceptor.LastRequestXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML;
+            }
+             catch (System.AggregateException aggex)
+            {
+                if (_ProductListByIdentifierMessage.ErrorMessage != null)
+                    _InnerErrorMessage = _ProductListByIdentifierMessage.ErrorMessage;
+                _OperationSuccess = false;
+                _ErrorMessage = aggex.Message;
+                _ErrorType = aggex.HelpLink;
+                _RequestXML = _RequestInterceptor.LastRequestXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML;
+            }
+            catch (System.Exception ex)
+            {
+       /*       if (_OrderListMessage.Exception.InnerException != null)
+                   _InnerErrorMessage = _OrderListMessage.Exception.InnerException.Message;*/
+                _OperationSuccess = false;
+                _ErrorMessage = ex.Message;
+                _ErrorType = ex.HelpLink;
+                _RequestXML = _RequestInterceptor.LastRequestXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML;
+            }
+            return this;
         }
 
         public void CreateProductListReport()
@@ -59,14 +74,14 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
             string myProductList = "Ean;FatherProductId;Name;CategoryCode;BrandName;Size;Color;ImageUrl;HasError;ErrorMessage;\r\n";
             var webRoot = _env.WebRootPath;            
             
-            if (_ProductListByIdentifierMessage.Result.ProductListByIdentifier != null)
+            if (_ProductListByIdentifierMessage.ProductListByIdentifier != null)
             {
-                string folderPath = System.IO.Path.Combine(webRoot,"ProductExtract",_ProductListByIdentifierMessage.Result.TokenId);
+                string folderPath = System.IO.Path.Combine(webRoot,"ProductExtract",_ProductListByIdentifierMessage.TokenId);
                 if (!Directory.Exists(folderPath))
                     Directory.CreateDirectory(folderPath);
                 _ProductListReportPath = System.IO.Path.Combine(folderPath,"ProductList.csv"); 
 
-                foreach (ProductByIdentifier myProduct in _ProductListByIdentifierMessage.Result.ProductListByIdentifier)
+                foreach (ProductByIdentifier myProduct in _ProductListByIdentifierMessage.ProductListByIdentifier)
                 {           
                     myProductList += myProduct.Ean + ';' +myProduct.FatherProductId + ';' + myProduct.Name + ';' + myProduct.CategoryCode + ';' + myProduct.BrandName + ';' + myProduct.Size +';' + myProduct.Color +';' + myProduct.ImageUrl +';' + myProduct.HasError +';'+ myProduct.ErrorMessage + ";\r\n";           
                 }

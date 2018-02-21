@@ -68,7 +68,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var pi in Model._ProductListByIdentifierMessage.Result.ProductListByIdentifier)
+                                @foreach (var pi in Model._ProductListByIdentifierMessage.ProductListByIdentifier)
                                 {
                                     if(@pi.HasError==true)
                                     { 
@@ -158,7 +158,7 @@
                 </div>
             }
             </div>
-            <h4><a href="~/ProductManager/Download/?SellerLogin=@Model._ProductListByIdentifierMessage.Result.TokenId">Export your Product list</a></h4>
+            <h4><a href="~/ProductManager/Download/?SellerLogin=@Model._ProductListByIdentifierMessage.TokenId">Export your Product list</a></h4>
 
 </div>
 
