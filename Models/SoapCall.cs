@@ -39,8 +39,8 @@ namespace cdscntmkpapinetcore2webapp.Models
                     b.ReceiveTimeout = TimeSpan.FromMinutes(10);
                     b.OpenTimeout = TimeSpan.FromMinutes(10);
                     b.CloseTimeout = TimeSpan.FromMinutes(10);
-                    string proxyUrl = "http://m98js9u10vrq7m:4RBT1Hml9SL8uipUUXJ9R8iCDg@eu-west-1-babbage.quotaguard.com:9293";
-                    //string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
+                  //  string proxyUrl = "http://m98js9u10vrq7m:4RBT1Hml9SL8uipUUXJ9R8iCDg@eu-west-1-babbage.quotaguard.com:9293";
+                    string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
                     System.Uri proxyUri = new System.Uri(proxyUrl);
                     string cleanProxyURL = proxyUri.Scheme + "://" + proxyUri.Host+":"+proxyUri.Port;
                     string user = proxyUri.UserInfo.Split(':')[0];
