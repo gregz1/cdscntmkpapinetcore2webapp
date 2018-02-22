@@ -8,6 +8,8 @@ using System.IO;
 using System.Net.Http;
 using System.Runtime.Serialization;
 using Microsoft.Extensions.Configuration;
+using System.Net;
+using System.ServiceModel;
 
 namespace cdscntmkpapinetcore2webapp.Models
 {
@@ -41,43 +43,72 @@ namespace cdscntmkpapinetcore2webapp.Models
                     svcIssue = "https://sts.cdiscount.com/users/httpIssue.svc";
                     realm = "https://wsvc.cdiscount.com/MarketplaceAPIService.svc";
 
-                }
-                else if (_Environment == EnvironmentEnum.Preproduction)
-                {
+                    string encoded = Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format("{0}:{1}", _Login, _Password)));
+                    var stsUri = new Uri(string.Format("{0}/?realm={1}", svcIssue, realm));
+                    Stream  myttokenStreamoken;
+                    using (HttpClient client = new HttpClient())
+                    {
+                        client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", encoded);
+                        var data =  client.GetAsync(stsUri).Result;
+                        myttokenStreamoken =  data.Content.ReadAsStreamAsync().Result;                    
+                    }
+                    if (myttokenStreamoken != null)
+                    {
+                        var dataContractSerializer = new DataContractSerializer(typeof(string));
+                        token = (string)dataContractSerializer.ReadObject(myttokenStreamoken);
+                    }
 
-                    svcIssue = "https://sts.preprod-cdiscount.com/users/httpIssue.svc";
-                    realm = "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
-                }
-                else if (_Environment == EnvironmentEnum.Recette)
+                }                
+                else
                 {
-
-                    svcIssue = "https://sts.Recette-cdiscount.com/users/httpIssue.svc";
-                    realm = "https://wsvc.Recette-cdiscount.com/MarketplaceAPIService.svc";
+                    if (_Environment == EnvironmentEnum.Recette)
+                    {
+                        svcIssue = "https://sts.Recette-cdiscount.com/users/httpIssue.svc";
+                        realm = "https://wsvc.Recette-cdiscount.com/MarketplaceAPIService.svc";
+                    }                        
+                    else if (_Environment == EnvironmentEnum.Preproduction)
+                    {
+                        svcIssue = "https://sts.preprod-cdiscount.com/users/httpIssue.svc";
+                        realm = "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
+                    }                    
+                    string proxyUrl = Environment.GetEnvironmentVariable("QUOTAGUARDSTATIC_URL");
+                    System.Uri proxyUri = new System.Uri(proxyUrl);
+                    string cleanProxyURL = proxyUri.Scheme + "://" + proxyUri.Host+":"+proxyUri.Port;
+                    string user = proxyUri.UserInfo.Split(':')[0];
+                    string password = proxyUri.UserInfo.Split(':')[1];
+                    WebProxy myProxy = new WebProxy();
+                    Uri newUri = new Uri(cleanProxyURL);
+                    myProxy.Credentials = new NetworkCredential(user, password);
+                    myProxy.Address = newUri;                    
+                    WebRequest.DefaultWebProxy = myProxy;                  
+                    HttpClientHandler httpClientHandler = new HttpClientHandler()
+                    {
+                    Credentials = new NetworkCredential(user, password),
+                        Proxy = myProxy
+                    };                    
+                    string encoded = Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format("{0}:{1}", _Login, _Password)));
+                    var stsUri = new Uri(string.Format("{0}/?realm={1}", svcIssue, realm));
+                    Stream  myttokenStreamoken;
+                    using (HttpClient client = new HttpClient())
+                    {
+                        client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", encoded);
+                        var data =  client.GetAsync(stsUri).Result;
+                        myttokenStreamoken =  data.Content.ReadAsStreamAsync().Result;                    
+                    }
+                    if (myttokenStreamoken != null)
+                    {
+                        var dataContractSerializer = new DataContractSerializer(typeof(string));
+                        token = (string)dataContractSerializer.ReadObject(myttokenStreamoken);
+                    }                        
                 }
-                string encoded = Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format("{0}:{1}", _Login, _Password)));
-
-                var stsUri = new Uri(string.Format("{0}/?realm={1}", svcIssue, realm));
-               Stream  myttokenStreamoken;
-                using (HttpClient client = new HttpClient())
-                {
-                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", encoded);
-                    var data =  client.GetAsync(stsUri).Result;
-                    myttokenStreamoken =  data.Content.ReadAsStreamAsync().Result;
-                   
-                }
-
-                if (myttokenStreamoken != null)
-                {
-                    var dataContractSerializer = new DataContractSerializer(typeof(string));
-                    token = (string)dataContractSerializer.ReadObject(myttokenStreamoken);
-                }
+                
+                
             }
             catch (System.Exception ex)
             {
                 var m = ex.Message;
             }
-
-                return token;
+            return token;
         }
 
         public HeaderMessage GetDefaultHeaderMessage()
