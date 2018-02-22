@@ -137,7 +137,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
             //string Request.Form["UpdateMode"];
-
+            GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage = new GetProductListByIdentifierMessage(_hostingEnvironment);
              if(Request.Form.Files[0].Length > 0)
             {
                 var filePath = Path.GetTempFileName();
@@ -148,27 +148,25 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                     if (formFile.Length > 0 && formFile.FileName.EndsWith(".csv"))
                     {
                         //MyRequest._Parameters.Add("IdentifierType","EAN");
-                        string EANList = "";
-                           string strLine = "";
+                       
                         using (var stream = new FileStream(filePath, FileMode.Create))
                         {
                             await formFile.CopyToAsync(stream);
                         }
                         using(StreamReader sr = new  StreamReader(filePath,Encoding.UTF8))//(filePath,Encoding.UTF8)
                         {                               
-                            while((strLine = sr.ReadLine()) != null && i<1000)
-                            {
-                                if(!strLine.Contains(';'))
-                                    EANList += ';'+strLine;
-                                i++;
-                            }
-                            MyRequest._Parameters["EAN"] = EANList;                            
-
+                            string EANList = "";
+                            string strLine = "";
+                            while((strLine = sr.ReadLine() )!= null && i < 199)
+                            {                               
+                                EANList += strLine;
+                                i++;                                
+                            }    
+                            MyRequest._Parameters["EAN"] = EANList;
                         }
                     }
                 }
-            }
-             GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage = new GetProductListByIdentifierMessage(_hostingEnvironment);
+            }            
             return View(await MyGetProductListByIdentifierMessage.GetMessage(MyRequest,_hostingEnvironment));
         }
 
