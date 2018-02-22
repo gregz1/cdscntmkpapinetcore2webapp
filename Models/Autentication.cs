@@ -89,7 +89,7 @@ namespace cdscntmkpapinetcore2webapp.Models
                     string encoded = Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format("{0}:{1}", _Login, _Password)));
                     var stsUri = new Uri(string.Format("{0}/?realm={1}", svcIssue, realm));
                     Stream  myttokenStreamoken;
-                    using (HttpClient client = new HttpClient())
+                    using (HttpClient client = new HttpClient(httpClientHandler))
                     {
                         client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", encoded);
                         var data =  client.GetAsync(stsUri).Result;
