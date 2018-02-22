@@ -264,7 +264,8 @@ namespace cdscntmkpapinetcore2webapp.Controllers
 
         public ActionResult CreateRefundVoucherRequest()
         {
-            Request MyRequest = new CreateRefundVoucherRequestModel();
+            Request MyRequest = new Request();
+            //Request MyRequest = new CreateRefundVoucherRequestModel();
           /*  if (HttpContext.Session.GetString(SessionToken) != null)
             {
                 MyRequest._Login = HttpContext.Session.GetString(SessionLogin);
