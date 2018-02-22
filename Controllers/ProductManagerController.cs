@@ -159,6 +159,8 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                             string strLine = "";
                             while((strLine = sr.ReadLine() )!= null && i < 199)
                             {                               
+                                if(!strLine.Contains(';'))
+                                strLine+=';';
                                 EANList += strLine;
                                 i++;                                
                             }    
