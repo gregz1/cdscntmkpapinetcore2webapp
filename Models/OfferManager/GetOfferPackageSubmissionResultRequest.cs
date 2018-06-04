@@ -15,7 +15,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
             {
                 _hasParameters = true;
 
-                _Autentication = new Autentication();
+                //_Autentication = new Autentication();
 
                 _OfferFilter = new OfferFilter();
 
