@@ -13371,34 +13371,34 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "2.0.0"
-          },
-          "System.Xml.XPath.XmlDocument": {
-            "target": "Package",
-            "version": "4.3.0"
-          },
-          "System.Xml.XmlSerializer": {
-            "target": "Package",
-            "version": "4.3.0"
-          },
-          "System.ServiceModel.Http": {
-            "target": "Package",
-            "version": "4.4.0"
+            "version": "[2.0.0, )"
           },
           "System.Net.Http": {
             "target": "Package",
             "version": "(, )"
+          },
+          "System.ServiceModel.Http": {
+            "target": "Package",
+            "version": "[4.4.0, )"
+          },
+          "System.Xml.XPath.XmlDocument": {
+            "target": "Package",
+            "version": "[4.3.0, )"
+          },
+          "System.Xml.XmlSerializer": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
