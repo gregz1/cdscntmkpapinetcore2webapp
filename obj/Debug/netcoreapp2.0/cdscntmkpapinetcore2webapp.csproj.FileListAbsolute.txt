@@ -8,3 +8,4 @@ c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netc
 c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.AssemblyInfo.cs
 c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.dll
 c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.pdb
+C:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp2.0\cdscntmkpapinetcore2webapp.csprojAssemblyReference.cache

@@ -136,8 +136,9 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            //string Request.Form["UpdateMode"];
-            GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage = new GetProductListByIdentifierMessage(_hostingEnvironment);
+            int page=0;
+            
+            cdscntmkpapinetcore2webapp.Models.ProductManager.GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage = new GetProductListByIdentifierMessage(_hostingEnvironment);
              if(Request.Form.Files[0].Length > 0)
             {
                 var filePath = Path.GetTempFileName();
@@ -157,19 +158,65 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                         {                               
                             string EANList = "";
                             string strLine = "";
-                            while((strLine = sr.ReadLine() )!= null && i < 199)
-                            {                               
-                                if(!strLine.Contains(';'))
-                                strLine+=';';
-                                EANList += strLine;
-                                i++;                                
-                            }    
-                            MyRequest._Parameters["EAN"] = EANList;
+                            List<www.cdiscount.com.ProductByIdentifier.ProductByIdentifier> lst = new List<www.cdiscount.com.ProductByIdentifier.ProductByIdentifier>();
+                            while(!sr.EndOfStream)
+                            {
+                                while((strLine = sr.ReadLine() )!= null && i <199)
+                                {                              
+                                    if(!strLine.Contains(';'))
+                                    strLine+=';';
+                                    EANList += strLine;
+                                    i++;             
+                                    if(i==199)
+                                    {
+                                        GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage2 = new GetProductListByIdentifierMessage(_hostingEnvironment);
+                                        MyRequest._Parameters["EAN"] = EANList;
+                                    //    if(page ==0) 
+                                      //      MyGetProductListByIdentifierMessage._ProductListByIdentifierMessage = (await MyGetProductListByIdentifierMessage2.GetMessage(MyRequest,_hostingEnvironment))._ProductListByIdentifierMessage;
+                                        
+                                        lst.AddRange((await MyGetProductListByIdentifierMessage2.GetMessage(MyRequest,_hostingEnvironment))._ProductListByIdentifierMessage.ProductListByIdentifier.ToList());                                    
+                                        i=0;
+                                        EANList = "";
+                                        page++;                                        
+                                    }
+                                }  
+                                
+                            /*    GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage2 = new GetProductListByIdentifierMessage(_hostingEnvironment);
+                                MyRequest._Parameters["EAN"] = EANList;
+                                if(page ==0) 
+                                    MyGetProductListByIdentifierMessage._ProductListByIdentifierMessage = (await MyGetProductListByIdentifierMessage2.GetMessage(MyRequest,_hostingEnvironment))._ProductListByIdentifierMessage;
+                                
+                                lst.AddRange((await MyGetProductListByIdentifierMessage2.GetMessage(MyRequest,_hostingEnvironment))._ProductListByIdentifierMessage.ProductListByIdentifier.ToList());                                    
+                                i=0;
+                                EANList = "";
+                                page++;*/
+                            }  
+
+                            string myProductList = "Ean;FatherProductId;Name;CategoryCode;BrandName;Size;Color;ImageUrl;HasError;ErrorMessage;\r\n";
+                                        var webRoot = _hostingEnvironment.WebRootPath;            
+                                        
+                                        if (lst != null)
+                                        {
+                                            string folderPath = System.IO.Path.Combine(webRoot,"ProductExtract","test");
+                                            if (!Directory.Exists(folderPath))
+                                                Directory.CreateDirectory(folderPath);
+                                         
+                                            foreach (www.cdiscount.com.ProductByIdentifier.ProductByIdentifier myProduct in lst)
+                                            {           
+                                                myProductList += myProduct.Ean + ';' +myProduct.FatherProductId + ';' + myProduct.Name + ';' + myProduct.CategoryCode + ';' + myProduct.BrandName + ';' + myProduct.Size +';' + myProduct.Color +';' + myProduct.ImageUrl +';' + myProduct.HasError +';'+ myProduct.ErrorMessage + ";\r\n";           
+                                            }
+                                            System.IO.File.WriteAllText(System.IO.Path.Combine(folderPath,"ProductList.csv"), myProductList);
+                                        }
+
+                            MyGetProductListByIdentifierMessage._ProductListByIdentifierMessage.ProductListByIdentifier=lst.ToArray();
                         }
                     }
                 }
-            }            
-            return View(await MyGetProductListByIdentifierMessage.GetMessage(MyRequest,_hostingEnvironment));
+            }
+            //if(page>0)            
+            return View(MyGetProductListByIdentifierMessage);
+            //else
+            //return View(await MyGetProductListByIdentifierMessage.GetMessage(MyRequest,_hostingEnvironment));
         }
 
         public ActionResult GetProductPackageSubmissionResultRequest()
@@ -203,12 +250,12 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         }
 
         
-         public  ActionResult GetAllModelListRequest() 
-         {
+        public  ActionResult GetAllModelListRequest() 
+        {
             Request MyRequest = new GetAllModelListRequest();
             GetSessionData(ref MyRequest);
             return View(MyRequest);
-          }
+        }
         [HttpPost]
         public ActionResult GetAllModelListMessage(GetBrandListRequest MyRequest)
         {
@@ -230,11 +277,11 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             return View(new GetProductPackageMatchingFileDataMessage(MyRequest));
         }
         public  ActionResult GetModelListRequest() 
-         {
+        {
             Request MyRequest = new GetModelListRequest();
             GetSessionData(ref MyRequest);
             return View(MyRequest);
-          }
+        }
         [HttpPost]
         public ActionResult GetModelListMessage(GetModelListRequest MyRequest)
         {

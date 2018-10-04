@@ -76,7 +76,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
         public async Task<GetOrderListMessage> GetMessage(GetOrderListRequest MyRequest, IHostingEnvironment env)
         {
             try{
-                 if (string.IsNullOrWhiteSpace(env.WebRootPath))
+                if (string.IsNullOrWhiteSpace(env.WebRootPath))
                 {
                     env.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
                 }
