@@ -453,7 +453,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             memory.Position = 0;
             return File(memory, "application/octet-stream", Path.GetFileName(path));
         }
-         public async void CleanFiles()
+         public void CleanFiles()
         {        
             var path = Path.Combine(
                            Directory.GetCurrentDirectory(),
