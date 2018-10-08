@@ -26,8 +26,9 @@ namespace cdscntmkpapinetcore2webapp
             // Add framework services.
             services.AddMvc();
 
-            services.AddDbContext<cdscntmkpapinetcore2webappContext>(options =>
+            /*services.AddDbContext<cdscntmkpapinetcore2webappContext>(options =>
                     options.UseSqlite("Data Source=SoapCall.db"));
+                    */
 
         }
 

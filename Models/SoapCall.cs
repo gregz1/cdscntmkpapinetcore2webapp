@@ -49,13 +49,13 @@ namespace cdscntmkpapinetcore2webapp.Models
                     Uri newUri = new Uri(cleanProxyURL);
                     myProxy.Credentials = new NetworkCredential(user, password);
                     myProxy.Address = newUri;                    
-                    b.ProxyAddress =newUri;
+                 /*   b.ProxyAddress =newUri;
                     WebRequest.DefaultWebProxy = myProxy;
                     b.Security.Mode = BasicHttpSecurityMode.Transport;
                     b.Security.Transport.ClientCredentialType = HttpClientCredentialType.None; // !!!
                     b.Security.Transport.ProxyCredentialType = HttpProxyCredentialType.Basic; // !!!
                     b.UseDefaultWebProxy = true;
-                    
+                   */ 
                 
                     HeaderMessage hdr  = new HeaderMessage()
                     {
