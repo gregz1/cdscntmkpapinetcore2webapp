@@ -27,7 +27,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         public OrderManagerController(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
-            CleanFiles();
+//            CleanFiles();
         }
 
         public void GetSessionData(ref Request MyRequest)

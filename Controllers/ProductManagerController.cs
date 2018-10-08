@@ -30,7 +30,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         public ProductManagerController(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
-            CleanFiles();
+            //CleanFiles();
         }
 
         //Autentication _Autentication;
