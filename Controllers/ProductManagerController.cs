@@ -126,7 +126,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         public ActionResult GetProductListByIdentifierRequest()
         {
             Request MyRequest = new GetProductListByIdentifierRequest();
-            CleanFiles();
+            //CleanFiles();
             GetSessionData(ref MyRequest);           
             return View(MyRequest);
         }
