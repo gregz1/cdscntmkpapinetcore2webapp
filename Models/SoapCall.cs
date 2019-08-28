@@ -32,7 +32,7 @@ namespace cdscntmkpapinetcore2webapp.Models
         {
             try{
                     MarketplaceAPIServiceClient Client = new MarketplaceAPIServiceClient();            
-                    Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc");
+                    Client = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, "http://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc");
                     var b = Client.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
 
                     b.SendTimeout = TimeSpan.FromMinutes(10);

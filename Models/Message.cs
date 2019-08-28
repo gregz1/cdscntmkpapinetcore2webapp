@@ -49,7 +49,7 @@ namespace cdscntmkpapinetcore2webapp.Models
             /*else if (_Environment == EnvironmentEnum.Local)
                 _EndPointAddress = "http://localhost:8030/MarketplaceAPIService.svc";*/
             else if (_Environment == EnvironmentEnum.Preproduction)
-                _EndPointAddress = "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
+                _EndPointAddress = "http://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
             else if (_Environment == EnvironmentEnum.Recette)
                 _EndPointAddress = "https://wsvc.recette-cdiscount.com/MarketplaceAPIService.svc";
 
@@ -78,7 +78,7 @@ namespace cdscntmkpapinetcore2webapp.Models
                     _EndPointAddress =  "https://wsvc.recette-cdiscount.com/MarketplaceAPIService.svc";
                     
                 else if (_Environment == EnvironmentEnum.Preproduction)
-                    _EndPointAddress = "https://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
+                    _EndPointAddress = "http://wsvc.preprod-cdiscount.com/MarketplaceAPIService.svc";
                     
                     _MarketplaceAPIService = new MarketplaceAPIServiceClient(MarketplaceAPIServiceClient.EndpointConfiguration.BasicHttpBinding_IMarketplaceAPIService, _EndPointAddress);
                     var b = _MarketplaceAPIService.Endpoint.Binding as System.ServiceModel.BasicHttpBinding;
