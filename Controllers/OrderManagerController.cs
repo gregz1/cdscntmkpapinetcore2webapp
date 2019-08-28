@@ -226,7 +226,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         public ActionResult GetOrderListRequest()
         {
             Request MyRequest = new GetOrderListRequest();
-            CleanFiles();
+ //   CleanFiles();
          /*   if (HttpContext.Session.GetString(SessionToken) != null)
             {
                 MyRequest._Login = HttpContext.Session.GetString(SessionLogin);
