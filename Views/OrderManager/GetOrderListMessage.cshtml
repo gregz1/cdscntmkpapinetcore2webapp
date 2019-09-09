@@ -40,8 +40,9 @@
                 </h4>
             </div>
             <div id="MessageXML" class="panel-collapse collapse">
-                <div class="panel-body"><pre lang="xml"> @Html.DisplayFor(model => model._MessageXML)</pre></div>
-            </div>        
+                <div class="panel-body"><textarea id="textbox">@Html.DisplayFor(model => model._MessageXML)</textarea> 
+                  <button id="create">Create file</button> <a download="info.txt" id="downloadlink" style="display: none">Download</a></div>
+            </div>    
         </div>        
     
     </div>
@@ -122,6 +123,7 @@
                 <div id="MessageXML" class="panel-collapse collapse">
                     <div class="panel-body"><pre lang="xml"> @Html.DisplayFor(model => model._MessageXML)</pre></div>
                 </div>           
+                <textarea id="textbox">Type something here</textarea> <button id="create">Create file</button> <a download="info.txt" id="downloadlink" style="display: none">Download</a>
             </div>
         </div>
         <div class="form-group">
@@ -236,7 +238,7 @@
 -->
 <script>
 
-    var editor = CodeMirror(document.getElementById("RequestXML"), {
+/*    var editor = CodeMirror(document.getElementById("RequestXML"), {
         mode: "xml",
         height: "auto",
         value: "@Model._RequestXML.ToString()",
@@ -249,5 +251,31 @@
     function showCode() {
         var text = editor.getValue();
         alert(text);
+    }*/
+    (function () {
+var textFile = null,
+  makeTextFile = function (text) {
+    var data = new Blob([text], {type: 'text/plain'});
+
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
     }
+
+    textFile = window.URL.createObjectURL(data);
+
+    return textFile;
+  };
+
+
+  var create = document.getElementById('create'),
+    textbox = document.getElementById('textbox');
+
+  create.addEventListener('click', function () {
+    var link = document.getElementById('downloadlink');
+    link.href = makeTextFile(textbox.value);
+    link.style.display = 'block';
+  }, false);
+})();
 </script>
