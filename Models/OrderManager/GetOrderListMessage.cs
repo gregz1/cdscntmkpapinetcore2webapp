@@ -91,7 +91,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
                     CreateOrderListReport();
                 }
                 _RequestXML = _RequestInterceptor.LastRequestXML;
-                _MessageXML = _RequestInterceptor.LastResponseXML;
+                _MessageXML = _RequestInterceptor.LastResponseXML.Substring(40);
             }
              catch (System.AggregateException aggex)
             {
