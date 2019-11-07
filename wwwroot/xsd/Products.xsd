@@ -44,6 +44,7 @@
                           </xs:element>
                         </xs:sequence>
                         <xs:attribute name="BrandName" form="unqualified" type="xs:string" />
+						<xs:attribute name="EncodedMarketingDescription" form="unqualified" type="xs:string" />
                         <xs:attribute name="SellerProductFamily" form="unqualified" type="xs:string" />
                         <xs:attribute name="SellerProductColorName" form="unqualified" type="xs:string" />
                         <xs:attribute name="Size" form="unqualified" type="xs:string" />
@@ -55,6 +56,11 @@
                         <xs:attribute name="CategoryCode" form="unqualified" type="xs:string" />
                         <xs:attribute name="SellerProductId" form="unqualified" type="xs:string" />
                         <xs:attribute name="ShortLabel" form="unqualified" type="xs:string" />
+						<xs:attribute name="Width" form="unqualified" type="xs:string" />
+						<xs:attribute name="Height" form="unqualified" type="xs:string" />
+						<xs:attribute name="Weight" form="unqualified" type="xs:string" />
+						<xs:attribute name="Length" form="unqualified" type="xs:string" />
+						<xs:attribute name="ManufacturerPartNumber" form="unqualified" type="xs:string" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>

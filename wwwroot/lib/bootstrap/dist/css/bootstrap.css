@@ -113,6 +113,7 @@ input,
 optgroup,
 select,
 textarea {
+  width: 100%;
   margin: 0;
   font: inherit;
   color: inherit;
@@ -174,6 +175,7 @@ legend {
   border: 0;
 }
 textarea {
+  width: 100%;
   overflow: auto;
 }
 optgroup {
@@ -1092,6 +1094,7 @@ input,
 button,
 select,
 textarea {
+  width: 100%;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -2596,6 +2599,7 @@ fieldset[disabled] .form-control {
 }
 textarea.form-control {
   height: auto;
+  widows: 100%;
 }
 input[type="search"] {
   -webkit-appearance: none;

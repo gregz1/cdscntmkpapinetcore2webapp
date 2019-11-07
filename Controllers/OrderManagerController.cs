@@ -103,7 +103,9 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                                     ProductConditionList.Add(param[3]);
                                     AcceptationStateList.Add(param[4]);
                                     CarrierList.Add(param[5]);
+                                    if(param.Length > 6)
                                     TrackingIdList.Add(param[6]);
+                                    if(param.Length > 7)
                                     TrackingUrlList.Add(param[7]);
                                 }
                             }
@@ -469,4 +471,25 @@ namespace cdscntmkpapinetcore2webapp.Controllers
 
         }
     }
+
+/*
+public class LineOrder
+{
+ String OrderNumber {get;set;}
+String SellerProductIdList {get;set;}
+                        String OrderStateList = new List<string>();
+                        List<string> OrderStateList = new List<string>();
+                        List<string> OrderStateList = new List<string>();
+                        List<string> OrderStateList = new List<string>();
+                        List<string> OrderStateList = new List<string>();
+                        List<string> OrderStateList = new List<string>();
+                        List<string> OrderStateList = new List<string>();
+                        List<string> AcceptationStateList = new List<string>();
+                        List<string> ProductConditionList = new List<string>();
+                        List<string> TrackingUrlList = new List<string>();
+                        List<string> TrackingIdList = new List<string>();
+                        List<string> CarrierList = new List<string>();
+
+}*/
+
 }

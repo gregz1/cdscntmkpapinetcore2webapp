@@ -139,7 +139,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             int page=0;
             
             cdscntmkpapinetcore2webapp.Models.ProductManager.GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage = new GetProductListByIdentifierMessage(_hostingEnvironment);
-             if(Request.Form.Files[0].Length > 0)
+        /*     if(Request.Form.Files.Count >0 && Request.Form.Files[0].Length > 0)
             {
                 var filePath = Path.GetTempFileName();
                 List<string> LineList = new List<string>();
@@ -179,7 +179,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                                         EANList = "";
                                         page++;                                        
                                     }
-                                }  
+                                }  */
                                 
                             /*    GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage2 = new GetProductListByIdentifierMessage(_hostingEnvironment);
                                 MyRequest._Parameters["EAN"] = EANList;
@@ -190,7 +190,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                                 i=0;
                                 EANList = "";
                                 page++;*/
-                            }  
+               /*             }  
 
                             string myProductList = "Ean;FatherProductId;Name;CategoryCode;BrandName;Size;Color;ImageUrl;HasError;ErrorMessage;\r\n";
                                         var webRoot = _hostingEnvironment.WebRootPath;            
@@ -212,7 +212,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                         }
                     }
                 }
-            }
+            }*/
             //if(page>0)            
             return View(MyGetProductListByIdentifierMessage);
             //else
