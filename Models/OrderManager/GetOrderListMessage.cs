@@ -11,12 +11,12 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
         {
             public OrderListMessage _OrderListMessage { get; set; }
             public string _OrderListReportPath { get; set; }
-            public IHostingEnvironment _env;
+            public IWebHostEnvironment _env;
             //public string _Login  { get; set; }
 
         //public string _XmlRequestFromEditor { get; set; }
 
-        public GetOrderListMessage(IHostingEnvironment env)
+        public GetOrderListMessage(IWebHostEnvironment env)
         {
             if (string.IsNullOrWhiteSpace(env.WebRootPath))
             {
@@ -73,7 +73,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OrderManager
 
 
 
-        public async Task<GetOrderListMessage> GetMessage(GetOrderListRequest MyRequest, IHostingEnvironment env)
+        public async Task<GetOrderListMessage> GetMessage(GetOrderListRequest MyRequest, IWebHostEnvironment env)
         {
             try{
                 if (string.IsNullOrWhiteSpace(env.WebRootPath))

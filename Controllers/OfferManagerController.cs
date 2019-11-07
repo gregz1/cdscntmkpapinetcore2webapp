@@ -2,6 +2,7 @@
 using cdscntmkpapinetcore2webapp.Models;
 using cdscntmkpapinetcore2webapp.Models.OfferManager;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,6 +22,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         const string SessionToken = "_Token";
         const string SessionEnvironment = "_Environment";
 
+        public readonly IWebHostEnvironment _Environment;
        // OfferManager _OfferManager;
         //Autentication _Autentication;
         /*public IActionResult Index()
@@ -35,6 +37,12 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             //ViewData["NumTimes"] = numTimes;
 
             return View();
+        }
+
+
+        public OfferManagerController(IWebHostEnvironment env)
+        {
+            _Environment = env;
         }
 
         public void GetSessionData(ref Request MyRequest)
@@ -114,7 +122,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
 
         public ActionResult CheckXmlOfferFileRequest()
         {
-            return View(new CheckXmlFileRequest());
+            return View(new CheckXmlFileRequest(_Environment));
         }
         
         [HttpPost]

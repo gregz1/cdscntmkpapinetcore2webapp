@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Cdiscount.Framework.Core.Communication.Messages;
+using Microsoft.AspNetCore.Hosting;
 using www.cdiscount.com;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -16,10 +17,17 @@ namespace cdscntmkpapinetcore2webapp.Models
         public EnvironmentEnum _EnvironmentSelected { get; set; }
         public Dictionary<string, string> _Parameters { get; set; }
         public Dictionary<string, bool> _ParametersBool { get; set; }
-        
+        public IWebHostEnvironment _Environment;
         public HeaderMessage _HeaderMessage;
-        public Request()
+        public Request( )
         {
+            _Autentication = new Autentication();
+            _Parameters = new Dictionary<string, string>();
+            _ParametersBool = new Dictionary<string, bool>();
+        }
+        public Request( IWebHostEnvironment env)
+        {
+            _Environment = env;
             _Autentication = new Autentication();
             _Parameters = new Dictionary<string, string>();
             _ParametersBool = new Dictionary<string, bool>();

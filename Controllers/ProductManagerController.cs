@@ -26,8 +26,8 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         const string SessionLogin = "_Login";
         const string SessionToken = "_Token";
         const string SessionEnvironment = "_Environment";
-        private readonly IHostingEnvironment _hostingEnvironment;
-        public ProductManagerController(IHostingEnvironment hostingEnvironment)
+        private readonly IWebHostEnvironment _hostingEnvironment;
+        public ProductManagerController(IWebHostEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
             //CleanFiles();

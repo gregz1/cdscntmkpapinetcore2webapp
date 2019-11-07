@@ -10,12 +10,12 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
     public class GetProductListByIdentifierMessage : Message
     {
         public ProductListByIdentifierMessage _ProductListByIdentifierMessage { get; set; }
-        public IHostingEnvironment _env;
+        public IWebHostEnvironment _env;
         public ProductFilter _ProductFilter { get; set; }
         public string _ProductListReportPath { get; set; }
         ProductPackageRequest _ProductPackageRequest;
         public IdentifierRequest _IdentifierRequest { get; set; }
-        public  GetProductListByIdentifierMessage(IHostingEnvironment env)
+        public  GetProductListByIdentifierMessage(IWebHostEnvironment env)
         {
             if (string.IsNullOrWhiteSpace(env.WebRootPath))
             {
@@ -23,7 +23,7 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
             }
             _env = env;           
         }        
-        public async Task<GetProductListByIdentifierMessage> GetMessage(GetProductListByIdentifierRequest MyRequest, IHostingEnvironment env)
+        public async Task<GetProductListByIdentifierMessage> GetMessage(GetProductListByIdentifierRequest MyRequest, IWebHostEnvironment env)
         {   
             try
             {       
