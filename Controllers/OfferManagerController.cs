@@ -162,9 +162,8 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                                 navigator.MoveToFollowing("price", "http://www.contoso.com/books");
                                 XmlWriter writer = navigator.InsertAfter();
                                 writer.WriteStartElement("anotherNode", "http://www.contoso.com/books");
-                                writer.WriteEndElement();
+                                writer.WriteEndElement();                                
                                 writer.Close();
-
                                 // the document will now fail to successfully validate
                                 document.Validate(eventHandler);
    */                          }

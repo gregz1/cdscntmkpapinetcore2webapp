@@ -443,10 +443,16 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             if (SellerLogin == null)
                 return Content("filename not present");
 
-            var path = Path.Combine(
+            /*var path = Path.Combine(
                            Directory.GetCurrentDirectory(),
-                           "wwwroot","OrderExtract",SellerLogin,"OrderList.csv");
-
+                           "wwwroot","OrderExtract",SellerLogin,"OrderList.csv");*/
+                        string test = Directory.GetCurrentDirectory();
+                        var path = Path.Combine(
+                           Directory.GetCurrentDirectory(),
+                           "wwwroot","CodesErreurs.csv");
+                           test+="wwwroot";
+                           test+="CodesErreurs.csv";
+                        
             var memory = new MemoryStream();
             using (var stream = new FileStream(path, FileMode.Open))
             {
