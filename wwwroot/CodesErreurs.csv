@@ -1,421 +1,372 @@
-Code;LibellÇs;Actions
-1001;EAN : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""EAN"" et soumettre de nouveau votre fichier de demande de crÇation produit "
-1003;RÇfÇrence produit vendeur : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""RÇfÇrence"" et soumettre de nouveau votre fichier de demande de crÇation produit "
-1005;Code catÇgorie : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Code Categorie"" et soumettre de nouveau votre fichier de demande de crÇation produit. L'arbre des catÇgories est disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile"
-1006;Marque :Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Marque"" et soumettre de nouveau votre fichier de demande de crÇation produit. Si votre produit n'a pas de marque, merci d'indiquer AUCUNE.
-Si vous souhaitez crÇer votre marque dans notre base, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir la Preuve d'enregistrement aupräs de l'INPI, OMPI ou EUIPO + le logo au format GIF et taille : 80x40."
-1007;Nature du produit : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Nature du produit"" et soumettre de nouveau votre fichier de demande de crÇation produit. "
-1008;LibellÇ court du produit : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""LibellÇ court"" et soumettre de nouveau votre fichier de demande de crÇation produit "
-1009;LibellÇ long du produit: Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""LibellÇ long"" et soumettre de nouveau votre fichier de demande de crÇation produit "
-1010;Description du produit : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Description produit"" et soumettre de nouveau votre fichier de demande de crÇation produit "
-1012;Image produit 1 : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Image 1"" et soumettre de nouveau votre fichier de demande de crÇation produit "
-1022;PropriÇtÇ spÇcifique: Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez effectuer une modification pour le produit concernÇ (ajout d'un ""0"" dans la colonne Poids par exemple) et le soumettre de nouveau en crÇation.
-Si le probläme persiste, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement le fichier de crÇation et le rapport svp."
-1028;Taille du produit variant : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Taille"" et soumettre de nouveau votre fichier de demande de crÇation produit. La taille est obligatoire pour un produit variant. La liste des tailles autorisÇes est disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile. "
-1029;Sku famille : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Sku famille"" et soumettre de nouveau votre fichier de demande de crÇation produit. Le Sku famille est obligatoire pour un produit variant. Il permet de regrouper toutes les tailles sur un màme modäle."
-1030;Couleur marketing du produit : Ce champ est obligatoire et vous n'avez rien indiquÇ dedans, veuillez renseigner une donnÇe.;"Veuillez complÇter la colonne ""Couleur marketing"" et soumettre de nouveau votre fichier de demande de crÇation produit. La couleur marketing est obligatoire pour un produit variant"
-1101;"EAN : La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";L'EAN doit àtre composÇ de 13 chiffres.
-1102;"ISBN: La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";L'ISBN doit àtre composÇ de 13 chiffres.
-1103;La taille n'a pas ÇtÇ trouvÇe dans la matrice de tailles : taille='{0}', matrice='{1}';"Explication : La taille n'a pas ÇtÇ trouvÇe dans notre systäme.
-Solution : Veuillez consulter notre liste de tailles (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile) et indiquer une taille conforme et existante."
-1107;"Nature du produit : La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Veuillez sÇlectionner ""Variant"" ou ""Standard"" en fonction de la typologie de votre produit.
-Vous pouvez retrouver la liste des produits variant ou standard dans l'arbre des catÇgories (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile)"
-1108;"LibellÇ court du produit:La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";Le libellÇ court ne doit pas excÇder 30 caractäres (il ne doit pas contenir de lien URL, balises HTML, donnÇes informations commerciales : garantie, prix etc).
-1109;"LibellÇ long du produit: La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e). ).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";Le libellÇ long ne doit pas excÇder 132 caractäres (il ne doit pas contenir de lien URL, balises HTML, donnÇes informations commerciales : garantie, prix etc).
-1112;"Image produit 1 :La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"L'image doit àtre au format jpg, jpeg, png, ou gif.
-Taille minimum : 50x500 pixels.
-Taille maximum : 3000 x 3000 pixels.
-Poids : ne pas excÇder 5 Mo."
-1113;"Image produit 2 : La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"L'image doit àtre au format jpg, jpeg, png, ou gif.
-Taille minimum : 50x500 pixels.
-Taille maximum : 3000 x 3000 pixels.
-Poids : ne pas excÇder 5 Mo."
-1114;"Image produit 3 : La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"L'image doit àtre au format jpg, jpeg, png, ou gif.
-Taille minimum : 50x500 pixels.
-Taille maximum : 3000 x 3000 pixels.
-Poids : ne pas excÇder 5 Mo."
-1115;"Image produit 4 : La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).   Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"L'image doit àtre au format jpg, jpeg, png, ou gif.
-Taille minimum : 50x500 pixels.
-Taille maximum : 3000 x 3000 pixels.
-Poids : ne pas excÇder 5 Mo."
-1117;"Longueur : La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).   Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Les dimensions doivent àtre en cm et comporter au maximum 4 caractäres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1118;"Largeur: La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).   Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Les dimensions doivent àtre en cm et comporter au maximum 4 caractäres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1119;"Hauteur:La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Les dimensions doivent àtre en cm et comporter au maximum 4 caractäres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1120;"Poids: La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Le poids doit àtre en kg et comporter au maximum 4 caractäres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1121;"Nom du modäle: La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Veuillez vous rÇfÇrer au menu d'aide du centre de support pour avoir toutes les indications sur ""Comment crÇer des produits ?"" ou ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir votre fichier de crÇation."
-1122;"PropriÇtÇ spÇcifique: La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Veuillez effectuer une modification pour le produit concernÇ (ajout d'un ""0"" dans la colonne Poids par exemple) et le soumettre de nouveau en crÇation.
-Si le probläme persiste, veuillez ouvrir une requàte de Type : CrÇer ou modifier vos fiches produits et Sous-type : Aide sur la crÇation de vos produits en nous faisant parvenir obligatoirement le fichier de crÇation et le rapport svp."
-1124;"Produit: La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"Veuillez effectuer une modification pour le produit concernÇ (ajout d'un ""0"" dans la colonne Poids par exemple) et le soumettre de nouveau en crÇation.
-Si le probläme persiste, veuillez ouvrir une requàte de Type : CrÇer ou modifier vos fiches produits et Sous-type : Aide sur la crÇation de vos produits en nous faisant parvenir obligatoirement le fichier de crÇation et le rapport svp."
-1126;"Description marketing du produit :La valeur renseignÇe dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous rÇfÇrer Ö la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur ""Comment crÇer des produits ?""";"La description marketing ne doit pas excÇder 5000 caractäres.
-Les liens URL doivent àtre sur un serveur sÇcurisÇ https://
-Les donnÇes informations commerciales (garantie, prix etc) sont interdites.
-Balises HTML interdites : <href> <font> <table> <tr> <td> <th> <h1>ˇ<h2>ˇ<h3>ˇ<h4>ˇ<h5>ˇ<h6>ˇ<body>
-Balises HTML autorisÇes :  <bold> <strong> <br>"
-1201;EAN: Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);L'EAN doit àtre composÇ de 13 chiffres.
-1202;ISBN:Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);L'ISBN doit àtre composÇ de 13 chiffres.
-1203;RÇfÇrence produit vendeur:Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);"La rÇfÇrence vendeur ne doit pas excÇder 50 caractäres.
-Les accents, la barre verticale pipe Æ | Ø, l'Çtoile ""*"" et les symboles masquÇs ne sont pas autorisÇs."
-1205;Code catÇgorie: Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);"Le code catÇgorie n'est pas conforme. Veuillez consulter l'arbre des catÇgories disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile.
-Attention : Le code catÇgorie qui dÇbute par 0 doit àtre copiÇ intÇgralement (le ""0"" doit àtre conservÇ)."
-1206;Marque:Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);La marque ne doit pas excÇder 70 caractäres. Vous pouvez retrouver la liste des marques dans votre Espace vendeur > Produits > Vendre des produits en masse > Documentation utile.
-1208;LibellÇ court du produit : Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);Le libellÇ court ne doit pas excÇder 30 caractäres (il ne doit pas contenir de lien URL, balises HTML, donnÇes informations commerciales : garantie, prix etc).
-1209;LibellÇ long du produit:Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);Le libellÇ long ne doit pas excÇder 132 caractäres (il ne doit pas contenir de lien URL, balises HTML, donnÇes informations commerciales : garantie, prix etc).
-1210;Description du produit: Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);La description produit ne doit pas excÇder 420 caractäres (elle ne doit pas contenir de lien URL, balises HTML, donnÇes informations commerciales : garantie, prix etc).
-1211;RÇfÇrence constructeur:Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);"Veuillez effectuer une modification pour le produit concernÇ (ajout d'un ""0"" dans la colonne Poids par exemple) et le soumettre de nouveau en crÇation.
-Si le probläme persiste, veuillez ouvrir une requàte de Type : CrÇer ou modifier vos fiches produits et Sous-type : Aide sur la crÇation de vos produits en nous faisant parvenir obligatoirement le fichier de crÇation et le rapport svp."
-1212;Image produit 1 : Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
-1213;Image produit 2 : Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
-1214;Image produit 3 : Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
-1215;Image produit 4 : Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
-1217;Longueur: Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);"Elle doit comporter au maximum 4 chiffres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1218;Largeur:  Format de la donnÇe incorrect, vÇrifiez le format attendu (voir l'onglet dÇfinition des attributs dans le fichier modäle);"Elle doit comporter au maximum 4 chiffres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1219;Hauteur:Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);"Elle doit comporter au maximum 4 chiffres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1220;Poids :Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);"Il doit comporter au maximum 4 chiffres avant la virgule et 3 apräs.
-Pour information : cette donnÇe n'est pas prise en compte sur la fiche produit lors de la crÇation."
-1226;Description marketing du produit : Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);"La description marketing ne doit pas excÇder 5000 caractäres.
-Les liens URL doivent àtre sur un serveur sÇcurisÇ https://
-Les donnÇes informations commerciales (garantie, prix etc) sont interdites.
-Balises HTML interdites : <href> <font> <table> <tr> <td> <th> <h1>ˇ<h2>ˇ<h3>ˇ<h4>ˇ<h5>ˇ<h6>ˇ<body>
-Balises HTML autorisÇes :  <bold> <strong> <br>"
-1228;Taille du produit variant: Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);Veuillez consulter la liste des tailles autorisÇes disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile.
-1229;Sku famille: Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);Le SKU Famille ne doit pas excÇder 100 caractäres.
-1230;Couleur marketing du produit :Taille de la donnÇe incorrecte, vÇrifiez la taille attendue (voir la notice dans la section documentation utile);La couleur marketing ne doit pas excÇder 50 caractäres.
-1305;Code catÇgorie : Inexistant;"Veuillez complÇter le champ ""Code catÇgorie"" ou indiquer un code catÇgorie valide (l'arbre des catÇgories est disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile)."
-1322;PropriÇtÇ spÇcifique: Inexistant;"Veuillez effectuer une modification pour le produit concernÇ (ajout d'un ""0"" dans la colonne Poids par exemple) et le soumettre de nouveau en crÇation.
-Si le probläme persiste, veuillez ouvrir une requàte de Type : CrÇer ou modifier vos fiches produits et Sous-type : Aide sur la crÇation de vos produits en nous faisant parvenir obligatoirement le fichier de crÇation et le rapport svp."
-1400;Une erreur technique nous empàche de crÇer le produit.;"Explication : Ce message signifie qu?il y a eu un dysfonctionnement technique lors de la crÇation (raison inconnue).
+CODE ; Libell√©s ; Actions
+CODE_1001 ; EAN : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; "Veuillez compl√©ter la colonne   EAN   et soumettre de nouveau votre fichier de demande de cr√©ation produit  
+CODE_1003 ; R√©f√©rence produit vendeur : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   R√©f√©rence   et soumettre de nouveau votre fichier de demande de cr√©ation produit  
+CODE_1005 ; Code cat√©gorie : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Code Categorie   et soumettre de nouveau votre fichier de demande de cr√©ation produit. L'arbre des cat√©gories est disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile 
+CODE_1006 ; Marque :Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Marque   et soumettre de nouveau votre fichier de demande de cr√©ation produit. Si votre produit n'a pas de marque, merci d'indiquer AUCUNE.Si vous souhaitez cr√©er votre marque dans notre base, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir la Preuve d'enregistrement aupr√©s de l'INPI, OMPI ou EUIPO + le logo au format GIF et taille : 80x40. 
+CODE_1007 ; Nature du produit : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Nature du produit   et soumettre de nouveau votre fichier de demande de cr√©ation produit.  
+CODE_1008 ; Libell√© court du produit : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Libell√© court   et soumettre de nouveau votre fichier de demande de cr√©ation produit  
+CODE_1009 ; Libell√© long du produit: Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Libell√© long   et soumettre de nouveau votre fichier de demande de cr√©ation produit  
+CODE_1010 ; Description du produit : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Description produit   et soumettre de nouveau votre fichier de demande de cr√©ation produit  
+CODE_1012 ; Image produit 1 : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Image 1   et soumettre de nouveau votre fichier de demande de cr√©ation produit  
+CODE_1022 ; Propri√©t√© sp√©cifique: Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez effectuer une modification pour le produit concern√© (ajout d'un   0   dans la colonne Poids par exemple) et le soumettre de nouveau en cr√©ation.Si le probl√©me persiste, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement le fichier de cr√©ation et le rapport svp. 
+CODE_1028 ; Taille du produit variant : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Taille   et soumettre de nouveau votre fichier de demande de cr√©ation produit. La taille est obligatoire pour un produit variant. La liste des tailles autoris√©es est disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile.  
+CODE_1029 ; Sku famille : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Sku famille   et soumettre de nouveau votre fichier de demande de cr√©ation produit. Le Sku famille est obligatoire pour un produit variant. Il permet de regrouper toutes les tailles sur un m√©me mod√©le. 
+CODE_1030 ; Couleur marketing du produit : Ce champ est obligatoire et vous n'avez rien indiqu√© dedans, veuillez renseigner une donn√©e. ; Veuillez compl√©ter la colonne   Couleur marketing   et soumettre de nouveau votre fichier de demande de cr√©ation produit. La couleur marketing est obligatoire pour un produit variant 
+CODE_1101 ; EAN : La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; L'EAN doit √©tre compos√© de 13 chiffres.
+CODE_1102 ; ISBN: La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; L'ISBN doit √©tre compos√© de 13 chiffres.
+CODE_1103 ; La taille n'a pas √©t√© trouv√©e dans la matrice de tailles : taille='{0}', matrice='{1}' ; Explication : La taille n'a pas √©t√© trouv√©e dans notre syst√©me. Solution : Veuillez consulter notre liste de tailles (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile) et indiquer une taille conforme et existante. 
+CODE_1107 ; Nature du produit : La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?    ;  Veuillez s√©lectionner   Variant   ou   Standard   en fonction de la typologie de votre produit.Vous pouvez retrouver la liste des produits variant ou standard dans l'arbre des cat√©gories (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile) 
+CODE_1108 ; Libell√© court du produit:La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Le libell√© court ne doit pas exc√©der 30 caract√©res (il ne doit pas contenir de lien URL, balises HTML, donn√©es informations commerciales : garantie, prix etc).
+CODE_1109 ; Libell√© long du produit: La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e). ).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Le libell√© long ne doit pas exc√©der 132 caract√©res (il ne doit pas contenir de lien URL, balises HTML, donn√©es informations commerciales : garantie, prix etc).
+CODE_1112 ; Image produit 1 :La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; L'image doit √©tre au format jpg, jpeg, png, ou gif.Taille minimum : 50x500 pixels. Taille maximum : 3000 x 3000 pixels.Poids : ne pas exc√©der 5 Mo. 
+CODE_1113 ; Image produit 2 : La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; L'image doit √©tre au format jpg, jpeg, png, ou gif. Taille minimum : 50x500 pixels.Taille maximum : 3000 x 3000 pixels. Poids : ne pas exc√©der 5 Mo. 
+CODE_1114 ; Image produit 3 : La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e). Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; L'image doit √©tre au format jpg, jpeg, png, ou gif. Taille minimum : 50x500 pixels.Taille maximum : 3000 x 3000 pixels.Poids : ne pas exc√©der 5 Mo. 
+CODE_1115 ; Image produit 4 : La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).   Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; L'image doit √©tre au format jpg, jpeg, png, ou gif. Taille minimum : 50x500 pixels.Taille maximum : 3000 x 3000 pixels.Poids : ne pas exc√©der 5 Mo. 
+CODE_1117 ; Longueur : La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).   Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Les dimensions doivent √©tre en cm et comporter au maximum 4 caract√©res avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 1118 ; Largeur: La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).   Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Les dimensions doivent √©tre en cm et comporter au maximum 4 caract√©res avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 
+CODE_1119 ; Hauteur:La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Les dimensions doivent √©tre en cm et comporter au maximum 4 caract√©res avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 
+CODE_1120 ; Poids: La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Le poids doit √©tre en kg et comporter au maximum 4 caract√©res avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 
+CODE_1121 ; Nom du mod√©le: La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Veuillez vous r√©f√©rer au menu d'aide du centre de support pour avoir toutes les indications sur   Comment cr√©er des produits ?   ou ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir votre fichier de cr√©ation. 
+CODE_1122 ; Propri√©t√© sp√©cifique: La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Veuillez effectuer une modification pour le produit concern√© (ajout d'un   0   dans la colonne Poids par exemple) et le soumettre de nouveau en cr√©ation. Si le probl√©me persiste, veuillez ouvrir une requ√©te de Type : Cr√©er ou modifier vos fiches produits et Sous-type : Aide sur la cr√©ation de vos produits en nous faisant parvenir obligatoirement le fichier de cr√©ation et le rapport svp. 
+CODE_1124 ; Produit: La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; Veuillez effectuer une modification pour le produit concern√© (ajout d'un   0   dans la colonne Poids par exemple) et le soumettre de nouveau en cr√©ation. Si le probl√©me persiste, veuillez ouvrir une requ√©te de Type : Cr√©er ou modifier vos fiches produits et Sous-type : Aide sur la cr√©ation de vos produits en nous faisant parvenir obligatoirement le fichier de cr√©ation et le rapport svp. 
+CODE_1126 ; Description marketing du produit :La valeur renseign√©e dans ce champ ne respecte pas le format ou la taille attendu(e).  Veuillez-vous r√©f√©rer √© la rubrique Aide de votre espace vendeur pour avoir toutes les indications sur   Comment cr√©er des produits ?   ; La description marketing ne doit pas exc√©der 5000 caract√©res. Les liens URL doivent √©tre sur un serveur s√©curis√© https:// Les donn√©es informations commerciales (garantie, prix etc) sont interdites. Balises HTML interdites : <href> <font> <table> <tr> <td> <th> <h1>√©<h2>√©<h3>√©<h4>√©<h5>√©<h6>√©<body> Balises HTML autoris√©es :  <bold> <strong> <br> 
+CODE_1201 ; EAN: Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; L'EAN doit √©tre compos√© de 13 chiffres.
+CODE_1202 ; ISBN:Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; L'ISBN doit √©tre compos√© de 13 chiffres.
+CODE_1203 ; R√©f√©rence produit vendeur:Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; La r√©f√©rence vendeur ne doit pas exc√©der 50 caract√©res. Les accents, la barre verticale pipe √© | √©, l'√©toile   *   et les symboles masqu√©s ne sont pas autoris√©s. 
+CODE_1205 ; Code cat√©gorie: Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Le code cat√©gorie n'est pas conforme. Veuillez consulter l'arbre des cat√©gories disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile. Attention : Le code cat√©gorie qui d√©bute par 0 doit √©tre copi√© int√©gralement (le   0   doit √©tre conserv√©). 
+CODE_1206 ; Marque:Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; La marque ne doit pas exc√©der 70 caract√©res. Vous pouvez retrouver la liste des marques dans votre Espace vendeur > Produits > Vendre des produits en masse > Documentation utile.
+CODE_1208 ; Libell√© court du produit : Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Le libell√© court ne doit pas exc√©der 30 caract√©res (il ne doit pas contenir de lien URL, balises HTML, donn√©es informations commerciales : garantie, prix etc).
+CODE_1209 ; Libell√© long du produit:Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Le libell√© long ne doit pas exc√©der 132 caract√©res (il ne doit pas contenir de lien URL, balises HTML, donn√©es informations commerciales : garantie, prix etc).
+CODE_1210 ; Description du produit: Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; La description produit ne doit pas exc√©der 420 caract√©res (elle ne doit pas contenir de lien URL, balises HTML, donn√©es informations commerciales : garantie, prix etc).
+CODE_1211 ; R√©f√©rence constructeur:Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Veuillez effectuer une modification pour le produit concern√© (ajout d'un   0   dans la colonne Poids par exemple) et le soumettre de nouveau en cr√©ation. Si le probl√©me persiste, veuillez ouvrir une requ√©te de Type : Cr√©er ou modifier vos fiches produits et Sous-type : Aide sur la cr√©ation de vos produits en nous faisant parvenir obligatoirement le fichier de cr√©ation et le rapport svp. 
+CODE_1212 ; Image produit 1 : Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
+CODE_1213 ; Image produit 2 : Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
+CODE_1214 ; Image produit 3 : Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
+CODE_1215 ; Image produit 4 : Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; L'image doit faire 50x500 pixels minimum et 3000x3000 pixels maximum.
+CODE_1217 ; Longueur: Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Elle doit comporter au maximum 4 chiffres avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 
+CODE_1218 ; Largeur:  Format de la donn√©e incorrect, v√©rifiez le format attendu (voir l'onglet d√©finition des attributs dans le fichier mod√©le) ; Elle doit comporter au maximum 4 chiffres avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 
+CODE_1219 ; Hauteur:Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Elle doit comporter au maximum 4 chiffres avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 
+CODE_1220 ; Poids :Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Il doit comporter au maximum 4 chiffres avant la virgule et 3 apr√©s. Pour information : cette donn√©e n'est pas prise en compte sur la fiche produit lors de la cr√©ation. 
+CODE_1226 ; Description marketing du produit : Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; La description marketing ne doit pas exc√©der 5000 caract√©res. Les liens URL doivent √©tre sur un serveur s√©curis√© https:// Les donn√©es informations commerciales (garantie, prix etc) sont interdites. Balises HTML interdites : <href> <font> <table> <tr> <td> <th> <h1>√©<h2>√©<h3>√©<h4>√©<h5>√©<h6>√©<body> Balises HTML autoris√©es :  <bold> <strong> <br> 
+CODE_1228 ; Taille du produit variant: Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Veuillez consulter la liste des tailles autoris√©es disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile.
+CODE_1229 ; Sku famille: Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; Le SKU Famille ne doit pas exc√©der 100 caract√©res.
+CODE_1230 ; Couleur marketing du produit :Taille de la donn√©e incorrecte, v√©rifiez la taille attendue (voir la notice dans la section documentation utile) ; La couleur marketing ne doit pas exc√©der 50 caract√©res.
+CODE_1305 ; Code cat√©gorie : Inexistant ; Veuillez compl√©ter le champ   Code cat√©gorie   ou indiquer un code cat√©gorie valide (l'arbre des cat√©gories est disponible sur votre espace vendeur : Produits/Vendre des produits en masse/Documentation utile). 
+CODE_1322 ; Propri√©t√© sp√©cifique: Inexistant ; Veuillez effectuer une modification pour le produit concern√© (ajout d'un   0   dans la colonne Poids par exemple) et le soumettre de nouveau en cr√©ation. Si le probl√©me persiste, veuillez ouvrir une requ√©te de Type : Cr√©er ou modifier vos fiches produits et Sous-type : Aide sur la cr√©ation de vos produits en nous faisant parvenir obligatoirement le fichier de cr√©ation et le rapport svp. 
+CODE_1400 ; Une erreur technique nous emp√©che de cr√©er le produit. ; Explication : Ce message signifie qu?il y a eu un dysfonctionnement technique lors de la cr√©ation (raison inconnue). Solution : a) Si un SKU Cdiscount est pr√©sent dans la colonne D √©√©SKU Trouv√©√©√©, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport. b) Si aucun SKU Cdiscount n?est pr√©sent dans la colonne D √©√©SKU Trouv√©√©√© alors vous devez soumettre une nouvelle demande de cr√©ation en effectuant une modification sur les produits concern√©s (ajouter un √©√©0√©√© dans la colonne Poids par exemple). 
+CODE_1505 ; Code cat√©gorie : Votre produit n'est pas autoris√© car il n'est pas conforme aux crit√©res de r√©f√©rencement de notre Marketplace (r√©gles d'√©thique, exigences de s√©curit√©, absence de contrefa√©ons,...) ; Explication : Ce message peut venir de 3 points : 1) La cat√©gorie est ferm√©e pour votre compte Exemple : La cat√©gorie est ferm√©e pour diff√©rentes raisons (Contrefa√©on etc). Le message est donc conforme et justifi√©.
+2 ) Notre syst√©me de cr√©ation a mal cat√©goris√© le produit et la cat√©gorie choisie est ferm√©e
+Exemple : Vous avez indiqu√© le code cat√©gorie 0K070101  √©√©COQUE POUR TABLETTE TACTILE - HOUSSE POUR TABLETTE TACTILE√©√© mais notre syst√©me de cr√©ation a cat√©goris√© le produit en COQUE TELEPHONE - BUMPER TELEPHONE, code 07050F01 mais il se trouve que cette cat√©gorie est ferm√©e pour votre compte.
+Il s?agit donc d?une erreur de notre syst√©me de cr√©ation.
 
-Solution : 
-a) Si un SKU Cdiscount est prÇsent dans la colonne D ÆˇSKU TrouvÇˇØ, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport.
+3) Vous avez utilis√© des termes inappropri√©s/interdits : Termes racistes, Cannabis, Marijuana, Arme etc
+Exemple : Dans le libell√© long vous avez indiqu√© √©√©T-shirt avec feuille de cannabis√©√©.
+Exemple : Dans le libell√© long vous avez indiqu√© √©√©Pistolet - √©9mm ? Arme √© feu√©.
+Le message est donc conforme et justifi√©.
 
-b) Si aucun SKU Cdiscount n?est prÇsent dans la colonne D ÆˇSKU TrouvÇˇØ alors vous devez soumettre une nouvelle demande de crÇation en effectuant une modification sur les produits concernÇs (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple)."
-1505;Code catÇgorie : Votre produit n'est pas autorisÇ car il n'est pas conforme aux critäres de rÇfÇrencement de notre Marketplace (rägles d'Çthique, exigences de sÇcuritÇ, absence de contrefaáons,...);"Explication : Ce message peut venir de 3 points :
-
-1) La catÇgorie est fermÇe pour votre compte
-Exemple : La catÇgorie est fermÇe pour diffÇrentes raisons (Contrefaáon etc).
-Le message est donc conforme et justifiÇ.
-
-2 ) Notre systäme de crÇation a mal catÇgorisÇ le produit et la catÇgorie choisie est fermÇe
-Exemple : Vous avez indiquÇ le code catÇgorie 0K070101  ÆˇCOQUE POUR TABLETTE TACTILE - HOUSSE POUR TABLETTE TACTILEˇØ mais notre systäme de crÇation a catÇgorisÇ le produit en COQUE TELEPHONE - BUMPER TELEPHONE, code 07050F01 mais il se trouve que cette catÇgorie est fermÇe pour votre compte.
-Il s?agit donc d?une erreur de notre systäme de crÇation.
-
-3) Vous avez utilisÇ des termes inappropriÇs/interdits : Termes racistes, Cannabis, Marijuana, Arme etc
-Exemple : Dans le libellÇ long vous avez indiquÇ ÆˇT-shirt avec feuille de cannabisˇØ.
-Exemple : Dans le libellÇ long vous avez indiquÇ ÆˇPistolet - ˇ9mm ? Arme Ö feuØ.
-Le message est donc conforme et justifiÇ.
-
-Solution si vous àtes dans le cas numÇro 2 :
-Vous devez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport.
+Solution si vous √©tes dans le cas num√©ro 2 :
+Vous devez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport.
 
 Nous effectuerons une analyse :
 Si votre fichier est non conforme, nous vous fournirons une explication avec des exemples.
-Si votre fichier est conforme, nous vous invitons Ö effectuer une modification sur vos produits (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et de les resoumettre en crÇation.
+Si votre fichier est conforme, nous vous invitons √© effectuer une modification sur vos produits (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et de les resoumettre en cr√©ation.
 
-En amont, nous envoyons un mail Ö notre Çquipe technique afin qu?elle puisse effectuer une analyse pour savoir s?il s?agit d?un dysfonctionnement, d?une erreur de notre systäme de crÇation ou autre."
-1601;EAN : ClÇ invalide, vÇrifiez l'EAN;Veuillez vÇrifier que l'EAN soit conforme. Il doit àtre composÇ de 13 chiffres (https://fr.wikipedia.org/wiki/EAN_13)
-1602;ISBN: ClÇ invalide, vÇrifier l'EAN;Veuillez vÇrifier que l'ISBN soit conforme. Il doit àtre composÇ de 13 chiffres (http://lesignet.canalblog.com/archives/2008/09/23/10670289.html)
-1724;Produit: GNX n'a pas gÇnÇrÇ d'EAN;"Une erreur technique s'est produite, merci de resoumettre votre produit en y apportant une modification (ajouter un ""0"" dans la colonne Poids par exemple)."
-1901;EAN:Non intÇgrÇe, erreur dans le traitement;"Une erreur technique s'est produite, merci de resoumettre votre produit en y apportant une modification (ajouter un ""0"" dans la colonne Poids par exemple)."
-2100;Une erreur technique nous empàche de crÇer le produit. Vous pouvez resoumettre votre demande.;"Explication : Ce message signifie qu?il y a eu un dysfonctionnement technique lors de la crÇation (raison inconnue).
-
-Solution : 
-a) Si un SKU Cdiscount est prÇsent dans la colonne D ÆˇSKU TrouvÇˇØ, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport.
-
-b) Si aucun SKU Cdiscount n?est prÇsent dans la colonne D ÆˇSKU TrouvÇˇØ alors vous devez soumettre une nouvelle demande de crÇation en effectuant une modification sur les produits concernÇs (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple)."
-2325;Rayon : Pas de rayon affectÇ Ö la catÇgorie produit '1000002686' [SECURITE - PROTECTION CHANTIER], veuillez contacter le support vendeur.;"Ce message signifie qu'il n'y a pas de rayon / navigation associÇ Ö la catÇgorie de votre produit.
-Veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport svp."
-2401;EAN : Un produit de type Standard existe dÇjÖ avec le màme EAN, il est donc impossible d?utiliser cet EAN pour votre produit de type Variant. 2 solutions : soit vous positionnez une information commerciale sur cet EAN car il s?agit du produit que vous souhaitez vendre, soit vous utilisez un autre EAN.;"Votre EAN existe dÇjÖ dans notre base mais sur un produit Standard (sans dÇclinaisons de tailles). Vous pouvez däs Ö prÇsent publier votre information commerciale.
-Cependant, si l'EAN correspond bien Ö un produit de type variant, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport svp, nous effectuerons une analyse."
-2432;EAN:Inactif - veuillez contacter le support vendeur. ;"Veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport svp."
-2442;EAN : Produit dÇjÖ existant : vous pouvez ajouter une information commerciale sur ce produit (voir Gestion de vos informations commerciales dans l?espace vendeur);Le produit existe dÇjÖ dans notre base. Vous pouvez däs Ö prÇsent publier votre information commerciale.
-2501;EAN : Vous avez choisi un EAN dÇjÖ utilisÇ sur un produit d?une autre couleur. 2 solutions : soit vous positionnez une information commerciale car il s?agit du produit que vous voulez vendre (màme taille, màme couleur), soit vous utilisez un autre EAN pour ce produit variant et cette couleur. ;"Explication : Vous souhaitez insÇrer dans votre boutique (rÇfÇrentiel) les tailles 42 et 43 d?un produit (dont l?EAN est dÇjÖ existant dans notre base) et pour lequel vous avez dÇjÖ les tailles 44 ´ et 45 ´ crÇÇes (SKU Cdiscount crÇÇ pour les tailles 44 ´ et 45 ´ : MP01184230).
-
-Pour les tailles 44 ´ et 45 ´ de ce produit, vous avez indiquÇ un SKU Famille Æˇ306ˇØ, vous indiquez donc le SKU Famille Æˇ306ˇØ pour les tailles 42 et 43 afin de les rattacher aux autres tailles du SKU Cdiscount : MP01184230.
-MAIS les EAN des tailles 42 et 43 que vous souhaitez ajouter dans votre boutique sont rattachÇs au SKU Cdiscount MP00992899 et non MP01184230.
+En amont, nous envoyons un mail √© notre √©quipe technique afin qu?elle puisse effectuer une analyse pour savoir s?il s?agit d?un dysfonctionnement, d?une erreur de notre syst√©me de cr√©ation ou autre. 
+CODE_1601 ; EAN : Cl√© invalide, v√©rifiez l'EAN ; Veuillez v√©rifier que l'EAN soit conforme. Il doit √©tre compos√© de 13 chiffres (https://fr.wikipedia.org/wiki/EAN_13)
+CODE_1602 ; ISBN: Cl√© invalide, v√©rifier l'EAN ; Veuillez v√©rifier que l'ISBN soit conforme. Il doit √©tre compos√© de 13 chiffres (http://lesignet.canalblog.com/archives/2008/09/23/10670289.html)
+CODE_1724 ; Produit: GNX n'a pas g√©n√©r√© d'EAN ; Une erreur technique s'est produite, merci de resoumettre votre produit en y apportant une modification (ajouter un   0   dans la colonne Poids par exemple). 
+CODE_1901 ; EAN:Non int√©gr√©e, erreur dans le traitement ; Une erreur technique s'est produite, merci de resoumettre votre produit en y apportant une modification (ajouter un   0   dans la colonne Poids par exemple). 
+CODE_2100 ; Une erreur technique nous emp√©che de cr√©er le produit. Vous pouvez resoumettre votre demande. ; Explication : Ce message signifie qu?il y a eu un dysfonctionnement technique lors de la cr√©ation (raison inconnue).
 
 Solution : 
-Vous devez donc modifier votre SKU Famille afin que les tailles 42 et 43 puissent s?insÇrer dans votre boutique (rÇfÇrentiel)."
-2624;Produit : EAN existant dans votre fichier sur plusieurs produits : '3760226840084'. Un produit = Une rÇfÇrence vendeur = Un EAN;Vous devez indiquer un EAN diffÇrent pour chaque produit. Un produit = Une rÇfÇrence vendeur = Un EAN
-2724;Produit : RÇfÇrence produit existante  dans votre fichier sur plusieurs produits : '11308'. Un produit = Une rÇfÇrence vendeur = Un EAN;Vous devez indiquer une rÇfÇrence diffÇrente pour chaque produit. Un produit = Une rÇfÇrence vendeur = Un EAN
-2824;Produit : Combinaison : SKU Famille/Couleur marketing/Taille existante sur plusieurs produits dans votre fichier. Chaque produit d'une màme famille doit avoir une taille et/ou une couleur diffÇrente;"Explication : Ce message signifie que vous avez renseignÇ plusieurs fois la màme combinaison ÆˇSKU Famille + Couleur marketing + TailleˇØ sur diffÇrents produits.
+a) Si un SKU Cdiscount est pr√©sent dans la colonne D √©√©SKU Trouv√©√©√©, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport.
 
-Solution : Vous devez donc modifier une des 3 donnÇes (SKU Famille ou Taille ou Couleur marketing)."
-2928;"1) Taille du produit variant : L'ajout de la taille {x} est impossible pour ce produit {x}. Vous devez crÇer votre produit en utilisant un nouveau Sku famille.
+b) Si aucun SKU Cdiscount n?est pr√©sent dans la colonne D √©√©SKU Trouv√©√©√© alors vous devez soumettre une nouvelle demande de cr√©ation en effectuant une modification sur les produits concern√©s (ajouter un √©√©0√©√© dans la colonne Poids par exemple). 
+2325 ; Rayon : Pas de rayon affect√© √© la cat√©gorie produit '1000002686' [SECURITE - PROTECTION CHANTIER], veuillez contacter le support vendeur. ; Ce message signifie qu'il n'y a pas de rayon / navigation associ√© √© la cat√©gorie de votre produit.
+Veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport svp. 
+CODE_2401 ; EAN : Un produit de type Standard existe d√©j√© avec le m√©me EAN, il est donc impossible d?utiliser cet EAN pour votre produit de type Variant. 2 solutions : soit vous positionnez une information commerciale sur cet EAN car il s?agit du produit que vous souhaitez vendre, soit vous utilisez un autre EAN. ; Votre EAN existe d√©j√© dans notre base mais sur un produit Standard (sans d√©clinaisons de tailles). Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+Cependant, si l'EAN correspond bien √© un produit de type variant, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport svp, nous effectuerons une analyse. 
+CODE_2432 ; EAN:Inactif - veuillez contacter le support vendeur. ; Veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport svp. 
+CODE_2442 ; EAN : Produit d√©j√© existant : vous pouvez ajouter une information commerciale sur ce produit (voir Gestion de vos informations commerciales dans l?espace vendeur) ; Le produit existe d√©j√© dans notre base. Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+CODE_2501 ; EAN : Vous avez choisi un EAN d√©j√© utilis√© sur un produit d?une autre couleur. 2 solutions : soit vous positionnez une information commerciale car il s?agit du produit que vous voulez vendre (m√©me taille, m√©me couleur), soit vous utilisez un autre EAN pour ce produit variant et cette couleur. ; Explication : Vous souhaitez ins√©rer dans votre boutique (r√©f√©rentiel) les tailles 42 et 43 d?un produit (dont l?EAN est d√©j√© existant dans notre base) et pour lequel vous avez d√©j√© les tailles 44 √© et 45 √© cr√©√©es (SKU Cdiscount cr√©√© pour les tailles 44 √© et 45 √© : MP01184230).
 
-2) Taille du produit variant : L'ajout de la taille {x} est impossible pour ce produit . Vous devez crÇer votre produit en utilisant un nouveau Sku famille.";"Explication : Vous souhaitez ajouter la taille 36 sur un produit dÇjÖ crÇÇ avec les tailles 40, 41, 42, 43, 44 et 45.
-
-Vous utilisez pour cela le fichier de crÇation qui correspond au modäle unique ÆˇSOUMISSION CREATION PRODUITS_MKˇØ mais les premiäres tailles (40, 41, 42, 43, 44 et 45) ont ÇtÇ crÇÇes avec un modäle diffÇrent (ancien modäle : New - Chaussures et accessoires). De ce fait, il n?est pas possible d?ajouter la taille 36 au produit existant.
+Pour les tailles 44 √© et 45 √© de ce produit, vous avez indiqu√© un SKU Famille √©√©306√©√©, vous indiquez donc le SKU Famille √©√©306√©√© pour les tailles 42 et 43 afin de les rattacher aux autres tailles du SKU Cdiscount : MP01184230.
+MAIS les EAN des tailles 42 et 43 que vous souhaitez ajouter dans votre boutique sont rattach√©s au SKU Cdiscount MP00992899 et non MP01184230.
 
 Solution : 
-Vous devez modifier votre SKU Famille."
-3001;EAN : Un EAN existe dÇjÖ pour la combinaison ÆˇSku famille {x} - Taille {x} - Couleur {x} Ø. 2 solutions : soit vous resoumettez votre demande en modifiant la combinaison, soit vous positionnez une information commerciale sur cet EAN {x} car il s?agit du produit que vous souhaitez vendre.;"Explication : Vous avez indiquÇ la combinaison ÆˇSKU Famille + Taille + Couleur marketingˇØ sur un EAN mais cette taille est associÇe Ö un EAN diffÇrent dans notre base.
+Vous devez donc modifier votre SKU Famille afin que les tailles 42 et 43 puissent s?ins√©rer dans votre boutique (r√©f√©rentiel). 
+CODE_2624 ; Produit : EAN existant dans votre fichier sur plusieurs produits : '3760226840084'. Un produit = Une r√©f√©rence vendeur = Un EAN ; Vous devez indiquer un EAN diff√©rent pour chaque produit. Un produit = Une r√©f√©rence vendeur = Un EAN
+CODE_2724 ; Produit : R√©f√©rence produit existante  dans votre fichier sur plusieurs produits : '11308'. Un produit = Une r√©f√©rence vendeur = Un EAN ; Vous devez indiquer une r√©f√©rence diff√©rente pour chaque produit. Un produit = Une r√©f√©rence vendeur = Un EAN
+CODE_2824 ; Produit : Combinaison : SKU Famille/Couleur marketing/Taille existante sur plusieurs produits dans votre fichier. Chaque produit d'une m√©me famille doit avoir une taille et/ou une couleur diff√©rente ; Explication : Ce message signifie que vous avez renseign√© plusieurs fois la m√©me combinaison √©√©SKU Famille + Couleur marketing + Taille√©√© sur diff√©rents produits.
 
-Solution : Vous devez modifier l?EAN du produit et mettre celui correspondant Ö la taille."
-3128;Taille du produit variant : La taille n'a pas ÇtÇ trouvÇe dans la matrice de tailles : taille='{x}', matrice='{x}';"Explication : La taille n'a pas ÇtÇ trouvÇe dans notre systäme.
-Solution : Veuillez consulter notre liste de tailles (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile) et indiquer une taille conforme et existante."
-3300;Produit crÇÇ. Vous pouvez ajouter une information commerciale sur ce produit.;Votre produit a bien ÇtÇ crÇÇ dans notre base. Vous pouvez däs Ö prÇsent publier votre information commerciale.
-3424;Produit existant mais non ouvert Ö la Marketplace, veuillez contacter le support vendeur.;"Veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport svp."
-3500;Produit mis Ö jour : vous pouvez ajouter une information commerciale sur ce produit (voir Gestion de vos informations commerciales dans l?espace vendeur);Votre produit a bien ÇtÇ crÇÇ dans notre base. Vous pouvez däs Ö prÇsent publier votre information commerciale.
-3600;Produit '{0}' ajoutÇ au produit '{1}';Produit crÇÇ. Vous pouvez däs Ö prÇsent publier votre information commerciale.
-3712;Image produit 1 : Nous ne pouvons pas rÇcupÇrer l?image car l'accäs Ö votre serveur d'image a ÇtÇ refusÇ. Veuillez vÇrifier la disponibilitÇ de l?image sur votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+Solution : Vous devez donc modifier une des 3 donn√©es (SKU Famille ou Taille ou Couleur marketing). 
+CODE_2928 ; 1) Taille du produit variant : L'ajout de la taille {x} est impossible pour ce produit {x}. Vous devez cr√©er votre produit en utilisant un nouveau Sku famille.
 
-Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-3713;Image produit 2 : Nous ne pouvons pas rÇcupÇrer l?image car l'accäs Ö votre serveur d'image a ÇtÇ refusÇ. Veuillez vÇrifier la disponibilitÇ de l?image sur votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+2) Taille du produit variant : L'ajout de la taille {x} est impossible pour ce produit . Vous devez cr√©er votre produit en utilisant un nouveau Sku famille. ; Explication : Vous souhaitez ajouter la taille 36 sur un produit d√©j√© cr√©√© avec les tailles 40, 41, 42, 43, 44 et 45.
 
-Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-3714;Image produit 3 : Nous ne pouvons pas rÇcupÇrer l?image car l'accäs Ö votre serveur d'image a ÇtÇ refusÇ. Veuillez vÇrifier la disponibilitÇ de l?image sur votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+Vous utilisez pour cela le fichier de cr√©ation qui correspond au mod√©le unique √©√©SOUMISSION CREATION PRODUITS_MK√©√© mais les premi√©res tailles (40, 41, 42, 43, 44 et 45) ont √©t√© cr√©√©es avec un mod√©le diff√©rent (ancien mod√©le : New - Chaussures et accessoires). De ce fait, il n?est pas possible d?ajouter la taille 36 au produit existant.
 
-Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-3715;Image produit 4 : Nous ne pouvons pas rÇcupÇrer l?image car l'accäs Ö votre serveur d'image a ÇtÇ refusÇ. Veuillez vÇrifier la disponibilitÇ de l?image sur votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+Solution : 
+Vous devez modifier votre SKU Famille. 
+CODE_3001 ; EAN : Un EAN existe d√©j√© pour la combinaison √©√©Sku famille {x} - Taille {x} - Couleur {x} √©. 2 solutions : soit vous resoumettez votre demande en modifiant la combinaison, soit vous positionnez une information commerciale sur cet EAN {x} car il s?agit du produit que vous souhaitez vendre. ; Explication : Vous avez indiqu√© la combinaison √©√©SKU Famille + Taille + Couleur marketing√©√© sur un EAN mais cette taille est associ√©e √© un EAN diff√©rent dans notre base.
+
+Solution : Vous devez modifier l?EAN du produit et mettre celui correspondant √© la taille. 
+CODE_3128 ; Taille du produit variant : La taille n'a pas √©t√© trouv√©e dans la matrice de tailles : taille='{x}', matrice='{x}' ; Explication : La taille n'a pas √©t√© trouv√©e dans notre syst√©me.
+Solution : Veuillez consulter notre liste de tailles (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile) et indiquer une taille conforme et existante. 
+CODE_3300 ; Produit cr√©√©. Vous pouvez ajouter une information commerciale sur ce produit. ; Votre produit a bien √©t√© cr√©√© dans notre base. Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+CODE_3424 ; Produit existant mais non ouvert √© la Marketplace, veuillez contacter le support vendeur. ; Veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport svp. 
+CODE_3500 ; Produit mis √© jour : vous pouvez ajouter une information commerciale sur ce produit (voir Gestion de vos informations commerciales dans l?espace vendeur) ; Votre produit a bien √©t√© cr√©√© dans notre base. Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+CODE_3600 ; Produit '{0}' ajout√© au produit '{1}' ; Produit cr√©√©. Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+CODE_3712 ; Image produit 1 : Nous ne pouvons pas r√©cup√©rer l?image car l'acc√©s √© votre serveur d'image a √©t√© refus√©. Veuillez v√©rifier la disponibilit√© de l?image sur votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-3728;Taille du produit variant : La taille du produit Variant que vous essayez de crÇer n'est pas rÇfÇrencÇe dans la matrice de taille. Avant de resoumettre votre produit, vous devez ouvrir un ticket au support vendeur pour qu?il la crÇÇe.;"Explication : Vous souhaitez ajouter les tailles 43 et 44 sur un produit dÇjÖ crÇÇ dans notre base (avec d?autres tailles).
-Cependant le modäle de crÇation utilisÇ pour les tailles existantes ne contient pas les tailles que vous souhaitez ajouter.
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_3713 ; Image produit 2 : Nous ne pouvons pas r√©cup√©rer l?image car l'acc√©s √© votre serveur d'image a √©t√© refus√©. Veuillez v√©rifier la disponibilit√© de l?image sur votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
-Vous devez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport et nous effectuerons une analyse :
-a) Si la fiche est erronÇe, nous devrons la supprimer afin que vous puissiez la recrÇer avec les bonnes informations (fiche ÆˇT-shirtˇØ mais il s?agit d?une ÆˇbasketˇØ)
-b) Si la fiche est conforme : nous ajouterons la taille dans notre base si cela est cohÇrent."
-3812;Image produit 1 : RÇsolution incorrecte, vÇrifiez la taille de l'image.;"L'image doit àtre au format jpg, jpeg, png, ou gif.
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_3714 ; Image produit 3 : Nous ne pouvons pas r√©cup√©rer l?image car l'acc√©s √© votre serveur d'image a √©t√© refus√©. Veuillez v√©rifier la disponibilit√© de l?image sur votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
+
+Solution :
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_3715 ; Image produit 4 : Nous ne pouvons pas r√©cup√©rer l?image car l'acc√©s √© votre serveur d'image a √©t√© refus√©. Veuillez v√©rifier la disponibilit√© de l?image sur votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
+
+Solution :
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_3728 ; Taille du produit variant : La taille du produit Variant que vous essayez de cr√©er n'est pas r√©f√©renc√©e dans la matrice de taille. Avant de resoumettre votre produit, vous devez ouvrir un ticket au support vendeur pour qu?il la cr√©√©e. ; Explication : Vous souhaitez ajouter les tailles 43 et 44 sur un produit d√©j√© cr√©√© dans notre base (avec d?autres tailles).
+Cependant le mod√©le de cr√©ation utilis√© pour les tailles existantes ne contient pas les tailles que vous souhaitez ajouter.
+
+Solution :
+Vous devez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport et nous effectuerons une analyse :
+a) Si la fiche est erron√©e, nous devrons la supprimer afin que vous puissiez la recr√©er avec les bonnes informations (fiche √©√©T-shirt√©√© mais il s?agit d?une √©√©basket√©√©)
+b) Si la fiche est conforme : nous ajouterons la taille dans notre base si cela est coh√©rent. 
+CODE_3812 ; Image produit 1 : R√©solution incorrecte, v√©rifiez la taille de l'image. ; L'image doit √©tre au format jpg, jpeg, png, ou gif.
 Taille minimum : 50x500 pixels.
 Taille maximum : 3000 x 3000 pixels.
-Poids : ne pas excÇder 5 Mo."
-3912;Image du produit 1 : La rÇcupÇration d'image nous a ÇtÇ refusÇe par votre serveur distant. Veuillez vÇrifier les paramätres de sÇcuritÇ de votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+Poids : ne pas exc√©der 5 Mo. 
+CODE_3912 ; Image du produit 1 : La r√©cup√©ration d'image nous a √©t√© refus√©e par votre serveur distant. Veuillez v√©rifier les param√©tres de s√©curit√© de votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-3913;Image produit 2 : La rÇcupÇration de l'image nous a ÇtÇ refusÇe par votre serveur distant. Veuillez vÇrifier le paramÇtrage de sÇcuritÇ de votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_3913 ; Image produit 2 : La r√©cup√©ration de l'image nous a √©t√© refus√©e par votre serveur distant. Veuillez v√©rifier le param√©trage de s√©curit√© de votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-3914;Image produit 3 : La rÇcupÇration de l'image nous a ÇtÇ refusÇe par votre serveur distant. Veuillez vÇrifier le paramÇtrage de sÇcuritÇ de votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_3914 ; Image produit 3 : La r√©cup√©ration de l'image nous a √©t√© refus√©e par votre serveur distant. Veuillez v√©rifier le param√©trage de s√©curit√© de votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-3915;Image produit 4 : La rÇcupÇration de l'image nous a ÇtÇ refusÇe par votre serveur distant. Veuillez vÇrifier le paramÇtrage de sÇcuritÇ de votre serveur.;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_3915 ; Image produit 4 : La r√©cup√©ration de l'image nous a √©t√© refus√©e par votre serveur distant. Veuillez v√©rifier le param√©trage de s√©curit√© de votre serveur. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
-1) Vous devez soumettre une nouvelle demande de crÇation en y apportant une modification sur chaque produit (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple) et vÇrifier que votre serveur soit bien disponible
-2) Vous devez ÆˇwhitelistÇˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8"
-4012;Image produit 1 : Time out lors de la rÇcupÇration de l?image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;"Notre systäme de crÇation a mis plus de 5 secondes pour rÇcupÇrer votre visuel ce qui n'est pas conforme.
-Veuillez vÇrifier le temps de tÇlÇchargement et soumettre une nouvelle demande de crÇation en apportant une modification sur le produit concernÇ (ajouter un ""0"" dans la colonne Poids par exemple)."
-4012;Time out lors de la rÇcupÇration de votre image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;" Pour cette erreur, nous vous suggÇrons d'augmenter la capacitÇ d'hÇbergement sur cette image. 
-Vous pouvez aussi changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)"
-4013;Image produit 2 :Time out lors de la rÇcupÇration de l?image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;"Notre systäme de crÇation a mis plus de 5 secondes pour rÇcupÇrer votre visuel ce qui n'est pas conforme.
-Veuillez vÇrifier le temps de tÇlÇchargement et soumettre une nouvelle demande de crÇation en apportant une modification sur le produit concernÇ (ajouter un ""0"" dans la colonne Poids par exemple)."
-4013;Time out lors de la rÇcupÇration de votre image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;" Pour cette erreur, nous vous suggÇrons d'augmenter la capacitÇ d'hÇbergement sur cette image. 
-Vous pouvez aussi changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)"
-4014;Image produit 3 :Time out lors de la rÇcupÇration de l?image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;"Notre systäme de crÇation a mis plus de 5 secondes pour rÇcupÇrer votre visuel ce qui n'est pas conforme.
-Veuillez vÇrifier le temps de tÇlÇchargement et soumettre une nouvelle demande de crÇation en apportant une modification sur le produit concernÇ (ajouter un ""0"" dans la colonne Poids par exemple)."
-4014;Time out lors de la rÇcupÇration de votre image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;" Pour cette erreur, nous vous suggÇrons d'augmenter la capacitÇ d'hÇbergement sur cette image. 
-Vous pouvez aussi changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)"
-4015;Image produit 4 :Time out lors de la rÇcupÇration de l?image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;"Notre systäme de crÇation a mis plus de 5 secondes pour rÇcupÇrer votre visuel ce qui n'est pas conforme.
-Veuillez vÇrifier le temps de tÇlÇchargement et soumettre une nouvelle demande de crÇation en apportant une modification sur le produit concernÇ (ajouter un ""0"" dans la colonne Poids par exemple)."
-4015;Time out lors de la rÇcupÇration de votre image, votre serveur a mis plus de 5 secondes Ö rÇpondre.;" Pour cette erreur, nous vous suggÇrons d'augmenter la capacitÇ d'hÇbergement sur cette image. 
-Vous pouvez aussi changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)"
-4108;LibellÇ court du produit:Contient du html alors que c'est interdit pour cette propriÇtÇ;Les balises HTML sont interdites dans le libellÇ court, veuillez les retirer (elles sont autorisÇes uniquement dans la description marketing).
-4109;LibellÇ long du produit: Contient du html alors que c'est interdit pour cette propriÇtÇ;Les balises HTML sont interdites dans le libellÇ long, veuillez les retirer (elles sont autorisÇes uniquement dans la description marketing).
-4110;Description du produit : Contient du html alors que c'est interdit pour cette propriÇtÇ;Les balises HTML sont interdites dans la description produit, veuillez les retirer (elles sont autorisÇes uniquement dans la description marketing).
-4112;Image produit 1:Contient du html alors que c'est interdit pour cette propriÇtÇ;Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
-4113;Image produit 2:Contient du html alors que c'est interdit pour cette propriÇtÇ;Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
-4114;Image produit 3:Contient du html alors que c'est interdit pour cette propriÇtÇ;Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
-4115;Image produit 4:Contient du html alors que c'est interdit pour cette propriÇtÇ;Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
-4203;RÇfÇrence produit vendeur : Vous avez dÇjÖ associÇ cette rÇfÇrence vendeur Ö un autre produit, il est donc impossible de la rÇutiliser pour la crÇation d'un nouveau produit. 2 solutions : soit vous en choisissez une autre pour ce produit, soit votre souhait est de modifier le produit existant, dans ce cas vous devez demander une modification des EAN.;"Explication : 
-a) Ce message signifie que vous avez indiquÇ une rÇfÇrence vendeur dans votre fichier de crÇation qui est dÇjÖ rattachÇe Ö un SKU Cdiscount existant.
-La rÇfÇrence prÇsente dans la colonne A ""RÇfÇrence vendeur"" de votre rapport est associÇe au produit (SKU Cdiscount) prÇsent dans la colonne D ""SKU trouvÇ"".
-De ce fait, vous ne pouvez pas utiliser cette rÇfÇrence sur un nouveau produit.
+1) Vous devez soumettre une nouvelle demande de cr√©ation en y apportant une modification sur chaque produit (ajouter un √©√©0√©√© dans la colonne Poids par exemple) et v√©rifier que votre serveur soit bien disponible
+2) Vous devez √©√©whitelist√©√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8 
+CODE_4012 ; Image produit 1 : Time out lors de la r√©cup√©ration de l?image, votre serveur a mis plus de 5 secondes √© r√©pondre. ; Notre syst√©me de cr√©ation a mis plus de 5 secondes pour r√©cup√©rer votre visuel ce qui n'est pas conforme.
+Veuillez v√©rifier le temps de t√©l√©chargement et soumettre une nouvelle demande de cr√©ation en apportant une modification sur le produit concern√© (ajouter un   0   dans la colonne Poids par exemple). 
+CODE_4012 ; Time out lors de la r√©cup√©ration de votre image, votre serveur a mis plus de 5 secondes √© r√©pondre. ;  Pour cette erreur, nous vous sugg√©rons d'augmenter la capacit√© d'h√©bergement sur cette image. 
+Vous pouvez aussi changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.) 
+CODE_4013 ; Image produit 2 :Time out lors de la r√©cup√©ration de l?image, votre serveur a mis plus de 5 secondes √© r√©pondre. ; Notre syst√©me de cr√©ation a mis plus de 5 secondes pour r√©cup√©rer votre visuel ce qui n'est pas conforme.
+Veuillez v√©rifier le temps de t√©l√©chargement et soumettre une nouvelle demande de cr√©ation en apportant une modification sur le produit concern√© (ajouter un   0   dans la colonne Poids par exemple). 
+CODE_4013 ; Time out lors de la r√©cup√©ration de votre image, votre serveur a mis plus de 5 secondes √© r√©pondre. ;  Pour cette erreur, nous vous sugg√©rons d'augmenter la capacit√© d'h√©bergement sur cette image. 
+Vous pouvez aussi changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.) 
+CODE_4014 ; Image produit 3 :Time out lors de la r√©cup√©ration de l?image, votre serveur a mis plus de 5 secondes √© r√©pondre. ; Notre syst√©me de cr√©ation a mis plus de 5 secondes pour r√©cup√©rer votre visuel ce qui n'est pas conforme.
+Veuillez v√©rifier le temps de t√©l√©chargement et soumettre une nouvelle demande de cr√©ation en apportant une modification sur le produit concern√© (ajouter un   0   dans la colonne Poids par exemple). 
+CODE_4014 ; Time out lors de la r√©cup√©ration de votre image, votre serveur a mis plus de 5 secondes √© r√©pondre. ;  Pour cette erreur, nous vous sugg√©rons d'augmenter la capacit√© d'h√©bergement sur cette image. 
+Vous pouvez aussi changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.) 
+CODE_4015 ; Image produit 4 :Time out lors de la r√©cup√©ration de l?image, votre serveur a mis plus de 5 secondes √© r√©pondre. ; Notre syst√©me de cr√©ation a mis plus de 5 secondes pour r√©cup√©rer votre visuel ce qui n'est pas conforme.
+Veuillez v√©rifier le temps de t√©l√©chargement et soumettre une nouvelle demande de cr√©ation en apportant une modification sur le produit concern√© (ajouter un   0   dans la colonne Poids par exemple). 
+CODE_4015 ; Time out lors de la r√©cup√©ration de votre image, votre serveur a mis plus de 5 secondes √© r√©pondre. ;  Pour cette erreur, nous vous sugg√©rons d'augmenter la capacit√© d'h√©bergement sur cette image. 
+Vous pouvez aussi changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.) 
+CODE_4108 ; Libell√© court du produit:Contient du html alors que c'est interdit pour cette propri√©t√© ; Les balises HTML sont interdites dans le libell√© court, veuillez les retirer (elles sont autoris√©es uniquement dans la description marketing).
+CODE_4109 ; Libell√© long du produit: Contient du html alors que c'est interdit pour cette propri√©t√© ; Les balises HTML sont interdites dans le libell√© long, veuillez les retirer (elles sont autoris√©es uniquement dans la description marketing).
+CODE_4110 ; Description du produit : Contient du html alors que c'est interdit pour cette propri√©t√© ; Les balises HTML sont interdites dans la description produit, veuillez les retirer (elles sont autoris√©es uniquement dans la description marketing).
+CODE_4112 ; Image produit 1:Contient du html alors que c'est interdit pour cette propri√©t√© ; Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
+CODE_4113 ; Image produit 2:Contient du html alors que c'est interdit pour cette propri√©t√© ; Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
+CODE_4114 ; Image produit 3:Contient du html alors que c'est interdit pour cette propri√©t√© ; Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
+CODE_4115 ; Image produit 4:Contient du html alors que c'est interdit pour cette propri√©t√© ; Les balises HTML sont interdites dans les images, veuillez les retirer et indiquer un lien URL au format : jpg, jpeg, gif ou png.
+CODE_4203 ; R√©f√©rence produit vendeur : Vous avez d√©j√© associ√© cette r√©f√©rence vendeur √© un autre produit, il est donc impossible de la r√©utiliser pour la cr√©ation d'un nouveau produit. 2 solutions : soit vous en choisissez une autre pour ce produit, soit votre souhait est de modifier le produit existant, dans ce cas vous devez demander une modification des EAN. ; Explication : 
+a) Ce message signifie que vous avez indiqu√© une r√©f√©rence vendeur dans votre fichier de cr√©ation qui est d√©j√© rattach√©e √© un SKU Cdiscount existant.
+La r√©f√©rence pr√©sente dans la colonne A   R√©f√©rence vendeur   de votre rapport est associ√©e au produit (SKU Cdiscount) pr√©sent dans la colonne D   SKU trouv√©  .
+De ce fait, vous ne pouvez pas utiliser cette r√©f√©rence sur un nouveau produit.
 
-b) Vous avez crÇÇ un produit sans EAN avec cette rÇfÇrence et vous souhaitez crÇer de nouveau cette rÇfÇrence mais cette fois-ci avec un EAN.
-Ce n?est pas possible car la rÇfÇrence est associÇe au SKU Cdiscount qui a ÇtÇ crÇÇ sans EAN.
+b) Vous avez cr√©√© un produit sans EAN avec cette r√©f√©rence et vous souhaitez cr√©er de nouveau cette r√©f√©rence mais cette fois-ci avec un EAN.
+Ce n?est pas possible car la r√©f√©rence est associ√©e au SKU Cdiscount qui a √©t√© cr√©√© sans EAN.
 Solution : 
 a) Vous avez 2 solutions : 
-	1) Publier votre information commerciale sur le SKU Cdiscount prÇsent dans la colonne D ""SKU trouvÇÆˇavec cette rÇfÇrence
-	2) Modifier la rÇfÇrence dans votre fichier de crÇation
+	1) Publier votre information commerciale sur le SKU Cdiscount pr√©sent dans la colonne D   SKU trouv√©√©√©avec cette r√©f√©rence
+	2) Modifier la r√©f√©rence dans votre fichier de cr√©ation
 
 b) Vous avez 3 solutions : 
-	1) Publier votre information commerciale avec cette rÇfÇrence sur le SKU Cdiscount crÇÇ sans EAN
-	2) Modifier la rÇfÇrence dans votre fichier de crÇation
-	3) Faire une demande de changement d?EAN en ouvrant une requàte de Type :   ""CrÇer ou modifier vos fiches-produits"" > ""Modifier vos rÇfÇrences produits"".  ˇØ (colonnes A, B et C)"
-4324;Produit : Les modäles pour les produits d'une màme famille ne sont pas identiques {sku,sku};"Explication : 
-1) Ce message remonte lorsque vous souhaitez crÇer des produits variants avec dÇclinaisons de tailles ET couleurs mais Ö ce jour cette action n?est plus possible.
+	1) Publier votre information commerciale avec cette r√©f√©rence sur le SKU Cdiscount cr√©√© sans EAN
+	2) Modifier la r√©f√©rence dans votre fichier de cr√©ation
+	3) Faire une demande de changement d?EAN en ouvrant une requ√©te de Type :     Cr√©er ou modifier vos fiches-produits   >   Modifier vos r√©f√©rences produits  .  √©√© (colonnes A, B et C) 
+CODE_4324 ; Produit : Les mod√©les pour les produits d'une m√©me famille ne sont pas identiques {sku,sku} ; Explication : 
+1) Ce message remonte lorsque vous souhaitez cr√©er des produits variants avec d√©clinaisons de tailles ET couleurs mais √© ce jour cette action n?est plus possible.
 Ou
-2) Ce message remonte lorsque la fiche produit contenant les 1äres tailles a ÇtÇ crÇÇe avec un ancien modäle (autre que SOUMISSION CREATION PRODUITS_MK) et que vous souhaitez ajouter une nouvelle taille avec le modäle actuel SOUMISSION CREATION PRODUITS_MK.
+2) Ce message remonte lorsque la fiche produit contenant les 1√©res tailles a √©t√© cr√©√©e avec un ancien mod√©le (autre que SOUMISSION CREATION PRODUITS_MK) et que vous souhaitez ajouter une nouvelle taille avec le mod√©le actuel SOUMISSION CREATION PRODUITS_MK.
 
 Solution : 
-1) Vous devez indiquer un SKU Famille diffÇrent pour chaque couleur.
-2) Vous devez indiquer un nouveau SKU Famille pour la taille que vous souhaitez ajouter."
-4424;Produit : Les propriÇtÇs principales doivent àtre diffÇrentes pour les produits d'une màme famille {sku sku };"Explication : 
-1) Ce message remonte lorsque vous souhaitez crÇer des produits variants avec dÇclinaisons de tailles ET couleurs mais Ö ce jour cette action n?est plus possible.
+1) Vous devez indiquer un SKU Famille diff√©rent pour chaque couleur.
+2) Vous devez indiquer un nouveau SKU Famille pour la taille que vous souhaitez ajouter. 
+CODE_4424 ; Produit : Les propri√©t√©s principales doivent √©tre diff√©rentes pour les produits d'une m√©me famille {sku sku } ; Explication : 
+1) Ce message remonte lorsque vous souhaitez cr√©er des produits variants avec d√©clinaisons de tailles ET couleurs mais √© ce jour cette action n?est plus possible.
 Ou
-2) Ce message remonte lorsque la fiche produit contenant les 1äres tailles a ÇtÇ crÇÇe avec un ancien modäle (autre que SOUMISSION CREATION PRODUITS_MK) et que vous souhaitez ajouter une nouvelle taille avec le modäle actuel SOUMISSION CREATION PRODUITS_MK.
+2) Ce message remonte lorsque la fiche produit contenant les 1√©res tailles a √©t√© cr√©√©e avec un ancien mod√©le (autre que SOUMISSION CREATION PRODUITS_MK) et que vous souhaitez ajouter une nouvelle taille avec le mod√©le actuel SOUMISSION CREATION PRODUITS_MK.
 
 Solution : 
-1) Vous devez indiquer un SKU Famille diffÇrent pour chaque couleur.
-2) Vous devez indiquer un nouveau SKU Famille pour la taille que vous souhaitez ajouter."
-4501;EAN : Plage EAN non conforme, ces EAN sont rÇservÇs Ö l'usage interne des entreprises.;"Les EAN (commenáant par 020 Ö 029   040 Ö 049   200 Ö 299) sont rÇservÇs Ö l'usage interne des entreprises et ne peuvent àtre utilisÇs par les vendeurs sur notre Marketplace. Veuillez indiquer un autre EAN.
-Si vous ne disposez pas d'EAN, vous pouvez en acheter directement aupräs de GS1 (https://www.gs1.fr/)"
-4731;La taille n'a pas ÇtÇ trouvÇe dans la matrice de tailles : taille='{0}', matrice='{1}';"Explication : La taille n'a pas ÇtÇ trouvÇe dans notre systäme.
-Solution : Veuillez consulter notre liste de tailles (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile) et indiquer une taille conforme et existante."
-4812;Image produit 1:RÇsolution incorrecte, vÇrifiez la taille de l'image (Minimum autorisÇ: 50 x 500px).;"L'image doit àtre au format jpg, jpeg, png, ou gif.
+1) Vous devez indiquer un SKU Famille diff√©rent pour chaque couleur.
+2) Vous devez indiquer un nouveau SKU Famille pour la taille que vous souhaitez ajouter. 
+CODE_4501 ; EAN : Plage EAN non conforme, ces EAN sont r√©serv√©s √© l'usage interne des entreprises. ; Les EAN (commen√©ant par 020 √© 029   040 √© 049   200 √© 299) sont r√©serv√©s √© l'usage interne des entreprises et ne peuvent √©tre utilis√©s par les vendeurs sur notre Marketplace. Veuillez indiquer un autre EAN.
+Si vous ne disposez pas d'EAN, vous pouvez en acheter directement aupr√©s de GS1 (https://www.gs1.fr/) 
+CODE_4731 ; La taille n'a pas √©t√© trouv√©e dans la matrice de tailles : taille='{0}', matrice='{1}' ; Explication : La taille n'a pas √©t√© trouv√©e dans notre syst√©me.
+Solution : Veuillez consulter notre liste de tailles (Espace vendeur > Produits > Vendre des produits en masse > Documentation utile) et indiquer une taille conforme et existante. 
+CODE_4812 ; Image produit 1:R√©solution incorrecte, v√©rifiez la taille de l'image (Minimum autoris√©: 50 x 500px). ; L'image doit √©tre au format jpg, jpeg, png, ou gif.
 Taille minimum : 50x500 pixels.
 Taille maximum : 3000 x 3000 pixels.
-Poids : ne pas excÇder 5 Mo."
-5026;Description marketing du produit : URL en http non autorisÇe, veuillez utiliser un serveur sÇcurisÇ en https;Les photos doivent àtre sur un serveur sÇcurisÇ en HTTPS://. Une fois les modifications effectuÇes merci de resoumettre votre fichier de demande de crÇation
-5100;"1) Impossible d'insÇrer dans le rÇfÇrentiel variant : Le sku variant ?MPxxxxxxxx' est dÇjÖ associÇ au couple sku famille / couleur suivant ?{x}' / ?{x}' pour le vendeur Æˇ{x}Ø, veuillez modifier toutes les tailles simultanÇment ou repasser le produit avec le bon couple.
+Poids : ne pas exc√©der 5 Mo. 
+CODE_5026 ; Description marketing du produit : URL en http non autoris√©e, veuillez utiliser un serveur s√©curis√© en https ; Les photos doivent √©tre sur un serveur s√©curis√© en HTTPS://. Une fois les modifications effectu√©es merci de resoumettre votre fichier de demande de cr√©ation
+CODE_5100 ; 1) Impossible d'ins√©rer dans le r√©f√©rentiel variant : Le sku variant ?MPxxxxxxxx' est d√©j√© associ√© au couple sku famille / couleur suivant ?{x}' / ?{x}' pour le vendeur √©√©{x}√©, veuillez modifier toutes les tailles simultan√©ment ou repasser le produit avec le bon couple.
 
-2) Impossible d'insÇrer dans le rÇfÇrentiel variant : Le produit taille 'MPxxxxxx-0001' n?existe pas, veuillez saisir un sku existant.";"1) Explication : Exemple Ce message signifie que pour le SKU Famille {x}, vous avez dÇjÖ crÇÇ la taille S avec la couleur marketing ÆˇBlancˇØ mais que pour la nouvelle taille M vous avez indiquÇ la couleur ÆˇRougeˇØ.
+2) Impossible d'ins√©rer dans le r√©f√©rentiel variant : Le produit taille 'MPxxxxxx-0001' n?existe pas, veuillez saisir un sku existant. ; 1) Explication : Exemple Ce message signifie que pour le SKU Famille {x}, vous avez d√©j√© cr√©√© la taille S avec la couleur marketing √©√©Blanc√©√© mais que pour la nouvelle taille M vous avez indiqu√© la couleur √©√©Rouge√©√©.
 
-Solution : Vous devez indiquer la couleur marketing utilisÇe lors de la crÇation des premiäres tailles.
+Solution : Vous devez indiquer la couleur marketing utilis√©e lors de la cr√©ation des premi√©res tailles.
 
 
-2) Explication : Vous souhaitez insÇrer dans votre boutique (rÇfÇrentiel) les tailles 38, 39.5, 40, 37, 37.5 et 39 d?un produit (dont les EAN sont dÇjÖ existants dans notre base) et pour lequel vous avez dÇjÖ les tailles 36 et 42 crÇÇes (SKU Cdiscount crÇÇ pour les tailles 36 et 42 : MP07463046).
+2) Explication : Vous souhaitez ins√©rer dans votre boutique (r√©f√©rentiel) les tailles 38, 39.5, 40, 37, 37.5 et 39 d?un produit (dont les EAN sont d√©j√© existants dans notre base) et pour lequel vous avez d√©j√© les tailles 36 et 42 cr√©√©es (SKU Cdiscount cr√©√© pour les tailles 36 et 42 : MP07463046).
 
-Pour les tailles 36 et 42 de ce produit, vous avez indiquÇ un SKU Famille Æˇ 1776_11944 ˇØ, vous indiquez donc le SKU Famille Æˇ 1776_11944 ˇØ pour les tailles 38, 39.5, 40, 37, 37.5 et 39 afin de les rattacher aux autres tailles du SKU Cdiscount : MP07463046 MAIS les EAN des tailles 38, 39.5, 40, 37, 37.5 et 39 dans notre base sont rattachÇs Ö un autre SKU Cdiscount MP05747679 et non MP07463046.
+Pour les tailles 36 et 42 de ce produit, vous avez indiqu√© un SKU Famille √©√© 1776_11944 √©√©, vous indiquez donc le SKU Famille √©√© 1776_11944 √©√© pour les tailles 38, 39.5, 40, 37, 37.5 et 39 afin de les rattacher aux autres tailles du SKU Cdiscount : MP07463046 MAIS les EAN des tailles 38, 39.5, 40, 37, 37.5 et 39 dans notre base sont rattach√©s √© un autre SKU Cdiscount MP05747679 et non MP07463046.
 
 Solution : 
-Vous devez donc modifier votre SKU Famille afin que les tailles 38, 39.5, 40, 37, 37.5 et 39 puissent s?insÇrer dans votre boutique (rÇfÇrentiel)."
-5126;Description marketing du produit : la balise href non autorisÇe;"La balise HTML href n'est pas autorisÇe. Une fois les modifications effectuÇes merci de resoumettre votre fichier de demande de crÇation.
-HTML Interdit : <href> <font> <table> <tr> <td> <th> <h1>ˇ<h2>ˇ<h3>ˇ<h4>ˇ<h5>ˇ<h6>ˇ<body>
-HTML AutorisÇ :  <bold> <strong> <br>"
-5224;Produit : CrÇation de produit dÇjÖ demandÇe et en cours d'analyse;"Explication : Votre produit a dÇjÖ ÇtÇ soumis en crÇation dans une prÇcÇdente demande. Vous devez doncˇconsulter le rapport d'origine.
+Vous devez donc modifier votre SKU Famille afin que les tailles 38, 39.5, 40, 37, 37.5 et 39 puissent s?ins√©rer dans votre boutique (r√©f√©rentiel). 
+CODE_5126 ; Description marketing du produit : la balise href non autoris√©e ; La balise HTML href n'est pas autoris√©e. Une fois les modifications effectu√©es merci de resoumettre votre fichier de demande de cr√©ation.
+HTML Interdit : <href> <font> <table> <tr> <td> <th> <h1>√©<h2>√©<h3>√©<h4>√©<h5>√©<h6>√©<body>
+HTML Autoris√© :  <bold> <strong> <br> 
+CODE_5224 ; Produit : Cr√©ation de produit d√©j√© demand√©e et en cours d'analyse ; Explication : Votre produit a d√©j√© √©t√© soumis en cr√©ation dans une pr√©c√©dente demande. Vous devez donc√©consulter le rapport d'origine.
 
-Solution : Si le rapport d?origine est toujours en attente depuis plus de 72h, vous devez soumettre une nouvelle demande de crÇation en apportant une modification sur chaque produit concernÇ (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple)."
-5424;Produit : Produit dÇjÖ prÇsentÇ et toujours en attente de traitement manuel par les Çquipes de la marketplace.;"Explication : Ce message signifie que le produit a dÇjÖ ÇtÇ soumis en crÇation et qu?il est toujours en cours de traitement dans notre systäme.
+Solution : Si le rapport d?origine est toujours en attente depuis plus de 72h, vous devez soumettre une nouvelle demande de cr√©ation en apportant une modification sur chaque produit concern√© (ajouter un √©√©0√©√© dans la colonne Poids par exemple). 
+CODE_5424 ; Produit : Produit d√©j√© pr√©sent√© et toujours en attente de traitement manuel par les √©quipes de la marketplace. ; Explication : Ce message signifie que le produit a d√©j√© √©t√© soumis en cr√©ation et qu?il est toujours en cours de traitement dans notre syst√©me.
 
-Solution : Attendre 24h Ö 48h que le traitement d'origine soit terminÇ.
-Si le message est toujours prÇsent au-delÖ de 48h Ö 72h, vous devez soumettre une nouvelle demande de crÇation en apportant une modification sur chaque produit concernÇ (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple).
+Solution : Attendre 24h √© 48h que le traitement d'origine soit termin√©.
+Si le message est toujours pr√©sent au-del√© de 48h √© 72h, vous devez soumettre une nouvelle demande de cr√©ation en apportant une modification sur chaque produit concern√© (ajouter un √©√©0√©√© dans la colonne Poids par exemple).
 
-Si le probläme persiste au-delÖ de 72h apräs votre repasse, vous devrez ouvrir une requàte de Type : CrÇer ou modifier vos fiches produits et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport pour que l?on puisse effectuer une analyse et vous apporter une solution / explication."
-5507;Nature du produit: Variant obligatoire pour cette catÇgorie, veuillez renseigner les donnÇes sku famille, taille et couleur marketing;"Ce message signifie que votre produit est traitÇ en Variant et non Standard. Vous devez donc indiquer ""Variant"" dans la colonne ""Nature du produit"" + Renseigner les colonnes ""SKU Famille"" + ""Taille"" + ""Couleur marketing"".
-Vous pouvez savoir si un produit est traitÇ en variant ou standard en consultant l'arbre des catÇgories qui se trouve sur votre Espace vendeur > Produits > Vendre des produits en masse > Documentation utile.
+Si le probl√©me persiste au-del√© de 72h apr√©s votre repasse, vous devrez ouvrir une requ√©te de Type : Cr√©er ou modifier vos fiches produits et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport pour que l?on puisse effectuer une analyse et vous apporter une solution / explication. 
+CODE_5507 ; Nature du produit: Variant obligatoire pour cette cat√©gorie, veuillez renseigner les donn√©es sku famille, taille et couleur marketing ; Ce message signifie que votre produit est trait√© en Variant et non Standard. Vous devez donc indiquer   Variant   dans la colonne   Nature du produit   + Renseigner les colonnes   SKU Famille   +   Taille   +   Couleur marketing  .
+Vous pouvez savoir si un produit est trait√© en variant ou standard en consultant l'arbre des cat√©gories qui se trouve sur votre Espace vendeur > Produits > Vendre des produits en masse > Documentation utile.
 
-Si en revanche dans l'arbre des catÇgories, votre produit est bien traitÇ en Standard, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation et le rapport svp."
-5607;"Nature du produit:Standard obligatoire sur cette catÇgorie, veuillez choisir ""Standard"" dans le champ ""Nature du produit"" et supprimer le sku famille, la taille ou la couleur marketing";"Ce message signifie que votre produit est traitÇ en Standard et non Variant. Vous devez donc indiquer ""Standard"" dans la colonne ""Nature du produit"" + Supprimer les donnÇes dans les colonnes ""SKU Famille"" + ""Taille"" + ""Couleur marketing"".
-Vous pouvez savoir si un produit est traitÇ en variant ou standard en consultant l'arbre des catÇgories qui se trouve sur votre Espace vendeur > Produits > Vendre des produits en masse > Documentation utile.
+Si en revanche dans l'arbre des cat√©gories, votre produit est bien trait√© en Standard, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation et le rapport svp. 
+CODE_5607 ; Nature du produit:Standard obligatoire sur cette cat√©gorie, veuillez choisir   Standard   dans le champ   Nature du produit   et supprimer le sku famille, la taille ou la couleur marketing ; Ce message signifie que votre produit est trait√© en Standard et non Variant. Vous devez donc indiquer   Standard   dans la colonne   Nature du produit   + Supprimer les donn√©es dans les colonnes   SKU Famille   +   Taille   +   Couleur marketing  .
+Vous pouvez savoir si un produit est trait√© en variant ou standard en consultant l'arbre des cat√©gories qui se trouve sur votre Espace vendeur > Produits > Vendre des produits en masse > Documentation utile.
 
-Si en revanche dans l'arbre des catÇgories, votre produit est bien traitÇ en Variant, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation et le rapport svp."
-5812;Erreur durant la rÇcupÇration de votre image. ;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
-
-Solution :
-
-1) Vous pouvez changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)
-2) Vous devez ÆˇwhitelisterˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8."
-5813;Erreur durant la rÇcupÇration de votre image. ;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+Si en revanche dans l'arbre des cat√©gories, votre produit est bien trait√© en Variant, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation et le rapport svp. 
+CODE_5812 ; Erreur durant la r√©cup√©ration de votre image. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
 
-1) Vous pouvez changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)
-2) Vous devez ÆˇwhitelisterˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8."
-5814;Erreur durant la rÇcupÇration de votre image. ;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+1) Vous pouvez changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.)
+2) Vous devez √©√©whitelister√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8. 
+CODE_5813 ; Erreur durant la r√©cup√©ration de votre image. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
 
-1) Vous pouvez changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)
-2) Vous devez ÆˇwhitelisterˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8."
-5815;Erreur durant la rÇcupÇration de votre image. ;"Explication : Ce message signifie que notre systäme de crÇation n?a pas pu rÇcupÇrer vos images pour 2 raisons :
-1) Votre serveur n?Çtait pas disponible au moment de la rÇcupÇration
-2) Vous n'avez pas ÆˇWhitelistÇˇØ les adresses IP afin de nous autoriser Ö rÇcupÇrer les images sur votre serveur.
+1) Vous pouvez changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.)
+2) Vous devez √©√©whitelister√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8. 
+CODE_5814 ; Erreur durant la r√©cup√©ration de votre image. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
 Solution :
 
-1) Vous pouvez changer d'hÇbergeur d'image (veuillez lire l'article ""Comment bien choisir et mettre en ligne les images produit ?"" sur votre espace vendeur pour retrouver une liste compläte d'hÇbergeur d'images.)
-2) Vous devez ÆˇwhitelisterˇØ les adresses IP suivantes : 62.122.8.8 et 62.122.15.8."
-5900;Un produit avec le SKU (x) est dÇjÖ existant dans notre base. ;"Explication : Ce message indique que la chaine de caractäre du SKU est dÇjÖ existante dans notre base, il n'est pas possible de changer un SKU Ö ce jour. 
+1) Vous pouvez changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.)
+2) Vous devez √©√©whitelister√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8. 
+CODE_5815 ; Erreur durant la r√©cup√©ration de votre image. ; Explication : Ce message signifie que notre syst√©me de cr√©ation n?a pas pu r√©cup√©rer vos images pour 2 raisons :
+1) Votre serveur n?√©tait pas disponible au moment de la r√©cup√©ration
+2) Vous n'avez pas √©√©Whitelist√©√©√© les adresses IP afin de nous autoriser √© r√©cup√©rer les images sur votre serveur.
 
-Solution : veuillez changer la marque du produit lors de votre crÇation produit. Le changement de ce champ permettra le dÇblocage du fichier. Vous pourrez toujours demander le changement de marque Ö nouveau en ouvrant une nouvelle requàte ""CrÇer ou modifier vos fiches-prdouits"" > ""Modifier vos fiches-produits"" ou ""Signaler une  erreur de fiche-produit"". "
-8000;Produit crÇÇ: Vous pouvez ajouter une information commerciale sur ce produit;Votre produit a bien ÇtÇ crÇÇ dans notre base. Vous pouvez däs Ö prÇsent publier votre information commerciale.
-8100;Produit crÇÇ: Vous pouvez ajouter une information commerciale sur ce produit;Votre produit a bien ÇtÇ crÇÇ dans notre base. Vous pouvez däs Ö prÇsent publier votre information commerciale.
-8500;Produit : Produit dÇjÖ prÇsentÇ et toujours en attente de traitement manuel par les Çquipes de la marketplace;"Explication : Ce message signifie que le produit est en cours de crÇation dans le systäme.
+Solution :
 
-Solution : Attendre 24h Ö 48h que le traitement soit terminÇ.
-Si le message est toujours prÇsent au-delÖ de 48h Ö 72h, vous devez soumettre une nouvelle demande de crÇation en apportant une modification sur chaque produit concernÇ (ajouter un Æˇ0ˇØ dans la colonne Poids par exemple).
+1) Vous pouvez changer d'h√©bergeur d'image (veuillez lire l'article   Comment bien choisir et mettre en ligne les images produit ?   sur votre espace vendeur pour retrouver une liste compl√©te d'h√©bergeur d'images.)
+2) Vous devez √©√©whitelister√©√© les adresses IP suivantes : 62.122.8.8 et 62.122.15.8. 
+CODE_5900 ; Un produit avec le SKU (x) est d√©j√© existant dans notre base. ; Explication : Ce message indique que la chaine de caract√©re du SKU est d√©j√© existante dans notre base, il n'est pas possible de changer un SKU √© ce jour. 
 
-Si le probläme persiste au-delÖ de 72h apräs votre repasse, vous devrez ouvrir une requàte de Type : CrÇer ou modifier vos fiches produits et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport pour que l?on puisse effectuer une analyse et vous apporter une solution / explication."
-9000;Produit dÇjÖ existant : vous pouvez ajouter une information commerciale sur ce produit (voir Gestion de vos informations commerciales dans l'espace vendeur);Le produit existe dÇjÖ dans notre base. Vous pouvez däs Ö prÇsent publier votre information commerciale.
-9101;EAN: Veuillez saisir tous les EAN pour ce sku famille;"Vous devez indiquer tous les EAN pour un màme SKU Famille.
-Exemple : vous avez indiquÇ un EAN pour la taille 35 mais pas pour les tailles 36 et 37 d'un màme SKU Famille, ce n'est pas conforme.
+Solution : veuillez changer la marque du produit lors de votre cr√©ation produit. Le changement de ce champ permettra le d√©blocage du fichier. Vous pourrez toujours demander le changement de marque √© nouveau en ouvrant une nouvelle requ√©te   Cr√©er ou modifier vos fiches-prdouits   >   Modifier vos fiches-produits   ou   Signaler une  erreur de fiche-produit  .  
+CODE_8000 ; Produit cr√©√©: Vous pouvez ajouter une information commerciale sur ce produit ; Votre produit a bien √©t√© cr√©√© dans notre base. Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+CODE_8100 ; Produit cr√©√©: Vous pouvez ajouter une information commerciale sur ce produit ; Votre produit a bien √©t√© cr√©√© dans notre base. Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+CODE_8500 ; Produit : Produit d√©j√© pr√©sent√© et toujours en attente de traitement manuel par les √©quipes de la marketplace ; Explication : Ce message signifie que le produit est en cours de cr√©ation dans le syst√©me.
 
-Si aucun de vos produits ne dispose d'EAN mais que le message s'affiche, veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport svp."
-9202;FA49857_01Mmax2||KO||9202|ISBN : Suppression ISBN car invalide;"Veuillez supprimer l'ISBN de votre fichier et soumettre de nouveau votre demande de crÇation.
-Si le probläme persiste, veuillez ouvrir une requàte de Type : CrÇer ou modifier vos fiches produits et Sous-type : Aide sur la crÇation de vos produits en nous faisant parvenir obligatoirement le fichier de crÇation et le rapport svp."
-9509;LibellÇ long du produit: LibellÇ long prÇsentÇ plusieurs fois dans votre package, veuillez complÇter les caractÇristiques;Les libellÇs longs identiques sont interdits sur des produits standard. Veuillez indiquer la donnÇe qui diffÇrencie les produits (couleur, modäle etc).
-9924;"1. Produit : Les informations renseignÇes dans vos libellÇs et descriptifs ne sont pas assez claires pour dÇterminer la catÇgorie Ö associer. Si vous ne dÇtectez pas d?erreur, vous pouvez nous contacter via la rubrique Æ Aide Ø de votre espace vendeur.
+Solution : Attendre 24h √© 48h que le traitement soit termin√©.
+Si le message est toujours pr√©sent au-del√© de 48h √© 72h, vous devez soumettre une nouvelle demande de cr√©ation en apportant une modification sur chaque produit concern√© (ajouter un √©√©0√©√© dans la colonne Poids par exemple).
 
-2. Produit : Les informations renseignÇes concernant la typologie du produit ne sont pas assez prÇcises pour dÇterminer la catÇgorie Ö associer. Merci de renseigner une seule typologie dans votre libellÇ.";"1. Explication : Cette erreur peut venir de 2 points :
-ˇLa non cohÇrence entre le code catÇgorie indiquÇ et le libellÇ long/description produit.
-ˇLes donnÇes code catÇgorie, libellÇ court, libellÇ long, description produit et visuel doivent àtre cohÇrents. Vous ne pouvez pas indiquer un type de produit diffÇrent pour chaque colonne.
-ˇ
+Si le probl√©me persiste au-del√© de 72h apr√©s votre repasse, vous devrez ouvrir une requ√©te de Type : Cr√©er ou modifier vos fiches produits et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport pour que l?on puisse effectuer une analyse et vous apporter une solution / explication. 
+CODE_9000 ; Produit d√©j√© existant : vous pouvez ajouter une information commerciale sur ce produit (voir Gestion de vos informations commerciales dans l'espace vendeur) ; Le produit existe d√©j√© dans notre base. Vous pouvez d√©s √© pr√©sent publier votre information commerciale.
+CODE_9101 ; EAN: Veuillez saisir tous les EAN pour ce sku famille ; Vous devez indiquer tous les EAN pour un m√©me SKU Famille.
+Exemple : vous avez indiqu√© un EAN pour la taille 35 mais pas pour les tailles 36 et 37 d'un m√©me SKU Famille, ce n'est pas conforme.
+
+Si aucun de vos produits ne dispose d'EAN mais que le message s'affiche, veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport svp. 
+CODE_9202 ; FA49857_01Mmax2||KO||9202|ISBN : Suppression ISBN car invalide ; Veuillez supprimer l'ISBN de votre fichier et soumettre de nouveau votre demande de cr√©ation.
+Si le probl√©me persiste, veuillez ouvrir une requ√©te de Type : Cr√©er ou modifier vos fiches produits et Sous-type : Aide sur la cr√©ation de vos produits en nous faisant parvenir obligatoirement le fichier de cr√©ation et le rapport svp. 
+CODE_9509 ; Libell√© long du produit: Libell√© long pr√©sent√© plusieurs fois dans votre package, veuillez compl√©ter les caract√©ristiques ; Les libell√©s longs identiques sont interdits sur des produits standard. Veuillez indiquer la donn√©e qui diff√©rencie les produits (couleur, mod√©le etc).
+CODE_9924 ; 1. Produit : Les informations renseign√©es dans vos libell√©s et descriptifs ne sont pas assez claires pour d√©terminer la cat√©gorie √© associer. Si vous ne d√©tectez pas d?erreur, vous pouvez nous contacter via la rubrique √© Aide √© de votre espace vendeur.
+
+2. Produit : Les informations renseign√©es concernant la typologie du produit ne sont pas assez pr√©cises pour d√©terminer la cat√©gorie √© associer. Merci de renseigner une seule typologie dans votre libell√©. ; 1. Explication : Cette erreur peut venir de 2 points :
+√©La non coh√©rence entre le code cat√©gorie indiqu√© et le libell√© long/description produit.
+√©Les donn√©es code cat√©gorie, libell√© court, libell√© long, description produit et visuel doivent √©tre coh√©rents. Vous ne pouvez pas indiquer un type de produit diff√©rent pour chaque colonne.
+√©
 Exemple :
-Votre code catÇgorie correspond Ö un tee-shirt alors que votre libellÇ long ou description produit indique un pull.
-Vous devez donc indiquer Æ tee-shirt Ø dans le libellÇ long + description produit.
+Votre code cat√©gorie correspond √© un tee-shirt alors que votre libell√© long ou description produit indique un pull.
+Vous devez donc indiquer √© tee-shirt √© dans le libell√© long + description produit.
 
-2. Le libellÇ qui n?est pas assez explicite
-ˇ
+2. Le libell√© qui n?est pas assez explicite
+√©
 Exemple :
-LibellÇ non explicite serait : Robe jupe de plage pour soirÇe de baseball Femme Adidas manches courtes
-Un libellÇ explicite serait : Robe de plage - Adidas - Manches courtes
-ˇ
-Pour rappel un libellÇ explicite pour le client se compose comme suit :
-[Type de produit] + [Marque] + [Modäle] + [Mots clÇs descriptifs : 1 ou 2 mots maximum]
+Libell√© non explicite serait : Robe jupe de plage pour soir√©e de baseball Femme Adidas manches courtes
+Un libell√© explicite serait : Robe de plage - Adidas - Manches courtes
+√©
+Pour rappel un libell√© explicite pour le client se compose comme suit :
+[Type de produit] + [Marque] + [Mod√®le] + [Mots cl√©s descriptifs : 1 ou 2 mots maximum]
 
 Solution :
 
-Si vous constatez un des deux points mentionnÇs ci-dessus, vous devez procÇder Ö des modifications et soumettre de nouveau une demande de crÇation.
-Si vous ne constatez aucune erreur, vous devez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport.
+Si vous constatez un des deux points mentionn√©s ci-dessus, vous devez proc√©der √© des modifications et soumettre de nouveau une demande de cr√©ation.
+Si vous ne constatez aucune erreur, vous devez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport.
 
 Nous effectuerons une analyse :
 Si votre fichier est non conforme, nous vous fournirons une explication avec des exemples.
-Si votre fichier est conforme, nous procäderons Ö la crÇation des produits.
+Si votre fichier est conforme, nous proc√©derons √© la cr√©ation des produits.
 
-2. Explication : Ce message signifie que vous avez indiquÇ plusieurs typologies de produit dans le libellÇ long.
-Exemple : ÆˇRobe de plage, jupe ? Femme ? JauneˇØ.
-Notre systäme de crÇation ne sait donc pas s?il s?agit d?une Robe ou d?une Jupe.
+2. Explication : Ce message signifie que vous avez indiqu√© plusieurs typologies de produit dans le libell√© long.
+Exemple : √©√©Robe de plage, jupe ? Femme ? Jaune√©.
+Notre syst√©me de cr√©ation ne sait donc pas s?il s?agit d?une Robe ou d?une Jupe.
 
 Solution : 
-Vous devez modifier le titre produit comme ceci : [Type de produit] + [Marque] + [Modäle] + [Mots clÇs descriptifs : 1 ou 2 mots maximum] 
-Si vous avez bien renseignÇ une seule typologie et que le code catÇgorie correspond bien au produit, vous devez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation ainsi que le rapport afin que l?on puisse faire une analyse.
+Vous devez modifier le titre produit comme ceci : [Type de produit] + [Marque] + [Mod√®le] + [Mots cl√©s descriptifs : 1 ou 2 mots maximum] 
+Si vous avez bien renseign√© une seule typologie et que le code cat√©gorie correspond bien au produit, vous devez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation ainsi que le rapport afin que l?on puisse faire une analyse.
 
 > Si votre fichier est non conforme, nous vousi fournirons une explication avec des exemples.
-> Si votre fichier est conforme, nous verrons pour dÇbloquer les produits en crÇation."
-9942;Produit non crÇÇ : Erreur sur la crÇation de produit taille (id='{x}', sellerid='{x}', family='{x}', color='{x}') : CheckSizeAlreadyExists - Un produit avec la màme taille existe dÇjÖ dans le catalogue Cdiscount;"Veuillez ouvrir une requàte de Type : ""CrÇer ou modifier vos fiches produits"" et Sous-type : ""Aide sur la crÇation de vos produits"" en nous faisant parvenir obligatoirement votre fichier de crÇation et le rapport svp afin que l'on puisse effectuer une analyse et vous apporter une solution / explication."
+> Si votre fichier est conforme, nous verrons pour d√©bloquer les produits en cr√©ation. 
+CODE_9942 ; Produit non cr√© : Erreur sur la cr√©ation de produit taille (id='{x}', sellerid='{x}', family='{x}', color='{x}') : CheckSizeAlreadyExists - Un produit avec la m√©me taille existe d√©j√© dans le catalogue Cdiscount ; Veuillez ouvrir une requ√©te de Type :   Cr√©er ou modifier vos fiches produits   et Sous-type :   Aide sur la cr√©ation de vos produits   en nous faisant parvenir obligatoirement votre fichier de cr√©ation et le rapport svp afin que l'on puisse effectuer une analyse et vous apporter une solution / explication. 
