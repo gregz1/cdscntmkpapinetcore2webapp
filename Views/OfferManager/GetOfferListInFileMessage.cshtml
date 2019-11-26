@@ -1,0 +1,84 @@
+@model cdscntmkpapinetcore2webapp.Models.OfferManager.GetOfferListInFileMessage
+
+@{
+    ViewData["Title"] = "GetOfferListInFile";
+}
+
+<br />
+<br />
+<br />
+<div>
+    <h4>GetOfferListInFileMessage</h4>
+@if (Model._OperationSuccess)
+{
+
+    <div class="alert alert-success">
+        <strong>
+            Success! @Model._Filepath 
+        </strong>
+        <strong>
+            @Model._MyOfferList.Count()
+        </strong>
+    <h4><a href="@Model._Filepath">Export your offer list</a></h4>
+    
+    </div>
+   <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Your Reference</th>
+                                    <th>Ean</th>
+                                    <th>ProductCondition</th>
+                                    <th>Stock</th>
+                                    <th>Price</th>
+                                    <th>VAT</th>
+                                    <th>EcoPart</th>
+                                    <th>DEA</th>
+                                    <th>PackagingUnit</th>
+                                    <th>ProductPackaging</th>
+                                    <th>ReferencePrice</th>
+                                    <th>Comment</th>
+                                    <th>PromotionType</th>
+                                    <th>PromotionStartDate</th>
+                                    <th>PromotionEndDate</th>
+                                    <th>Discount</th>
+                                    <th>ReferencePrice</th>
+                                    <th>AutomaticallySetToBestOffer</th>
+                                    <th>MinimumPrice</th>
+                                    <th>PreparationTime</th>
+                                    <th>MainDeliveryFees Tracked</th>
+                                    <th>AdditionalDeliveryFees Tracked</th>
+                                    <th>MainDeliveryFees Registered</th>
+                                    <th>AdditionalDeliveryFees Registered</th>
+                                    <th>PriceBenchmark Sku</th>
+                                    <th>PriceBenchmark OfferStatus</th>
+                                    <th>PriceBenchmark BestOfferPrice</th>
+                                    <th>PriceBenchmark BestOfferShippingFee</th>
+                                    <th>PriceBenchmark BestOfferCondition</th>
+                                    <th>OfferTypology</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>     
+   
+}
+else
+{
+    <div class="alert alert-warning">
+        <strong>Warning!</strong> error message : @Model._ErrorMessage.
+    </div>
+}
+
+
+<script>
+
+    var editor = CodeMirror(document.getElementById("MessageXML2"), {
+        mode: "xml",
+        height : "auto"
+    });
+</script>
+</div>
+

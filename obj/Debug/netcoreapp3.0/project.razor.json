@@ -14724,6 +14724,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\OfferManager\\GetOfferListInFileMessage.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferListInFileMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -14771,6 +14776,11 @@
     {
       "FilePath": "Views\\FBCManager\\SubmitOfferStateActionMessage.cshtml",
       "TargetPath": "Views\\FBCManager\\SubmitOfferStateActionMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\OfferManager\\GetOfferListInFileRequest.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferListInFileRequest.cshtml",
       "FileKind": "mvc"
     },
     {

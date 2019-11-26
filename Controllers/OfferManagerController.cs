@@ -103,7 +103,19 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             SetSessionData(MyRequest);
             return View(new GetOfferListMessage(MyRequest));
         }
-
+          public ActionResult GetOfferListInFileRequest()
+        {
+            Request MyRequest = new GetOfferListInFileRequest();
+            GetSessionData(ref MyRequest);
+            return View(MyRequest);
+        }
+        [HttpPost]
+        public ActionResult GetOfferListInFileMessage(GetOfferListInFileRequest MyRequest)
+        {
+            MyRequest.GetHeaderMessage();
+            SetSessionData(MyRequest);
+            return View(new GetOfferListInFileMessage(MyRequest));
+        }
        
         public ActionResult GetOfferPackageSubmissionResultRequest()
         {

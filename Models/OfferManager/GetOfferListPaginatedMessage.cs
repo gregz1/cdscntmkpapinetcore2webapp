@@ -2,7 +2,6 @@
 using www.cdiscount.com;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-
 namespace cdscntmkpapinetcore2webapp.Models.OfferManager
 {
     public class GetOfferListPaginatedMessage : Message
@@ -10,9 +9,8 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         public Task<OfferListPaginatedMessage> _OfferListPaginatedMessage { get; set; }
 
         public OfferFilterPaginated _OfferFilterPaginated { get; set; }
-
-
-        public GetOfferListPaginatedMessage(GetOfferListPaginatedRequest MyRequest)
+      
+         public GetOfferListPaginatedMessage(GetOfferListPaginatedRequest MyRequest)
         {
             _Environment = MyRequest._EnvironmentSelected;
             GetService(MyRequest);          
