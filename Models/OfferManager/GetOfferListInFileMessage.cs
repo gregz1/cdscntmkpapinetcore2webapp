@@ -33,13 +33,13 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                 while((MyRequest._OfferFilterPaginated.PageNumber< threshold) && _OperationSuccess)
                 {
                     Task<OfferListPaginatedMessage> OfferListPaginatedMessage = _MarketplaceAPIService.GetOfferListPaginatedAsync(MyRequest._HeaderMessage, MyRequest._OfferFilterPaginated);
-                    _MyOfferList.AddRange(OfferListPaginatedMessage.Result.OfferList);
+                  //  _MyOfferList.AddRange(OfferListPaginatedMessage.Result.OfferList);
                     _OperationSuccess = OfferListPaginatedMessage.Result.OperationSuccess;
                     TotalPageNumber = OfferListPaginatedMessage.Result.NumberOfPages;
                     threshold =  threshold < TotalPageNumber ? threshold: TotalPageNumber;
                     MyRequest._OfferFilterPaginated.PageNumber ++;            
                     
-                    var OfferList = from o in _MyOfferList select 
+                    var OfferList = from o in OfferListPaginatedMessage.Result.OfferList select 
                          string.Format(o.SellerProductId +';'+ o.ProductEan 
                     +';'+o.ProductCondition.ToString()+';'+o.Stock.ToString()
                     +';'+o.Price.ToString()+';'+o.VatRate.ToString()
