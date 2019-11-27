@@ -26,7 +26,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
             int TotalPageNumber =1;
             _OperationSuccess = true;
             int threshold = 400;
-            _Filepath=@"public/OfferExtract" +MyRequest._Token.Substring(0,10)+".csv";
+            _Filepath=@"OfferExtract" +MyRequest._Token.Substring(0,10)+".csv";
                                  
                 while((MyRequest._OfferFilterPaginated.PageNumber< threshold) && _OperationSuccess)
                 {
