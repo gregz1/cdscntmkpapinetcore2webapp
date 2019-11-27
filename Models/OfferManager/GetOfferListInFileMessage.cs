@@ -26,7 +26,9 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
             int TotalPageNumber =1;
             _OperationSuccess = true;
             int threshold = 40;
-            _Filepath=@"OfferExtract" +MyRequest._Token.Substring(0,10)+".csv";
+            _Filepath = Path.Combine(
+                           Directory.GetCurrentDirectory(),
+                           "wwwroot","OfferExtract"+MyRequest._Token.Substring(0,10)+".csv");
                                  
                 while((MyRequest._OfferFilterPaginated.PageNumber< threshold) && _OperationSuccess)
                 {
@@ -51,7 +53,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
             //XmlSerializer xmlSerializer = new XmlSerializer(_OfferListPaginatedMessage.Result.GetType());
             //_RequestXML = _RequestInterceptor.LastRequestXML;
             //_MessageXML = _RequestInterceptor.LastResponseXML;
-             _Filepath =Path.GetFullPath(_Filepath);
+            // _Filepath =Path.GetFullPath(_Filepath);
         }
     }
 }

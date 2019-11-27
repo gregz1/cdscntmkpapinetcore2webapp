@@ -205,6 +205,24 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         }
 
     }
+    public async Task<ActionResult> Download(string OfferExtractFile)
+        {
+            if (OfferExtractFile == null)
+                return Content("filename not present");
+
+            var path = Path.Combine(
+                           Directory.GetCurrentDirectory(),
+                           "wwwroot",OfferExtractFile);
+                        string test = Directory.GetCurrentDirectory();
+                        
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(path, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+            return File(memory, "application/octet-stream", Path.GetFileName(path));
+        }
         
     }
 }
