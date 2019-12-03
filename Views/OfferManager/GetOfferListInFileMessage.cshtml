@@ -14,55 +14,13 @@
 
     <div class="alert alert-success">
         <strong>
-            Success! @Model._Filepath 
+            Success! 
         </strong>
         <strong>
-            @Model._OfferNumber
             <h4><a href="~/OfferManager/Download/?OfferExtractFile=@Model._Filepath">Export your Offer list</a></h4>
         </strong>    
     
-    </div>
-   <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Your Reference</th>
-                                    <th>Ean</th>
-                                    <th>ProductCondition</th>
-                                    <th>Stock</th>
-                                    <th>Price</th>
-                                    <th>VAT</th>
-                                    <th>EcoPart</th>
-                                    <th>DEA</th>
-                                    <th>PackagingUnit</th>
-                                    <th>ProductPackaging</th>
-                                    <th>ReferencePrice</th>
-                                    <th>Comment</th>
-                                    <th>PromotionType</th>
-                                    <th>PromotionStartDate</th>
-                                    <th>PromotionEndDate</th>
-                                    <th>Discount</th>
-                                    <th>ReferencePrice</th>
-                                    <th>AutomaticallySetToBestOffer</th>
-                                    <th>MinimumPrice</th>
-                                    <th>PreparationTime</th>
-                                    <th>MainDeliveryFees Tracked</th>
-                                    <th>AdditionalDeliveryFees Tracked</th>
-                                    <th>MainDeliveryFees Registered</th>
-                                    <th>AdditionalDeliveryFees Registered</th>
-                                    <th>PriceBenchmark Sku</th>
-                                    <th>PriceBenchmark OfferStatus</th>
-                                    <th>PriceBenchmark BestOfferPrice</th>
-                                    <th>PriceBenchmark BestOfferShippingFee</th>
-                                    <th>PriceBenchmark BestOfferCondition</th>
-                                    <th>OfferTypology</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                            </tbody>
-                        </table>
-                    </div>     
+    </div>   
    
 }
 else
@@ -71,31 +29,17 @@ else
         <strong>Warning!</strong> error message : @Model._ErrorMessage.
     </div>
 }
-<div class="form-group">
-        <label for="progressBarRead">Lecture du fichier excel</label>
-        <div class="progress">
-            <div id="progressBarRead" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
-                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="progressBarRead">Recupération des données</label>
-        <div class="progress">
-            <div id="progressBarGetData" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
-                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="progressBarRead">Modification des références en base</label>
-        <div class="progress">
-            <div id="progressBarSetData" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
 
 @section scripts {
     <script type="text/javascript">

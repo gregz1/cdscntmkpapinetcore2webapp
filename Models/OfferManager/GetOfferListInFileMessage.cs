@@ -17,6 +17,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         public int  _OfferNumber{ get; set; }
         public string _Filepath {get;set;}
         public int _PageNumber {get;set;}
+        public int _TotalPageNumber {get;set;}
         public string _ErrorMessage {get;set;}
         public  GetOfferListInFileMessage()
         {         
@@ -37,19 +38,30 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                     try
                     {OfferListPaginatedMessage OfferListPaginatedMessage = await _MarketplaceAPIService.GetOfferListPaginatedAsync(MyRequest._HeaderMessage, MyRequest._OfferFilterPaginated);
                     _OperationSuccess = OfferListPaginatedMessage.OperationSuccess;
-                    _PageNumber = OfferListPaginatedMessage.NumberOfPages;
-                    threshold =  threshold < _PageNumber ? threshold: _PageNumber;
+                    _TotalPageNumber = OfferListPaginatedMessage.NumberOfPages;
+                    _PageNumber = MyRequest._OfferFilterPaginated.PageNumber ;
+                    threshold =  threshold < _TotalPageNumber ? threshold: _TotalPageNumber;
                     MyRequest._OfferFilterPaginated.PageNumber ++;            
                     
                     var OfferList = from o in OfferListPaginatedMessage.OfferList select 
-                         string.Format(o.SellerProductId +';'+ o.ProductEan 
+                         string.Format(
+                        o.SellerProductId +';'+ o.ProductEan 
                     +';'+o.ProductCondition.ToString()+';'+o.Stock.ToString()
                     +';'+o.Price.ToString()+';'+o.VatRate.ToString()
                     +';'+o.EcoTax.ToString()+';'+o.DeaTax.ToString()
                     +';'+o.ProductPackagingUnit+';'+o.ProductPackagingValue.ToString()
                     +';'+o.StrikedPrice.ToString()+';'+o.Comments
-                    +';'+o.PriceMustBeAligned.ToString()+';'+o.MinimumPriceForPriceAlignment.ToString());
-                    //+';'+ from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MaxLeadTime
+                    +';'+o.PriceMustBeAligned.ToString()+';'+o.MinimumPriceForPriceAlignment.ToString()
+                    +';'+o.Comments+';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MaxLeadTime).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MinLeadTime).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MinLeadTime).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.ShippingCharges).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.AdditionalShippingCharges).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.MinLeadTime).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.MinLeadTime).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.ShippingCharges).ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.AdditionalShippingCharges).ToString()
+                    );
                     if (!File.Exists(_Filepath))
                         File.WriteAllLines(_Filepath,OfferList);       
                     else
