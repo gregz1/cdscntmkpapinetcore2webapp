@@ -11,19 +11,21 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
 {
     public class GetOfferListInFileMessage : Message
     {
-        public Task<OfferListPaginatedMessage> _OfferListPaginatedMessage { get; set; }
+        public OfferListPaginatedMessage _OfferListPaginatedMessage { get; set; }
 
         public OfferFilterPaginated _OfferFilterPaginated { get; set; }
-        public List<Offer>   _MyOfferList{ get; set; }
+        public int  _OfferNumber{ get; set; }
         public string _Filepath {get;set;}
-        public GetOfferListInFileMessage(GetOfferListInFileRequest MyRequest)
-        {
+        public int _PageNumber {get;set;}
+        public  GetOfferListInFileMessage()
+        {         
+        }
+        public async Task<GetOfferListInFileMessage> GetMessage(GetOfferListInFileRequest MyRequest)
+        {                               
             _Environment = MyRequest._EnvironmentSelected;
             GetService(MyRequest);  
-            _MyOfferList = new List<Offer>();
             MyRequest._OfferFilterPaginated.PageNumber = 0;
-            int TotalPageNumber =1;
-            _OperationSuccess = true;
+           _OperationSuccess = true;
             int threshold = 40;
             _Filepath = Path.Combine(
                            Directory.GetCurrentDirectory(),
@@ -31,14 +33,13 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                                  
                 while((MyRequest._OfferFilterPaginated.PageNumber< threshold) && _OperationSuccess)
                 {
-                    Task<OfferListPaginatedMessage> OfferListPaginatedMessage = _MarketplaceAPIService.GetOfferListPaginatedAsync(MyRequest._HeaderMessage, MyRequest._OfferFilterPaginated);
-                  //  _MyOfferList.AddRange(OfferListPaginatedMessage.Result.OfferList);
-                    _OperationSuccess = OfferListPaginatedMessage.Result.OperationSuccess;
-                    TotalPageNumber = OfferListPaginatedMessage.Result.NumberOfPages;
-                    threshold =  threshold < TotalPageNumber ? threshold: TotalPageNumber;
+                    OfferListPaginatedMessage OfferListPaginatedMessage = await _MarketplaceAPIService.GetOfferListPaginatedAsync(MyRequest._HeaderMessage, MyRequest._OfferFilterPaginated);
+                    _OperationSuccess = OfferListPaginatedMessage.OperationSuccess;
+                    _PageNumber = OfferListPaginatedMessage.NumberOfPages;
+                    threshold =  threshold < _PageNumber ? threshold: _PageNumber;
                     MyRequest._OfferFilterPaginated.PageNumber ++;            
                     
-                    var OfferList = from o in OfferListPaginatedMessage.Result.OfferList select 
+                    var OfferList = from o in OfferListPaginatedMessage.OfferList select 
                          string.Format(o.SellerProductId +';'+ o.ProductEan 
                     +';'+o.ProductCondition.ToString()+';'+o.Stock.ToString()
                     +';'+o.Price.ToString()+';'+o.VatRate.ToString()
@@ -47,8 +48,10 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                     +';'+o.StrikedPrice.ToString()+';'+o.Comments
                     +';'+o.PriceMustBeAligned.ToString()+';'+o.MinimumPriceForPriceAlignment.ToString());
                     //+';'+ from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MaxLeadTime
-                    File.WriteAllLines(_Filepath,OfferList);                    
-                }            
+                    File.WriteAllLines(_Filepath,OfferList);       
+                    _OfferNumber += OfferList.Count();
+                }   
+                return this;         
             //XmlSerializer xmlSerializer = new XmlSerializer(_OfferListPaginatedMessage.Result.GetType());
             //_RequestXML = _RequestInterceptor.LastRequestXML;
             //_MessageXML = _RequestInterceptor.LastResponseXML;

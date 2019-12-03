@@ -20,12 +20,12 @@ namespace cdscntmkpapinetcore2webapp.Models.AccountManager
                 _HeaderMessage = MyRequest._HeaderMessage;
                 GetService(MyRequest);
                 _SellerMessage = await _MarketplaceAPIService.GetSellerInformationAsync(_HeaderMessage);
-                //  XmlSerializer xmlSerializer = new XmlSerializer(_AllCategoryTreeMessage.Result.GetType());
+                //XmlSerializer xmlSerializer = new XmlSerializer(_AllCategoryTreeMessage.Result.GetType());
 
                 _RequestXML = _RequestInterceptor.LastRequestXML;
                 _MessageXML = _RequestInterceptor.LastResponseXML;
 
-                return this;
+                return this;                
             }
 
         }

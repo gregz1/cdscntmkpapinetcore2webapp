@@ -110,11 +110,12 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             return View(MyRequest);
         }
         [HttpPost]
-        public ActionResult GetOfferListInFileMessage(GetOfferListInFileRequest MyRequest)
+        public async Task<ActionResult> GetOfferListInFileMessage(GetOfferListInFileRequest MyRequest)
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            return View(new GetOfferListInFileMessage(MyRequest));
+            GetOfferListInFileMessage MyMessage =new GetOfferListInFileMessage();
+            return View(await MyMessage.GetMessage(MyRequest));           
         }
        
         public ActionResult GetOfferPackageSubmissionResultRequest()
