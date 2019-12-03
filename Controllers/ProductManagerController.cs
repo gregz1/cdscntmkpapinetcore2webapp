@@ -138,7 +138,11 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             SetSessionData(MyRequest);
             int page=0;
             
-            cdscntmkpapinetcore2webapp.Models.ProductManager.GetProductListByIdentifierMessage MyGetProductListByIdentifierMessage = new GetProductListByIdentifierMessage(_hostingEnvironment);
+            
+            if(Request.Form.Files.Count == 0)
+            return View(new GetProductListByIdentifierMessage(MyRequest));
+            else
+            return View(new GetProductListByIdentifierMessage(_hostingEnvironment));
         /*     if(Request.Form.Files.Count >0 && Request.Form.Files[0].Length > 0)
             {
                 var filePath = Path.GetTempFileName();
@@ -214,7 +218,7 @@ namespace cdscntmkpapinetcore2webapp.Controllers
                 }
             }*/
             //if(page>0)            
-            return View(MyGetProductListByIdentifierMessage);
+            //return View(MyGetProductListByIdentifierMessage);
             //else
             //return View(await MyGetProductListByIdentifierMessage.GetMessage(MyRequest,_hostingEnvironment));
         }

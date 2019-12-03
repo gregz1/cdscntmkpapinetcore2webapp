@@ -14344,448 +14344,448 @@
   "RootNamespace": "cdscntmkpapinetcore2webapp",
   "Documents": [
     {
-      "FilePath": "Views\\OrderManager\\ValidateOrderListRequest.cshtml",
-      "TargetPath": "Views\\OrderManager\\ValidateOrderListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentSupplyOrderReportListMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderReportListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\SubmitProductPackageRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\SubmitProductPackageRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\CrmManager\\GetOrderClaimListRequest.cshtml",
-      "TargetPath": "Views\\CrmManager\\GetOrderClaimListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetExternalOrderStatusMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetExternalOrderStatusMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\CreateExternalOrderMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\CreateExternalOrderMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\SubmitOfferPackageRequest.cshtml",
-      "TargetPath": "Views\\OfferManager\\SubmitOfferPackageRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetAllowedCategoryTreeMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetAllowedCategoryTreeMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetExternalOrderStatusRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetExternalOrderStatusRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\SubmitFulfilmentSupplyOrderMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentSupplyOrderMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\CrmManager\\GetOrderClaimListMessage.cshtml",
-      "TargetPath": "Views\\CrmManager\\GetOrderClaimListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\GetOfferPackageSubmissionResultMessage.cshtml",
-      "TargetPath": "Views\\OfferManager\\GetOfferPackageSubmissionResultMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetProductListRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetProductListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\CrmManager\\GetDiscussionMailListMessage.cshtml",
-      "TargetPath": "Views\\CrmManager\\GetDiscussionMailListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetAllowedCategoryTreeRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetAllowedCategoryTreeRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\AccountManager\\GetSellerInformationRequest.cshtml",
-      "TargetPath": "Views\\AccountManager\\GetSellerInformationRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\GetOfferListRequest.cshtml",
-      "TargetPath": "Views\\OfferManager\\GetOfferListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentOrderListToSupplyRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentOrderListToSupplyRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetAllModelListMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetAllModelListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\SoapCall\\GetAllAllowedCategoryTree.cshtml",
-      "TargetPath": "Views\\SoapCall\\GetAllAllowedCategoryTree.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\GetOfferListPaginatedRequest.cshtml",
-      "TargetPath": "Views\\OfferManager\\GetOfferListPaginatedRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetProductPackageMatchingFileDataRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetProductPackageMatchingFileDataRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\SoapCall\\Index.cshtml",
-      "TargetPath": "Views\\SoapCall\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetProductListByIdentifierRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetProductListByIdentifierRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\CrmManager\\CloseDiscussionListMessage.cshtml",
-      "TargetPath": "Views\\CrmManager\\CloseDiscussionListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetAllAllowedCategoryTreeRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetAllAllowedCategoryTreeRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OrderManager\\GetOrderListMessage.cshtml",
-      "TargetPath": "Views\\OrderManager\\GetOrderListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentSupplyOrderReportListRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderReportListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OrderManager\\MyManageParcelMessage.cshtml",
-      "TargetPath": "Views\\OrderManager\\MyManageParcelMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Home\\About.cshtml",
-      "TargetPath": "Views\\Home\\About.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\CheckXmlProductFileRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\CheckXmlProductFileRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\CheckXmlOfferFileMessage.cshtml",
-      "TargetPath": "Views\\OfferManager\\CheckXmlOfferFileMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\Welcome.cshtml",
-      "TargetPath": "Views\\ProductManager\\Welcome.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentDeliveryDocumentMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentDeliveryDocumentMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentDeliveryDocumentRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentDeliveryDocumentRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OrderManager\\ValidateOrderListResponse.cshtml",
-      "TargetPath": "Views\\OrderManager\\ValidateOrderListResponse.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetProductPackageMatchingFileDataMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetProductPackageMatchingFileDataMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\SubmitOfferPackageMessage.cshtml",
-      "TargetPath": "Views\\OfferManager\\SubmitOfferPackageMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentOrderListToSupplyMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentOrderListToSupplyMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentSupplyOrderMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\GetOfferListPaginatedMessage.cshtml",
-      "TargetPath": "Views\\OfferManager\\GetOfferListPaginatedMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\SubmitFulfilmentActivationMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentActivationMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\GetOfferPackageSubmissionResultRequest.cshtml",
-      "TargetPath": "Views\\OfferManager\\GetOfferPackageSubmissionResultRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\SubmitFulfilmentSupplyOrderRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentSupplyOrderRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetProductListByIdentifierMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetProductListByIdentifierMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentSupplyOrderRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\SubmitProductPackageMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\SubmitProductPackageMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\Home\\Contact.cshtml",
-      "TargetPath": "Views\\Home\\Contact.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetProductPackageSubmissionResultMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetProductPackageSubmissionResultMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\AccountManager\\GetGlobalConfigurationMessage.cshtml",
-      "TargetPath": "Views\\AccountManager\\GetGlobalConfigurationMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetBrandListMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetBrandListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentActivationReportListMessage.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentActivationReportListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\AccountManager\\GetSellerInformationMessage.cshtml",
-      "TargetPath": "Views\\AccountManager\\GetSellerInformationMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\AccountManager\\GetGlobalConfigurationRequest.cshtml",
-      "TargetPath": "Views\\AccountManager\\GetGlobalConfigurationRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\SubmitFulfilmentActivationRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentActivationRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetProductListMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetProductListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetFulfilmentActivationReportListRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetFulfilmentActivationReportListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetModelListRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetModelListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\CrmManager\\CloseDiscussionListRequest.cshtml",
-      "TargetPath": "Views\\CrmManager\\CloseDiscussionListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetProductStockListRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\GetProductStockListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\OfferManager\\GetOfferListMessage.cshtml",
-      "TargetPath": "Views\\OfferManager\\GetOfferListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\GetProductStockListMessage.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetProductStockListMessage.cshtml",
       "TargetPath": "Views\\FBCManager\\GetProductStockListMessage.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\AccountManager\\GetSellerIndicatorsMessage.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\AccountManager\\GetSellerIndicatorsMessage.cshtml",
       "TargetPath": "Views\\AccountManager\\GetSellerIndicatorsMessage.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\ProductManager\\CheckXmlProductFileMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\CheckXmlProductFileMessage.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\CheckXmlProductFileRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\CheckXmlProductFileRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\CrmManager\\GetOfferQuestionListMessage.cshtml",
-      "TargetPath": "Views\\CrmManager\\GetOfferQuestionListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetAllModelListRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetAllModelListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetBrandListRequest.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetBrandListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetModelListMessage.cshtml",
-      "TargetPath": "Views\\ProductManager\\GetModelListMessage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\AccountManager\\GetSellerIndicatorsRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\AccountManager\\GetSellerIndicatorsRequest.cshtml",
       "TargetPath": "Views\\AccountManager\\GetSellerIndicatorsRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\OfferManager\\GetOfferListInFileMessage.cshtml",
-      "TargetPath": "Views\\OfferManager\\GetOfferListInFileMessage.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetModelListRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetModelListRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetExternalOrderStatusRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetExternalOrderStatusRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\CrmManager\\GetDiscussionMailListRequest.cshtml",
-      "TargetPath": "Views\\CrmManager\\GetDiscussionMailListRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\FBCManager\\SubmitOfferStateActionRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitOfferStateActionRequest.cshtml",
       "TargetPath": "Views\\FBCManager\\SubmitOfferStateActionRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\OrderManager\\MyManageParcelRequest.cshtml",
-      "TargetPath": "Views\\OrderManager\\MyManageParcelRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferListRequest.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferListRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\CrmManager\\GetOfferQuestionListRequest.cshtml",
-      "TargetPath": "Views\\CrmManager\\GetOfferQuestionListRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetExternalOrderStatusMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetExternalOrderStatusMessage.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\OrderManager\\GetOrderListRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\CloseDiscussionListRequest.cshtml",
+      "TargetPath": "Views\\CrmManager\\CloseDiscussionListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferPackageSubmissionResultRequest.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferPackageSubmissionResultRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetModelListMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetModelListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentDeliveryDocumentMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentDeliveryDocumentMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OrderManager\\GetOrderListRequest.cshtml",
       "TargetPath": "Views\\OrderManager\\GetOrderListRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\FBCManager\\CreateExternalOrderRequest.cshtml",
-      "TargetPath": "Views\\FBCManager\\CreateExternalOrderRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitFulfilmentSupplyOrderMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentSupplyOrderMessage.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\OfferManager\\CheckXmlOfferFileRequest.cshtml",
-      "TargetPath": "Views\\OfferManager\\CheckXmlOfferFileRequest.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProductManager\\GetAllAllowedCategoryTreeMessage.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetAllAllowedCategoryTreeMessage.cshtml",
       "TargetPath": "Views\\ProductManager\\GetAllAllowedCategoryTreeMessage.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\FBCManager\\SubmitOfferStateActionMessage.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\GetDiscussionMailListRequest.cshtml",
+      "TargetPath": "Views\\CrmManager\\GetDiscussionMailListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentSupplyOrderReportListMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderReportListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentOrderListToSupplyMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentOrderListToSupplyMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitFulfilmentActivationMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentActivationMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\SubmitProductPackageMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\SubmitProductPackageMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\Home\\Contact.cshtml",
+      "TargetPath": "Views\\Home\\Contact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetProductStockListRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetProductStockListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentDeliveryDocumentRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentDeliveryDocumentRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\AccountManager\\GetSellerInformationRequest.cshtml",
+      "TargetPath": "Views\\AccountManager\\GetSellerInformationRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\GetOfferQuestionListRequest.cshtml",
+      "TargetPath": "Views\\CrmManager\\GetOfferQuestionListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitOfferStateActionMessage.cshtml",
       "TargetPath": "Views\\FBCManager\\SubmitOfferStateActionMessage.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\OfferManager\\GetOfferListInFileRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\GetOrderClaimListRequest.cshtml",
+      "TargetPath": "Views\\CrmManager\\GetOrderClaimListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\GetOfferQuestionListMessage.cshtml",
+      "TargetPath": "Views\\CrmManager\\GetOfferQuestionListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetAllModelListMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetAllModelListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\SubmitOfferPackageRequest.cshtml",
+      "TargetPath": "Views\\OfferManager\\SubmitOfferPackageRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferListInFileRequest.cshtml",
       "TargetPath": "Views\\OfferManager\\GetOfferListInFileRequest.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\ProductManager\\GetProductPackageSubmissionResultRequest.cshtml",
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductListByIdentifierRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetProductListByIdentifierRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\GetOrderClaimListMessage.cshtml",
+      "TargetPath": "Views\\CrmManager\\GetOrderClaimListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetAllowedCategoryTreeRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetAllowedCategoryTreeRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductListRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetProductListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\Home\\About.cshtml",
+      "TargetPath": "Views\\Home\\About.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductListByIdentifierMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetProductListByIdentifierMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OrderManager\\MyManageParcelMessage.cshtml",
+      "TargetPath": "Views\\OrderManager\\MyManageParcelMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferListInFileMessage.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferListInFileMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductPackageSubmissionResultMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetProductPackageSubmissionResultMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OrderManager\\ValidateOrderListResponse.cshtml",
+      "TargetPath": "Views\\OrderManager\\ValidateOrderListResponse.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetAllowedCategoryTreeMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetAllowedCategoryTreeMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetBrandListMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetBrandListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\CheckXmlOfferFileRequest.cshtml",
+      "TargetPath": "Views\\OfferManager\\CheckXmlOfferFileRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetBrandListRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetBrandListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentActivationReportListRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentActivationReportListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentSupplyOrderReportListRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderReportListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentSupplyOrderRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitFulfilmentActivationRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentActivationRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\AccountManager\\GetSellerInformationMessage.cshtml",
+      "TargetPath": "Views\\AccountManager\\GetSellerInformationMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferListMessage.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferListPaginatedMessage.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferListPaginatedMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\CloseDiscussionListMessage.cshtml",
+      "TargetPath": "Views\\CrmManager\\CloseDiscussionListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitFulfilmentSupplyOrderRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentSupplyOrderRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OrderManager\\GetOrderListMessage.cshtml",
+      "TargetPath": "Views\\OrderManager\\GetOrderListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentSupplyOrderMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentSupplyOrderMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferPackageSubmissionResultMessage.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferPackageSubmissionResultMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\CheckXmlProductFileMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\CheckXmlProductFileMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OrderManager\\ValidateOrderListRequest.cshtml",
+      "TargetPath": "Views\\OrderManager\\ValidateOrderListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentActivationReportListMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentActivationReportListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\SoapCall\\GetAllAllowedCategoryTree.cshtml",
+      "TargetPath": "Views\\SoapCall\\GetAllAllowedCategoryTree.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\AccountManager\\GetGlobalConfigurationRequest.cshtml",
+      "TargetPath": "Views\\AccountManager\\GetGlobalConfigurationRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\SubmitOfferPackageMessage.cshtml",
+      "TargetPath": "Views\\OfferManager\\SubmitOfferPackageMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\SubmitProductPackageRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\SubmitProductPackageRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\SoapCall\\Index.cshtml",
+      "TargetPath": "Views\\SoapCall\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OrderManager\\MyManageParcelRequest.cshtml",
+      "TargetPath": "Views\\OrderManager\\MyManageParcelRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\CheckXmlOfferFileMessage.cshtml",
+      "TargetPath": "Views\\OfferManager\\CheckXmlOfferFileMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\AccountManager\\GetGlobalConfigurationMessage.cshtml",
+      "TargetPath": "Views\\AccountManager\\GetGlobalConfigurationMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetAllAllowedCategoryTreeRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetAllAllowedCategoryTreeRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductListMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetProductListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductPackageMatchingFileDataMessage.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetProductPackageMatchingFileDataMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\SubmitFulfilmentOnDemandSupplyOrderRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\CreateExternalOrderMessage.cshtml",
+      "TargetPath": "Views\\FBCManager\\CreateExternalOrderMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductPackageMatchingFileDataRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetProductPackageMatchingFileDataRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\OfferManager\\GetOfferListPaginatedRequest.cshtml",
+      "TargetPath": "Views\\OfferManager\\GetOfferListPaginatedRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetProductPackageSubmissionResultRequest.cshtml",
       "TargetPath": "Views\\ProductManager\\GetProductPackageSubmissionResultRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\Welcome.cshtml",
+      "TargetPath": "Views\\ProductManager\\Welcome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\ProductManager\\GetAllModelListRequest.cshtml",
+      "TargetPath": "Views\\ProductManager\\GetAllModelListRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\CrmManager\\GetDiscussionMailListMessage.cshtml",
+      "TargetPath": "Views\\CrmManager\\GetDiscussionMailListMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\CreateExternalOrderRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\CreateExternalOrderRequest.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gregory.tall\\Documents\\GitHub\\cdscntmkpapinetcore2webapp\\Views\\FBCManager\\GetFulfilmentOrderListToSupplyRequest.cshtml",
+      "TargetPath": "Views\\FBCManager\\GetFulfilmentOrderListToSupplyRequest.cshtml",
       "FileKind": "mvc"
     }
   ],

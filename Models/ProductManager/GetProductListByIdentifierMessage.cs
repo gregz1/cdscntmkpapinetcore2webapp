@@ -9,19 +9,33 @@ namespace cdscntmkpapinetcore2webapp.Models.ProductManager
 {
     public class GetProductListByIdentifierMessage : Message
     {
+        public Task<ProductListByIdentifierMessage> _ProductListByIdentifierMessage2 { get; set; }
         public ProductListByIdentifierMessage _ProductListByIdentifierMessage { get; set; }
         public IWebHostEnvironment _env;
         public ProductFilter _ProductFilter { get; set; }
         public string _ProductListReportPath { get; set; }
         ProductPackageRequest _ProductPackageRequest;
         public IdentifierRequest _IdentifierRequest { get; set; }
+        public  GetProductListByIdentifierMessage(GetProductListByIdentifierRequest MyRequest)
+        {
+            _Environment = MyRequest._EnvironmentSelected;
+            GetService(MyRequest);
+            _IdentifierRequest = new IdentifierRequest();
+            _IdentifierRequest.IdentifierType = IdentifierTypeEnum.EAN;
+            _IdentifierRequest.ValueList = MyRequest._Parameters["EAN"].Split(';');
+            _ProductListByIdentifierMessage2 = _MarketplaceAPIService.GetProductListByIdentifierAsync(MyRequest._HeaderMessage,_IdentifierRequest);
+            XmlSerializer xmlSerializer = new XmlSerializer(_ProductListByIdentifierMessage2.Result.GetType());
+
+            _RequestXML = _RequestInterceptor.LastRequestXML;
+            _MessageXML = _RequestInterceptor.LastResponseXML;
+        }
         public  GetProductListByIdentifierMessage(IWebHostEnvironment env)
         {
             if (string.IsNullOrWhiteSpace(env.WebRootPath))
             {
                 env.WebRootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
             }
-            _env = env;           
+            _env = env;
         }        
         public async Task<GetProductListByIdentifierMessage> GetMessage(GetProductListByIdentifierRequest MyRequest, IWebHostEnvironment env)
         {   

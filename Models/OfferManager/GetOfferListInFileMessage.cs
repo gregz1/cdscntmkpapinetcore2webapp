@@ -15,7 +15,6 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
 
         public OfferFilterPaginated _OfferFilterPaginated { get; set; }
         public List<Offer>   _MyOfferList{ get; set; }
-        public bool _OperationSuccess { get; set; }
         public string _Filepath {get;set;}
         public GetOfferListInFileMessage(GetOfferListInFileRequest MyRequest)
         {
