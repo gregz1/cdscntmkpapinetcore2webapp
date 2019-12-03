@@ -17,6 +17,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         public int  _OfferNumber{ get; set; }
         public string _Filepath {get;set;}
         public int _PageNumber {get;set;}
+        public string _ErrorMessage {get;set;}
         public  GetOfferListInFileMessage()
         {         
         }
@@ -33,7 +34,8 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                                  
                 while((MyRequest._OfferFilterPaginated.PageNumber< threshold) && _OperationSuccess)
                 {
-                    OfferListPaginatedMessage OfferListPaginatedMessage = await _MarketplaceAPIService.GetOfferListPaginatedAsync(MyRequest._HeaderMessage, MyRequest._OfferFilterPaginated);
+                    try
+                    {OfferListPaginatedMessage OfferListPaginatedMessage = await _MarketplaceAPIService.GetOfferListPaginatedAsync(MyRequest._HeaderMessage, MyRequest._OfferFilterPaginated);
                     _OperationSuccess = OfferListPaginatedMessage.OperationSuccess;
                     _PageNumber = OfferListPaginatedMessage.NumberOfPages;
                     threshold =  threshold < _PageNumber ? threshold: _PageNumber;
@@ -48,8 +50,17 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                     +';'+o.StrikedPrice.ToString()+';'+o.Comments
                     +';'+o.PriceMustBeAligned.ToString()+';'+o.MinimumPriceForPriceAlignment.ToString());
                     //+';'+ from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MaxLeadTime
-                    File.WriteAllLines(_Filepath,OfferList);       
+                    if (!File.Exists(_Filepath))
+                        File.WriteAllLines(_Filepath,OfferList);       
+                    else
+                        File.AppendAllLines(_Filepath,OfferList);
+
                     _OfferNumber += OfferList.Count();
+                    }
+                    catch(System.Exception ex)                    
+                    {
+                        _ErrorMessage+= string.Format(" {0} : {1}",MyRequest._OfferFilterPaginated.PageNumber.ToString() , ex.Message);                        
+                    }
                 }   
                 return this;         
             //XmlSerializer xmlSerializer = new XmlSerializer(_OfferListPaginatedMessage.Result.GetType());

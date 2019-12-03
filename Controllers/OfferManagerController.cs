@@ -115,7 +115,8 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
             GetOfferListInFileMessage MyMessage =new GetOfferListInFileMessage();
-            return View(await MyMessage.GetMessage(MyRequest));           
+            MyMessage.GetMessage(MyRequest);
+            return View(MyMessage);           
         }
        
         public ActionResult GetOfferPackageSubmissionResultRequest()
