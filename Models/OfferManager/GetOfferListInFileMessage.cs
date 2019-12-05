@@ -28,7 +28,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
             GetService(MyRequest);  
             MyRequest._OfferFilterPaginated.PageNumber = 0;
            _OperationSuccess = true;
-            int threshold = 40;
+            int threshold = 100;
             _Filepath = Path.Combine(
                            Directory.GetCurrentDirectory(),
                            "wwwroot","OfferExtract"+MyRequest._Token.Substring(0,10)+".csv");
@@ -52,15 +52,15 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                     +';'+o.ProductPackagingUnit+';'+o.ProductPackagingValue.ToString()
                     +';'+o.StrikedPrice.ToString()+';'+o.Comments
                     +';'+o.PriceMustBeAligned.ToString()+';'+o.MinimumPriceForPriceAlignment.ToString()
-                    +';'+o.Comments+';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MaxLeadTime).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MinLeadTime).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MinLeadTime).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.ShippingCharges).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.AdditionalShippingCharges).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.MinLeadTime).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.MinLeadTime).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.ShippingCharges).ToString()
-                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.AdditionalShippingCharges).ToString()
+                    +';'+o.Comments+';'+ ((from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MaxLeadTime).First().ToString())
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MinLeadTime).First().ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.MinLeadTime).First().ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.ShippingCharges).First().ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "TRK" select s.AdditionalShippingCharges).First().ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.MinLeadTime).First().ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.MinLeadTime).First().ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.ShippingCharges).First().ToString()
+                    +';'+ (from s in o.ShippingInformationList where s.DeliveryMode.Code == "REG" select s.AdditionalShippingCharges).First().ToString()
                     );
                     if (!File.Exists(_Filepath))
                         File.WriteAllLines(_Filepath,OfferList);       
