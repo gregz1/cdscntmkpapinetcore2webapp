@@ -33,7 +33,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
         {                               
             _Environment = MyRequest._EnvironmentSelected;
             GetService(MyRequest);  
-            MyRequest._OfferFilterPaginated.PageNumber = 0;
+            //MyRequest._OfferFilterPaginated.PageNumber = 0;
            _OperationSuccess = true;
             int threshold = 100;
             _Filepath = Path.Combine(
