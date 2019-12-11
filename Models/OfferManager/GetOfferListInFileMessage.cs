@@ -35,7 +35,7 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
             GetService(MyRequest);  
             //MyRequest._OfferFilterPaginated.PageNumber = 0;
            _OperationSuccess = true;
-            int threshold = 100;
+            int threshold = MyRequest._OfferFilterPaginated.PageNumber + 100;
             _Filepath = Path.Combine(
                            Directory.GetCurrentDirectory(),
                            "wwwroot","OfferExtract"+MyRequest._Token.Substring(0,10)+".csv");
