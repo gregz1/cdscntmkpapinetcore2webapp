@@ -186,3 +186,4 @@ c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\bin\Debug\netc
 c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp3.0\cdscntmkpapinetcore2webapp.MvcApplicationPartsAssemblyInfo.cs
 c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp3.0\Razor\Views\OfferManager\GetOfferListInFileMessage.cshtml.g.cs
 c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\obj\Debug\netcoreapp3.0\Razor\Views\OfferManager\GetOfferListInFileRequest.cshtml.g.cs
+c:\Users\gregory.tall\Documents\GitHub\cdscntmkpapinetcore2webapp\bin\Debug\netcoreapp3.0\libman.json

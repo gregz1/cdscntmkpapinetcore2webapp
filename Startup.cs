@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 //using Microsoft.EntityFrameworkCore;
 using cdscntmkpapinetcore2webapp.Models;
+using cdscntmkpapinetcore2webapp.Hubs;
 
 namespace cdscntmkpapinetcore2webapp
 {
@@ -26,8 +27,9 @@ namespace cdscntmkpapinetcore2webapp
        public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            //services.AddMvc();
+            services.AddMvc();
             services.AddRazorPages();
+            services.AddSignalR();
             
             services.AddMvc(option => option.EnableEndpointRouting = false) ;
             /*services.AddDbContext<cdscntmkpapinetcore2webappContext>(options =>
@@ -46,14 +48,21 @@ namespace cdscntmkpapinetcore2webapp
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
             app.UseStaticFiles();
-
+            app.UseDeveloperExceptionPage();
+            app.UseRouting();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Contact}/{id?}");
+            });
+             app.UseEndpoints(endpoints =>
+            {   
+                endpoints.MapRazorPages();
+                endpoints.MapHub<MyHub>("/myHub");
+                endpoints.MapHub<myProgressHub>("/myProgressHub");
+                endpoints.MapHub<myUpdaterHub>("/myUpdaterHub");
             });
         }
     }

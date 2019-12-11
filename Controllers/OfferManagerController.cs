@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.XPath;
-
+using Microsoft.AspNetCore.SignalR;
+using cdscntmkpapinetcore2webapp.Hubs;
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace cdscntmkpapinetcore2webapp.Controllers
@@ -40,11 +41,17 @@ namespace cdscntmkpapinetcore2webapp.Controllers
         }
 
 
-        public OfferManagerController(IWebHostEnvironment env)
+    /*    public OfferManagerController(IWebHostEnvironment env)
         {
             _Environment = env;
         }
-
+        */
+        private readonly IHubContext<myProgressHub> _progressHubContext;
+        public OfferManagerController(IWebHostEnvironment env ,IHubContext<myProgressHub> progressHubContext)
+        {
+             _Environment = env;
+            _progressHubContext = progressHubContext;            
+        }
         public void GetSessionData(ref Request MyRequest)
         {
           /*  if (HttpContext.Session.GetString(SessionToken) != null)
@@ -103,19 +110,21 @@ namespace cdscntmkpapinetcore2webapp.Controllers
             SetSessionData(MyRequest);
             return View(new GetOfferListMessage(MyRequest));
         }
-          public ActionResult GetOfferListInFileRequest()
+          public ActionResult GetOfferListInFileRequest( )
         {
             Request MyRequest = new GetOfferListInFileRequest();
             GetSessionData(ref MyRequest);
             return View(MyRequest);
         }
         [HttpPost]
-        public async Task<ActionResult> GetOfferListInFileMessage(GetOfferListInFileRequest MyRequest)
+        public async Task<ActionResult> GetOfferListInFileMessage(GetOfferListInFileRequest MyRequest ,[Bind(Prefix="id")] string connId)
         {
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
-            GetOfferListInFileMessage MyMessage =new GetOfferListInFileMessage();
-            MyMessage.GetMessage(MyRequest);
+            GetOfferListInFileMessage MyMessage =new GetOfferListInFileMessage(_progressHubContext);
+            myProgressHub MyHub = new myProgressHub();
+            //var RequiredId= MyHub.InvokeHubMethod();
+            MyMessage.GetMessage(MyRequest,"");
             return View(MyMessage);           
         }
        

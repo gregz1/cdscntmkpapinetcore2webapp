@@ -5,24 +5,31 @@ using System.Xml.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
+using Microsoft.AspNetCore.SignalR;
+using cdscntmkpapinetcore2webapp.Hubs;
 
 namespace cdscntmkpapinetcore2webapp.Models.OfferManager
 {
     public class GetOfferListInFileMessage : Message
     {
         public OfferListPaginatedMessage _OfferListPaginatedMessage { get; set; }
-
+         private readonly IHubContext<myProgressHub> _progressHubContext;
+   
         public OfferFilterPaginated _OfferFilterPaginated { get; set; }
         public int  _OfferNumber{ get; set; }
         public string _Filepath {get;set;}
         public int _PageNumber {get;set;}
         public int _TotalPageNumber {get;set;}
         public string _ErrorMessage {get;set;}
-        public  GetOfferListInFileMessage()
+       /* public  GetOfferListInFileMessage()
         {         
+           
+        }*/
+        public  GetOfferListInFileMessage(IHubContext<myProgressHub> progressHubContext)
+        {         
+            _progressHubContext = progressHubContext;
         }
-        public async Task<GetOfferListInFileMessage> GetMessage(GetOfferListInFileRequest MyRequest)
+        public async Task<GetOfferListInFileMessage> GetMessage(GetOfferListInFileRequest MyRequest,  string connId)
         {                               
             _Environment = MyRequest._EnvironmentSelected;
             GetService(MyRequest);  
@@ -42,7 +49,6 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                     _PageNumber = MyRequest._OfferFilterPaginated.PageNumber ;
                     threshold =  threshold < _TotalPageNumber ? threshold: _TotalPageNumber;
                     MyRequest._OfferFilterPaginated.PageNumber ++;            
-                    
                     var OfferList = from o in OfferListPaginatedMessage.OfferList select 
                          string.Format(
                         o.SellerProductId +';'+ o.ProductEan 
@@ -68,11 +74,13 @@ namespace cdscntmkpapinetcore2webapp.Models.OfferManager
                         File.AppendAllLines(_Filepath,OfferList);
 
                     _OfferNumber += OfferList.Count();
+                    
+                //    _progressHubContext.Clients.All.SendAsync("updateProgressBar",(decimal)_PageNumber/(decimal)_TotalPageNumber);
                     }
                     catch(System.Exception ex)                    
                     {
                         _ErrorMessage+= string.Format(" {0} : {1}",MyRequest._OfferFilterPaginated.PageNumber.ToString() , ex.Message);                        
-                    }
+                    }   
                 }   
                 return this;         
             //XmlSerializer xmlSerializer = new XmlSerializer(_OfferListPaginatedMessage.Result.GetType());

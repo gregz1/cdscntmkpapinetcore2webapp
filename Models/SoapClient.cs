@@ -26,8 +26,5 @@ namespace cdscntmkpapinetcore2webapp.Models
 
         public  SoapClient()
         {}
-
-
-
     }
 }
